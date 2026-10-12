@@ -6,6 +6,8 @@ Kala is a **free Bangla keyboard for Windows**. Type Unicode Bangla in everyday 
 
 [Download Kala](https://github.com/robispider/kala-releases/releases) · [User guide](USER_GUIDE.md) · [Report an issue](https://github.com/robispider/kala-releases/issues)
 
+Read the website: [English](https://robispider.github.io/kala-releases/en/) · [বাংলা](https://robispider.github.io/kala-releases/bn/). The complete guides include search, keyboard references, and research comparisons in both languages.
+
 ## Download and install
 
 The current release is [**v0.1.0-alpha.1**](https://github.com/robispider/kala-releases/releases/tag/v0.1.0-alpha.1), an **alpha pre-release**. Download `KalaSetup-v0.1.0-alpha.1.exe` from its Assets list. `SHA256SUMS.txt` is also supplied.
@@ -66,6 +68,8 @@ Settings, personal words, and reports stay on your computer. Review any report o
 - `README.md` — overview, download, and credits
 - `USER_GUIDE.md` — guide index and quick start
 - `docs/` — feature guides, layout references, release status, and research evidence
+- `translations/bn/` — complete Bangla versions of the guides
+- `site/` — Astro + Starlight website; see [website maintenance](SITE.md)
 - `LICENSE` — project note about free use/distribution and future source availability
 
 Documentation was reviewed against the v0.1.0-alpha.1 source on **12 October 2026**. Future releases may change the available features; read their release notes.

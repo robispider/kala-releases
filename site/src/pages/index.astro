@@ -1,0 +1,20 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const english = `${base}/en/`;
+const bangla = `${base}/bn/`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content={`0;url=${english}`} />
+    <link rel="canonical" href={`https://robispider.github.io${english}`} />
+    <title>Kala — Bangla input for Windows</title>
+  </head>
+  <body>
+    <h1>Kala</h1>
+    <p>Free Bangla input for Windows · <span lang="bn">Windows-এ বিনা মূল্যে বাংলা টাইপ করুন।</span></p>
+    <p><a href={english}>English</a> · <a href={bangla} lang="bn">বাংলা</a></p>
+  </body>
+</html>
