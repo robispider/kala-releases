@@ -39,6 +39,8 @@ Installers remain attached to GitHub Releases. The website links to those downlo
 
 Bangla guides are maintained translations, not an automatic browser-translation widget. The build fails if a language pair is missing or preserved facts drift. Review the meaning when changing either language; structural checks cannot prove translation quality.
 
+Write Bangla in a natural, formal Bangladeshi style, with short instructions and familiar Windows terminology. Use **কিবোর্ড লেআউট**, **উইন্ডো**, **পেজ**, **ওয়েবসাইট**, **ইমপোর্ট**, **এক্সপোর্ট**, **কপি**, **পেস্ট**, **টুলস**, **সাজেশন**, and **টেক্সট ডেটাসেট**. Refer to letter keys as **অক্ষর** and modifier/action controls as **বোতাম**, retaining their printed names (Shift, Ctrl, Alt, Space). Use **কালা**, **কালা ঝড়**, and **কালা গতি** in Bangla prose; keep exact English app labels where they help users find a control. Preserve literal typing examples such as **কি** and **কী**, key sequences, paths, placeholders, and research figures. Avoid literal English sentence structures and terminology specific to mobile apps.
+
 The site reuses Kala's existing mark and Black Bengal goat mascot. Fonts are self-hosted through the locked Inter and Noto Sans Bengali packages; their license notices are published with the site. The layout model results remain qualified as modeled effort, with human trials pending. The Learn guide remains labeled unavailable in the normal application Release build.
 
 ## Website validation — 12 October 2026

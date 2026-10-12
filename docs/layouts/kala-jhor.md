@@ -1,4 +1,4 @@
-# Kala Jhor — Kala ঝড়
+# Kala Jhor — কালা ঝড়
 
 [Guide index](../../USER_GUIDE.md) · [Kala Goti](kala-goti.md) · [Research and full comparison](research-and-comparison.md)
 

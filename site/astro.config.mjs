@@ -26,15 +26,15 @@ export default defineConfig({
           items: ['guide', 'guide/installation', 'guide/typing'],
         },
         {
-          label: 'Everyday features', translations: { bn: 'প্রতিদিনের সুবিধা' },
+          label: 'Everyday features', translations: { bn: 'দৈনন্দিন ব্যবহারের ফিচার' },
           items: ['guide/layouts', 'guide/on-screen-keyboard', 'guide/corrections', 'guide/personal-words', 'guide/settings', 'guide/learning'],
         },
         {
-          label: 'Keyboard layouts', translations: { bn: 'কিবোর্ড বিন্যাস' },
+          label: 'Keyboard layouts', translations: { bn: 'কিবোর্ড লেআউট' },
           items: ['layouts/avro-unijoy', 'layouts/kala-jhor', 'layouts/kala-goti'],
         },
         {
-          label: 'Research & release', translations: { bn: 'গবেষণা ও সংস্করণ' },
+          label: 'Research & release', translations: { bn: 'গবেষণা ও রিলিজ' },
           items: ['research', 'release-status', 'reference'],
         },
       ],

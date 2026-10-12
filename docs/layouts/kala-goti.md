@@ -1,4 +1,4 @@
-# Kala Goti — Kala গতি
+# Kala Goti — কালা গতি
 
 [Guide index](../../USER_GUIDE.md) · [Kala Jhor](kala-jhor.md) · [Research and full comparison](research-and-comparison.md)
 

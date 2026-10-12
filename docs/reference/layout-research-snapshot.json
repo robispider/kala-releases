@@ -191,7 +191,7 @@
     {
       "name": "newspaper/train",
       "label": "Prothom Alo newspaper articles (many sections)",
-      "labelBn": "প্রথম আলো সংবাদপত্রের লেখা (নানা বিভাগ)",
+      "labelBn": "প্রথম আলোর বিভিন্ন বিভাগের টেক্সট",
       "articles": 386205,
       "words": 110175696,
       "typedCharacters": 717543857
@@ -209,7 +209,7 @@
     {
       "name": "newspaper/heldout",
       "label": "Prothom Alo newspaper articles (many sections)",
-      "labelBn": "প্রথম আলো সংবাদপত্রের লেখা (নানা বিভাগ)",
+      "labelBn": "প্রথম আলোর বিভিন্ন বিভাগের টেক্সট",
       "articles": 43022,
       "words": 12286444,
       "typedCharacters": 80039818
@@ -217,7 +217,7 @@
     {
       "name": "bard-novel/heldout",
       "label": "BARD news articles that share no sentence with the newspaper set (never used in the search)",
-      "labelBn": "BARD সংবাদ-নিবন্ধ, সংবাদপত্রের সংগ্রহের সঙ্গে কোনো বাক্য মেলে না (অনুসন্ধানে কখনো ব্যবহৃত হয়নি)",
+      "labelBn": "BARD-এর সংবাদ নিবন্ধ; সংবাদপত্রের ডেটাসেটের সঙ্গে কোনো বাক্য মেলে না (সার্চে ব্যবহার হয়নি)",
       "articles": 5131,
       "words": 1098306,
       "typedCharacters": 7209251
@@ -230,7 +230,7 @@
       {
         "rank": 1,
         "name": "Kala Jhor",
-        "nameBn": "Kala ঝড়",
+        "nameBn": "কালা ঝড়",
         "kind": "kala",
         "developer": "Kala — Bangla-DH Pure research",
         "score": 100.0,
@@ -247,7 +247,7 @@
       {
         "rank": 2,
         "name": "Kala Goti",
-        "nameBn": "Kala গতি",
+        "nameBn": "কালা গতি",
         "kind": "kala",
         "developer": "Kala — Bangla-DH Pure research",
         "score": 97.7,

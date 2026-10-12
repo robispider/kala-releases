@@ -5,14 +5,14 @@ const bn = locale === 'bn';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const href = (route: string) => `${base}/${locale}/${route}/`;
 const layouts = [
-  { name: 'Avro Phonetic', route: 'layouts/avro-unijoy', kind: bn ? 'রোমান বানান' : 'Roman spelling', description: bn ? 'ইংরেজি অক্ষরে শব্দের উচ্চারণ লিখুন; Kala তা বাংলায় রূপ দেয়।' : 'Spell words in Roman letters and watch them become Bangla.', recipe: 'ami → আমি' },
-  { name: 'UniJoy', route: 'layouts/avro-unijoy', kind: bn ? 'পরিচিত স্থির বিন্যাস' : 'Familiar fixed keys', description: bn ? 'UniJoy-এর পরিচিত বাংলা কী ও স্বরবর্ণ লেখার পদ্ধতি।' : 'The familiar Bangla key map and hasant + vowel-sign method.', recipe: 'G F M D → আমি' },
-  { name: bn ? 'Kala ঝড়' : 'Kala Jhor', route: 'layouts/kala-jhor', kind: bn ? 'প্রসঙ্গ অনুযায়ী স্বরবর্ণ' : 'Context vowels', description: bn ? 'আগের বর্ণ দেখে একই স্বর-কী কার বা পূর্ণ স্বরবর্ণ দেয়।' : 'One vowel key. The current word decides sign or full vowel.', recipe: 'F X L → আমি' },
-  { name: bn ? 'Kala গতি' : 'Kala Goti', route: 'layouts/kala-goti', kind: bn ? 'UniJoy-ধাঁচের স্বরবর্ণ' : 'UniJoy-style vowels', description: bn ? 'গবেষণায় সাজানো নতুন কী-অবস্থান, পরিচিত হসন্ত + কার পদ্ধতি।' : 'Research-designed key positions, familiar hasant + sign entry.', recipe: 'K F X C → আমি' },
+  { name: 'Avro Phonetic', route: 'layouts/avro-unijoy', kind: bn ? 'রোমান হরফে বাংলা' : 'Roman spelling', description: bn ? 'রোমান হরফে বাংলা শব্দের উচ্চারণ লিখুন; কালা বাংলায় রূপান্তর করবে।' : 'Spell words in Roman letters and watch them become Bangla.', recipe: 'ami → আমি' },
+  { name: 'UniJoy', route: 'layouts/avro-unijoy', kind: bn ? 'পরিচিত ফিক্সড লেআউট' : 'Familiar fixed keys', description: bn ? 'অক্ষরের পরিচিত ম্যাপ, পূর্ণ স্বরবর্ণের জন্য হসন্ত + কার পদ্ধতি।' : 'The familiar Bangla key map and hasant + vowel-sign method.', recipe: 'G F M D → আমি' },
+  { name: bn ? 'কালা ঝড়' : 'Kala Jhor', route: 'layouts/kala-jhor', kind: bn ? 'আগের অক্ষর অনুযায়ী স্বরবর্ণ' : 'Context vowels', description: bn ? 'একই অক্ষর চেপে কার বা পূর্ণ স্বরবর্ণ লিখুন; আগের অক্ষর অনুযায়ী আউটপুট বদলাবে।' : 'One vowel key. The current word decides sign or full vowel.', recipe: 'F X L → আমি' },
+  { name: bn ? 'কালা গতি' : 'Kala Goti', route: 'layouts/kala-goti', kind: bn ? 'UniJoy-এর মতো স্বরবর্ণ' : 'UniJoy-style vowels', description: bn ? 'গবেষণায় বেছে নেওয়া অক্ষরের অবস্থান, সঙ্গে পরিচিত হসন্ত + কার পদ্ধতি।' : 'Research-designed key positions, familiar hasant + sign entry.', recipe: 'K F X C → আমি' },
 ];
 const links = [
-  { title: bn ? 'প্রথমবার শুরু করুন' : 'Get your first word right', body: bn ? 'ডাউনলোড, ইনস্টল ও অন্য অ্যাপে বাংলা চালুর ধাপ।' : 'Download, install, and turn Bangla on in another app.', route: 'guide/installation', number: '01' },
-  { title: bn ? 'লেখার সহায়তা বেছে নিন' : 'Choose your writing help', body: bn ? 'সংশোধন, বিকল্প বানান ও বানানের চিহ্ন—আলাদা নিয়ন্ত্রণ।' : 'Corrections, alternatives, and spelling marks, each with its own control.', route: 'guide/corrections', number: '02' },
+  { title: bn ? 'কালা দিয়ে শুরু করুন' : 'Get your first word right', body: bn ? 'ডাউনলোড, ইনস্টল ও অন্য অ্যাপে বাংলা চালু করার ধাপ।' : 'Download, install, and turn Bangla on in another app.', route: 'guide/installation', number: '01' },
+  { title: bn ? 'লেখার সহায়তা বেছে নিন' : 'Choose your writing help', body: bn ? 'অটোকরেকশন, সাজেশন ও বানানের চিহ্ন আলাদাভাবে চালু বা বন্ধ করুন।' : 'Corrections, alternatives, and spelling marks, each with its own control.', route: 'guide/corrections', number: '02' },
   { title: bn ? 'নিজের শব্দ সংরক্ষণ করুন' : 'Make Kala your own', body: bn ? 'নাম, পছন্দের বানান ও শর্টকাট নিজের কম্পিউটারে রাখুন।' : 'Keep names, preferred spellings, and shortcuts on your computer.', route: 'guide/personal-words', number: '03' },
 ];
 const board = evidence.finalRoundedLeaderboard.entries;
@@ -22,13 +22,13 @@ const maximum = Math.max(...board.map((row) => row.average));
   <div class="release-note">
     <span class="status-dot" aria-hidden="true"></span>
     <span>{bn ? 'v0.1.0-alpha.1 · Windows x64 · বিনা মূল্যে ব্যবহার ও বিতরণ' : 'v0.1.0-alpha.1 · Windows x64 · Free to use and distribute'}</span>
-    <a href={href('release-status')}>{bn ? 'সংস্করণের অবস্থা' : 'Release status'} <span aria-hidden="true">↗</span></a>
+    <a href={href('release-status')}>{bn ? 'রিলিজের অবস্থা' : 'Release status'} <span aria-hidden="true">↗</span></a>
   </div>
   <section class="home-section" aria-labelledby="layouts-title">
     <div class="section-heading">
       <p class="eyebrow">{bn ? 'আপনার লেখার ধরন' : 'YOUR WAY TO TYPE'}</p>
-      <h2 id="layouts-title">{bn ? 'চারটি বিন্যাস। আপনার পছন্দ।' : 'Four layouts. Your choice.'}</h2>
-      <p>{bn ? 'ফিজিক্যাল ও অন-স্ক্রিন কিবোর্ডে একই বিন্যাস ও সেটিংস ব্যবহার করুন।' : 'Use the same layout and settings on your physical and on-screen keyboards.'}</p>
+      <h2 id="layouts-title">{bn ? 'চারটি লেআউট থেকে আপনার পছন্দ বেছে নিন।' : 'Four layouts. Your choice.'}</h2>
+      <p>{bn ? 'ফিজিক্যাল ও অন-স্ক্রিন কিবোর্ডে একই লেআউট ও সেটিংস ব্যবহার করুন।' : 'Use the same layout and settings on your physical and on-screen keyboards.'}</p>
     </div>
     <div class="layout-grid">
       {layouts.map((layout) => <a class="layout-card" href={href(layout.route)}>
@@ -38,12 +38,12 @@ const maximum = Math.max(...board.map((row) => row.average));
         <div class="recipe"><code>{layout.recipe}</code><span aria-hidden="true">↗</span></div>
       </a>)}
     </div>
-    <p class="small-note">{bn ? 'স্থির বিন্যাসের উদাহরণে ইংরেজি অক্ষরগুলো ফিজিক্যাল কী-এর অবস্থান বোঝায়; Shift বলা না থাকলে সাধারণ কী চাপুন।' : 'Fixed-layout examples name physical key positions. Use unshifted keys unless a recipe says Shift.'}</p>
+    <p class="small-note">{bn ? 'ফিক্সড লেআউটের উদাহরণে ইংরেজি অক্ষরগুলো কিবোর্ডের অবস্থান বোঝায়। Shift উল্লেখ না থাকলে শুধু অক্ষর চাপুন।' : 'Fixed-layout examples name physical key positions. Use unshifted keys unless a recipe says Shift.'}</p>
   </section>
   <section class="home-section guide-section" aria-labelledby="guide-title">
     <div class="section-heading">
       <p class="eyebrow">{bn ? 'ধাপে ধাপে নির্দেশিকা' : 'A GUIDE FOR EVERYDAY USE'}</p>
-      <h2 id="guide-title">{bn ? 'ইনস্টল থেকে নিজের মতো ব্যবহার।' : 'From installation to your own routine.'}</h2>
+      <h2 id="guide-title">{bn ? 'ইনস্টল করুন, নিজের মতো সেটিংস সাজান।' : 'From installation to your own routine.'}</h2>
     </div>
     <div class="guide-grid">
       {links.map((link) => <a class="guide-card" href={href(link.route)}>
@@ -57,13 +57,13 @@ const maximum = Math.max(...board.map((row) => row.average));
   <section class="home-section research-section" aria-labelledby="research-title">
     <div class="research-copy">
       <p class="eyebrow">BANGLA-DH PURE</p>
-      <h2 id="research-title">{bn ? 'মডেল আছে। পরীক্ষার ফলও আছে।' : 'Designed with a model. Checked against text.'}</h2>
-      <p>{bn ? 'Kala ঝড় ও Kala গতি তৈরি হয়েছে একটি নির্দিষ্ট আঙুল-পরিশ্রম মডেল, বড় বাংলা পাঠসংগ্রহ ও কম্পিউটার অনুসন্ধান দিয়ে।' : 'Kala Jhor and Kala Goti were built with an explicit finger-effort model, large Bangla corpora, and computer search.'}</p>
+      <h2 id="research-title">{bn ? 'গবেষণায় তৈরি, বাংলা টেক্সটে যাচাই করা।' : 'Designed with a model. Checked against text.'}</h2>
+      <p>{bn ? 'কালা ঝড় ও কালা গতি তৈরিতে আঙুলের পরিশ্রমের নির্দিষ্ট মডেল, বড় বাংলা টেক্সট ডেটাসেট ও কম্পিউটার সার্চ ব্যবহার করা হয়েছে।' : 'Kala Jhor and Kala Goti were built with an explicit finger-effort model, large Bangla corpora, and computer search.'}</p>
       <div class="research-stats">
-        <div><strong>35.7%</strong><span>{bn ? 'ঝড়: UniJoy-এর চেয়ে কম মডেল-হিসাবের পরিশ্রম' : 'Jhor: lower modeled effort than UniJoy'}</span></div>
-        <div><strong>34.1%</strong><span>{bn ? 'গতি: UniJoy-এর চেয়ে কম মডেল-হিসাবের পরিশ্রম' : 'Goti: lower modeled effort than UniJoy'}</span></div>
+        <div><strong>35.7%</strong><span>{bn ? 'ঝড়: মডেলের হিসাবে UniJoy-এর চেয়ে কম পরিশ্রম' : 'Jhor: lower modeled effort than UniJoy'}</span></div>
+        <div><strong>34.1%</strong><span>{bn ? 'গতি: মডেলের হিসাবে UniJoy-এর চেয়ে কম পরিশ্রম' : 'Goti: lower modeled effort than UniJoy'}</span></div>
       </div>
-      <a class="text-link" href={href('research')}>{bn ? 'পদ্ধতি, তুলনা ও সীমা পড়ুন' : 'Read the method, comparison, and limits'} <span aria-hidden="true">→</span></a>
+      <a class="text-link" href={href('research')}>{bn ? 'পদ্ধতি, তুলনা ও সীমাবদ্ধতা পড়ুন' : 'Read the method, comparison, and limits'} <span aria-hidden="true">→</span></a>
     </div>
     <div class="effort-board">
       <div class="board-heading"><h3>{bn ? 'গড় পরিশ্রম · J1' : 'Average effort · J1'}</h3><span>{bn ? 'কম হলে ভালো' : 'Lower is better'}</span></div>
@@ -73,20 +73,20 @@ const maximum = Math.max(...board.map((row) => row.average));
           <div class="bar-track" aria-hidden="true"><span style={`width:${row.average / maximum * 100}%`}></span></div>
         </li>)}
       </ol>
-      <p>{bn ? 'উইকিপিডিয়া, সংবাদপত্র ও আগে না-দেখা সংবাদে রেকর্ড করা held-out ফলের সমান ওজনের গড়।' : 'Equal-weight average of recorded held-out Wikipedia, newspaper, and unseen-news results.'}</p>
+      <p>{bn ? 'সার্চে ব্যবহার না করা উইকিপিডিয়া, সংবাদপত্র ও নতুন সংবাদের ফলকে সমান ওজন দিয়ে নেওয়া গড়।' : 'Equal-weight average of recorded held-out Wikipedia, newspaper, and unseen-news results.'}</p>
     </div>
-    <p class="research-note">{bn ? 'এগুলো মডেলের ফল। মানুষের টাইপিং-গতি, স্বাচ্ছন্দ্য ও শেখার সময়ের পরীক্ষা এখনো বাকি। বর্তমান বিন্যাসগুলো অনুসন্ধানে পাওয়া সেরা; সর্বজনীন সর্বোত্তম প্রমাণিত নয়।' : 'These are model results. Human speed, comfort, and learning-time trials remain pending. The current layouts are best found, without a global optimality proof.'}</p>
+    <p class="research-note">{bn ? 'এগুলো মডেলের ফল। মানুষের টাইপিং গতি, স্বাচ্ছন্দ্য ও শেখার সময়ের পরীক্ষা এখনো বাকি। বর্তমান লেআউটগুলো সার্চে পাওয়া সেরা; সব সম্ভাব্য লেআউটের মধ্যে সেরা হওয়ার প্রমাণ নেই।' : 'These are model results. Human speed, comfort, and learning-time trials remain pending. The current layouts are best found, without a global optimality proof.'}</p>
   </section>
   <section class="home-section credit-section" aria-labelledby="credit-title">
     <div>
       <p class="eyebrow">{bn ? 'কৃতজ্ঞতা ও অবদান' : 'CREDIT WHERE IT BELONGS'}</p>
       <h2 id="credit-title">{bn ? 'ধন্যবাদ, OmicronLab।' : 'Thank you, OmicronLab.'}</h2>
-      <p>{bn ? 'Kala-র Avro Phonetic বাস্তবায়ন Avro-র বিন্যাস ও নিয়ম ব্যবহার করে তার টাইপিং আচরণ অনুকরণ করে। Avro Keyboard ও Avro Phonetic তৈরি এবং ভাগ করে নেওয়ার জন্য OmicronLab ও অবদানকারীদের ধন্যবাদ।' : 'Kala’s Avro Phonetic implementation uses Avro’s layout and rules to mimic its typing behavior. Thank you to OmicronLab and the contributors for creating and sharing Avro Keyboard and Avro Phonetic.'}</p>
+      <p>{bn ? 'কালার Avro Phonetic ফিচারে Avro-এর লেআউট ও নিয়ম ব্যবহার করা হয়েছে, যাতে পরিচিত টাইপিং পদ্ধতি অনুসরণ করা যায়। Avro Keyboard ও Avro Phonetic তৈরি এবং সবার সঙ্গে শেয়ার করার জন্য OmicronLab ও অবদানকারীদের ধন্যবাদ।' : 'Kala’s Avro Phonetic implementation uses Avro’s layout and rules to mimic its typing behavior. Thank you to OmicronLab and the contributors for creating and sharing Avro Keyboard and Avro Phonetic.'}</p>
       <div class="credit-links"><a href="https://www.omicronlab.com/">OmicronLab ↗</a><a href="https://github.com/omicronlab/Avro-Keyboard">Avro Keyboard ↗</a></div>
     </div>
     <div class="free-note">
-      <h3>{bn ? 'বিনা মূল্যে, আপনার কম্পিউটারে।' : 'Free, and on your computer.'}</h3>
-      <p>{bn ? 'Kala বিনা মূল্যে ব্যবহার ও বিতরণ করা যায়। অ্যাপের সোর্স কোড ভবিষ্যতে প্রকাশ করা হবে। ব্যক্তিগত শব্দ ও অ্যাপের রিপোর্ট Kala নিজে আপলোড করে না।' : 'Kala is free to use and distribute. The application source code will be available in the future. Kala does not automatically upload personal words or app reports.'}</p>
+      <h3>{bn ? 'বিনা মূল্যে ব্যবহার করুন।' : 'Free, and on your computer.'}</h3>
+      <p>{bn ? 'কালা বিনা মূল্যে ব্যবহার ও বিতরণ করা যায়। অ্যাপের সোর্স কোড ভবিষ্যতে প্রকাশ করা হবে। ব্যক্তিগত শব্দ ও রিপোর্ট আপনার কম্পিউটারেই থাকে; কালা নিজে থেকে আপলোড করে না।' : 'Kala is free to use and distribute. The application source code will be available in the future. Kala does not automatically upload personal words or app reports.'}</p>
       <a href={href('guide/settings')}>{bn ? 'গোপনীয়তা ও সহায়তা' : 'Privacy and support'} →</a>
     </div>
   </section>

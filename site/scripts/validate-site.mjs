@@ -22,7 +22,7 @@ for (const locale of locales) {
     assert(html.includes(`lang="${locale}"`), `Wrong page language: ${file}`);
     assert.equal([...html.matchAll(/<h1\b/g)].length, 1, `Duplicate/missing page title: ${file}`);
     assert(!html.includes('This content is not available in your language yet.'), `Untranslated fallback: ${file}`);
-    assert(!html.includes('এই পাতার বাংলা অনুবাদ এখনো নেই।'), `Untranslated fallback: ${file}`);
+    assert(!html.includes('এই পেজের বাংলা অনুবাদ এখনো নেই।'), `Untranslated fallback: ${file}`);
     const other = locale === 'en' ? 'bn' : 'en';
     assert(html.includes(`${base}/${other}/${route ? route + '/' : ''}`), `Missing same-page language route: ${file}`);
   }

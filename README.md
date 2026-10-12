@@ -27,8 +27,8 @@ See the [installation guide](docs/01-installation-and-first-start.md) for the co
 | --- | --- |
 | **Avro Phonetic** | Roman spellings, such as `ami` → আমি |
 | **UniJoy** | Familiar fixed Bangla keys |
-| **Kala Goti / Kala গতি** | Research layout with UniJoy-style full-vowel entry |
-| **Kala Jhor / Kala ঝড়** | Research layout with context-sensitive vowels |
+| **Kala Goti / কালা গতি** | Research layout with UniJoy-style full-vowel entry |
+| **Kala Jhor / কালা ঝড়** | Research layout with context-sensitive vowels |
 
 The layout page lets you select a supplied layout or import a supported Kala `.json` or Avro `.avrolayout` file.
 

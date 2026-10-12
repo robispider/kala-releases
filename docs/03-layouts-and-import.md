@@ -8,8 +8,8 @@
 | --- | --- | --- |
 | **Avro Phonetic** | Roman spellings are composed into Bangla | You know the English keyboard and prefer phonetic entry |
 | **UniJoy** | Fixed Bangla key positions | You already know UniJoy or want to learn it |
-| **Kala Goti / Kala গতি** | Optimized fixed keys with UniJoy-style full-vowel entry | You prefer hasant + vowel-sign entry for full vowels |
-| **Kala Jhor / Kala ঝড়** | Optimized fixed keys with context-sensitive vowels | You want the lowest modeled effort found by Kala's research and are ready to learn its vowel rules |
+| **Kala Goti / কালা গতি** | Optimized fixed keys with UniJoy-style full-vowel entry | You prefer hasant + vowel-sign entry for full vowels |
+| **Kala Jhor / কালা ঝড়** | Optimized fixed keys with context-sensitive vowels | You want the lowest modeled effort found by Kala's research and are ready to learn its vowel rules |
 
 1. Open **Layouts** in Kala.
 2. Read the layout card's description and examples.
