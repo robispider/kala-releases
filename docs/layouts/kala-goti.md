@@ -105,3 +105,5 @@ Goti has normal and Shift layers. Caps changes letter mappings; leave Caps off f
 | Modeled effort reduction vs UniJoy | 34.1% | 35.7% |
 
 Goti preserves a familiar vowel-entry method; Jhor has lower effort in the recorded model. Learnability and your eventual speed need practice and measurement. The [research comparison](research-and-comparison.md) explains how both were found and why neither has a universal “best keyboard” proof.
+
+**CC0:** Kala Goti’s original layout maps are free to use, adapt, and share without permission or royalties. Read the [layout dedication](../reference/original-layout-license.md).

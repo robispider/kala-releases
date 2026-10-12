@@ -21,6 +21,7 @@ export const pages = [
   { source: 'docs/layouts/research-and-comparison.md', route: 'research' },
   { source: 'docs/FEATURES_AND_RELEASES.md', route: 'release-status' },
   { source: 'docs/reference/implementation-and-evidence.md', route: 'reference' },
+  { source: 'docs/reference/original-layout-license.md', route: 'layout-license' },
 ];
 
 export function sourcePath(page, locale) {

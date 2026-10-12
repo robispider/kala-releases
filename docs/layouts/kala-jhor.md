@@ -118,3 +118,5 @@ If you want to add/change a vowel sign in an old word, retype the relevant conso
 The design uses an explicit ergonomic cost model, large text corpora, document-level held-out tests, 512 search runs, and independently checked scores. Its modeled advantage remained visible on Wikipedia, newspaper text, and an unseen news set. The current mixed-corpus layout is **best found**, while the earlier Wikipedia-only predecessor has a separately scoped certified bound.
 
 Read the [research page](research-and-comparison.md) for the exact objective, benchmark variants, all results, and remaining human-study limits. The evidence supports describing Jhor as a scientifically designed, data-driven layout with the lowest modeled effort among those tested. It does not establish “the most scientific layout” across all designs or measured superiority for every typist.
+
+**CC0:** Kala Jhor’s original layout maps are free to use, adapt, and share without permission or royalties. Read the [layout dedication](../reference/original-layout-license.md).

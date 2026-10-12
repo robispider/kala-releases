@@ -33,6 +33,8 @@ The release supplies Avro Phonetic, Kala Goti, and Kala Jhor. UniJoy/UniBijoy is
 
 ## Kala Jhor and Kala Goti
 
+The original Jhor/Goti layout maps are dedicated under [CC0 1.0 Universal](docs/reference/original-layout-license.md): use, adapt and share them without permission or royalties. The application and third-party material keep their existing terms.
+
 Kala's **Bangla-DH Pure** research used an explicit ergonomic effort model, large Bangla corpora, 512 search runs per layout, held-out text evaluation, and independent verification.
 
 In the recorded comparison of eight fixed layouts, **Kala Jhor ranked first and Kala Goti second**, with **35.7% and 34.1% lower modeled effort than UniJoy**, respectively. These are model results, not measured speed or comfort gains. The current layouts are the best found by the search, without a global optimality proof.

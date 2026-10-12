@@ -35,7 +35,7 @@ export default defineConfig({
         },
         {
           label: 'Research & release', translations: { bn: 'গবেষণা ও রিলিজ' },
-          items: ['research', 'release-status', 'reference'],
+          items: ['research', 'layout-license', 'release-status', 'reference'],
         },
       ],
       pagination: true,
