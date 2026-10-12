@@ -28,6 +28,10 @@ The full [user guide](USER_GUIDE.md) covers setup, layouts, corrections, setting
 
 Some behavior depends on the app and text field. Password, read-only, or protected fields do not receive Kala's Bangla input. See the user guide for details.
 
+## Avro Phonetic credit
+
+Kala's Avro Phonetic implementation uses the Avro Phonetic layout and rules to mimic Avro's typing behavior. Thank you to [OmicronLab](https://www.omicronlab.com/) for creating Avro Keyboard and Avro Phonetic and for sharing this work with the Bangla typing community. Learn more in the [Avro Keyboard repository](https://github.com/omicronlab/Avro-Keyboard).
+
 ## Updates and feedback
 
 Check the [releases page](https://github.com/robispider/kala-releases/releases) for updates. To report a problem or request help, open an [Issue](https://github.com/robispider/kala-releases/issues) and include your Kala version, Windows version, the app you were using, and steps to reproduce the problem. Do not include passwords or private document text.
