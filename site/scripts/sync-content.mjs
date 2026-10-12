@@ -20,7 +20,7 @@ for (const locale of locales) {
     await writeFile(destination, frontmatter + body + '\n');
   }
   const hero = {
-    tagline: locale === 'en' ? 'Free Bangla input for Windows. Your keyboard, your words, your way to write.' : 'উইন্ডোজে বিনা মূল্যে বাংলা লিখুন। পছন্দের কিবোর্ড লেআউট ও সেটিংস বেছে নিন।',
+    tagline: locale === 'en' ? 'Type Bangla, check spelling, and autocorrect together in your everyday Windows apps. No separate plugins. Learn Kala’s own research-designed fixed layouts.' : 'উইন্ডোজের প্রতিদিনের অ্যাপে বাংলা টাইপ করুন, বানান যাচাই করুন ও ভুল সংশোধন করুন—একসঙ্গে। আলাদা প্লাগইন লাগে না। কালার নিজস্ব গবেষণায় তৈরি ফিক্সড লেআউট শিখুন।',
     image: { file: '../../../assets/kala-mascot-520.png', alt: locale === 'en' ? 'Kala’s Black Bengal goat mascot' : 'কালার ব্ল্যাক বেঙ্গল ছাগলের মাসকট' },
     actions: [
       { text: locale === 'en' ? 'Download Kala' : 'কালা ডাউনলোড করুন', link: 'https://github.com/robispider/kala-releases/releases', icon: 'download' },
@@ -28,7 +28,7 @@ for (const locale of locales) {
       { text: locale === 'en' ? 'বাংলায় পড়ুন' : 'Read in English', link: `${base}/${locale === 'en' ? 'bn' : 'en'}/`, variant: 'minimal', icon: 'translate' },
     ],
   };
-  await writeFile(path.join(contentRoot, 'index.mdx'), `---\ntitle: ${JSON.stringify(locale === 'en' ? 'Bangla belongs in your everyday apps.' : 'প্রতিদিনের অ্যাপে বাংলা লিখুন।')}\ndescription: ${JSON.stringify(locale === 'en' ? 'Free Bangla input for Windows, with a complete user guide and research-backed layouts.' : 'উইন্ডোজে বিনা মূল্যে বাংলা লিখুন। ব্যবহার নির্দেশিকা ও গবেষণায় তৈরি কিবোর্ড লেআউট দেখুন।')}\ntemplate: splash\nhero: ${JSON.stringify(hero)}\neditUrl: false\n---\n\nimport KalaHome from '../../../components/KalaHome.astro';\n\n<KalaHome locale="${locale}" />\n`);
+  await writeFile(path.join(contentRoot, 'index.mdx'), `---\ntitle: ${JSON.stringify(locale === 'en' ? 'Better Bangla writing, wherever you work.' : 'নিজের অ্যাপেই আরও সহজে বাংলা লিখুন।')}\ndescription: ${JSON.stringify(locale === 'en' ? 'Free Bangla typing, plugin-free spellchecking, autocorrection, and built-in learning for Windows. Discover Kala’s original research-designed layouts.' : 'উইন্ডোজে বিনা মূল্যে বাংলা টাইপিং, প্লাগইন ছাড়াই স্পেলচেক, অটোকরেকশন ও শেখার মডিউল। কালার নিজস্ব ঝড় ও গতি লেআউট শিখুন।')}\ntemplate: splash\nhero: ${JSON.stringify(hero)}\neditUrl: false\n---\n\nimport KalaHome from '../../../components/KalaHome.astro';\n\n<KalaHome locale="${locale}" />\n`);
 }
 await mkdir(path.join(siteRoot, 'public/evidence'), { recursive: true });
 await writeFile(path.join(siteRoot, 'src/content/docs/404.md'), `---\ntitle: "Page not found / পেজটি পাওয়া যায়নি"\neditUrl: false\n---\n\nThis address does not match a page in the Kala guide. Return to the [English homepage](${base}/en/) or browse the [user guide](${base}/en/guide/).\n\n<span lang="bn">এই ঠিকানায় কালার নির্দেশিকার কোনো পেজ নেই। [বাংলা হোমপেজে](${base}/bn/) ফিরুন অথবা [ব্যবহার নির্দেশিকা](${base}/bn/guide/) পড়ুন।</span>\n`);

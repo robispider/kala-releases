@@ -2,7 +2,7 @@
 
 [Guide index](../USER_GUIDE.md) · [Feature and release status](FEATURES_AND_RELEASES.md)
 
-**Availability:** the learning module is implemented in the current code base, but the normal **v0.1.0-alpha.1 Release configuration excludes Learn**, its resources, and course packs. These instructions apply only to a build that includes the **Learn** entry. If your installed release has no Learn page, the feature is not present in that build. There is no recorded decision to ship it in the standard release yet.
+**Learn is included in the standard release.** The release decision confirmed on **12 October 2026** includes the learning module, its interface resources, and built-in course packs. Open **Learn** to begin. Older installers may lack this module; check your installed version and update when the new installer is available.
 
 The module teaches layout use inside explicit practice sessions. It does not collect practice evidence from your ordinary typing in other apps. Bangla layout practice and the research optimization that produced Jhor/Goti are different activities.
 
@@ -89,4 +89,4 @@ Some exposed learning preferences are still partial in the current code: Show to
 
 Learning files live under `%LOCALAPPDATA%\Kala\learning`. **Export** in Learning settings produces a learning-profile JSON copy; **Delete profile…** removes that learning profile after confirmation. These actions are distinct from Personal words' export/reset.
 
-Learner pilots, content/license review, live Windows practice validation, and standard Release inclusion remain pending. Use the current learning interface as a development feature, and report unexpected behavior with the exact build and configuration.
+Learner pilots, content/license review, and live Windows practice validation remain pending. Release inclusion does not establish measured learning or speed gains. Report unexpected behavior with the exact version and learning configuration.

@@ -30,7 +30,7 @@ Kala composes text as keys arrive. Space completes a word and runs enabled word 
 
 ## Fixed-layout basics
 
-With **UniJoy**, **Kala Goti**, or **Kala Jhor**, each physical key has a defined output on the normal and Shift layers. The letters printed on an English keyboard identify the physical positions; you are not spelling the Bangla word in Roman letters.
+With **Kala Goti**, **Kala Jhor**, or a supported imported fixed layout, each physical key has a defined output on the normal and Shift layers. The letters printed on an English keyboard identify the physical positions; you are not spelling the Bangla word in Roman letters.
 
 For Jhor and Goti, follow the [Jhor reference](layouts/kala-jhor.md) or [Goti reference](layouts/kala-goti.md). Those pages explain vowel signs, full vowels, hasant, conjuncts, numbers, and complete key maps.
 

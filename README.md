@@ -1,6 +1,6 @@
 # Kala for Windows
 
-Kala is a **free Bangla keyboard for Windows**. Type Unicode Bangla in everyday applications with a phonetic or fixed layout, using your physical keyboard or Kala's on-screen keyboard.
+Kala brings **Bangla typing, plugin-free spellchecking, and autocorrection together** in everyday Windows applications. Choose phonetic typing or Kala’s original fixed layouts, and build your skills with the included Learn module. Use your physical keyboard or Kala’s on-screen keyboard.
 
 **Kala is free to use and distribute.** The application source code will be made available in the future. This repository provides releases and user documentation.
 
@@ -26,11 +26,10 @@ See the [installation guide](docs/01-installation-and-first-start.md) for the co
 | Layout | Typing method |
 | --- | --- |
 | **Avro Phonetic** | Roman spellings, such as `ami` → আমি |
-| **UniJoy** | Familiar fixed Bangla keys |
-| **Kala Goti / কালা গতি** | Research layout with UniJoy-style full-vowel entry |
+| **Kala Goti / কালা গতি** | Original research layout with hasant + vowel-sign full-vowel entry |
 | **Kala Jhor / কালা ঝড়** | Research layout with context-sensitive vowels |
 
-The layout page lets you select a supplied layout or import a supported Kala `.json` or Avro `.avrolayout` file.
+The release supplies Avro Phonetic, Kala Goti, and Kala Jhor. UniJoy/UniBijoy is not bundled; its retained references are for research and comparison. The layout page lets you select a supplied layout or import a supported Kala `.json` or Avro `.avrolayout` file.
 
 ## Kala Jhor and Kala Goti
 
@@ -49,7 +48,7 @@ Read the [Jhor key map and typing steps](docs/layouts/kala-jhor.md), [Goti key m
 - English/Bangla interface, light/dark themes, and compact/large on-screen keys.
 - Local settings, personal data, and diagnostics.
 
-Help available in a field depends on the app's text/caret support. Read the [typing guide](docs/02-typing-and-apps.md) and [feature/release status](docs/FEATURES_AND_RELEASES.md). The Learn module in the current code base is excluded from the normal Release build; its [separate guide](docs/08-learning-module.md) explains availability.
+Help available in a field depends on the app's text/caret support. Read the [typing guide](docs/02-typing-and-apps.md) and [feature/release status](docs/FEATURES_AND_RELEASES.md). The included Learn module offers a starting-point check, daily practice, a course map, problem-key exercises, and progress/results. Follow its [step-by-step guide](docs/08-learning-module.md). The 12 October 2026 shipping decisions apply to the next installer; a website update does not replace previously published release assets.
 
 ## Avro Phonetic credit
 

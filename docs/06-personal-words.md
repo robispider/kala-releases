@@ -76,7 +76,7 @@ To import:
 3. A merge fails if exact input tokens conflict. Resolve conflicts before trying again.
 4. Read any error. A failed save/import retains the last loaded durable choices.
 
-Exporting layouts is a separate action on Layouts. Exporting a personal profile does not back up imported keyboard layouts, global settings, or the development learning profile.
+Exporting layouts is a separate action on Layouts. Exporting a personal profile does not back up imported keyboard layouts, global settings, or the separate learning profile.
 
 ## Delete personal learning
 
@@ -85,7 +85,7 @@ Exporting layouts is a separate action on Layouts. Exporting a personal profile 
 3. Read the confirmation and item count.
 4. Confirm deletion to erase managed entries, recovery data, and pending feedback.
 
-If cleanup is blocked by a file or permission restriction, Kala reports it and prevents the old managed entries from reappearing. Resolve the restriction and retry the reset. Exported copies outside Kala are not deleted by this action. The separate Learn profile is managed inside the learning module when that module is available.
+If cleanup is blocked by a file or permission restriction, Kala reports it and prevents the old managed entries from reappearing. Resolve the restriction and retry the reset. Exported copies outside Kala are not deleted by this action. The separate Learn profile is managed inside the included learning module.
 
 ## Limits and storage
 

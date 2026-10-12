@@ -4,14 +4,14 @@
 
 Reviewed **12 October 2026** against the application source at tag **v0.1.0-alpha.1**, commit `df967fbe9ac038cf7dabff0cb9c1f5a455dbc76b`. The public [v0.1.0-alpha.1 release](https://github.com/robispider/kala-releases/releases/tag/v0.1.0-alpha.1) is marked pre-release and provides a Windows x64 setup executable and `SHA256SUMS.txt`.
 
-This table describes the current code's normal Release configuration and recorded feature status. It is not a new live compatibility sign-off or an independent audit of the downloaded executable.
+This table reflects the current implementation and the **12 October 2026 release decisions**: include Learn and omit UniJoy from bundled layouts. These decisions apply to the next installer; previously published assets are not replaced by a website update. The source snapshot above supplies the historical implementation evidence. This is not a new live compatibility sign-off or an independent audit of the downloaded executable.
 
 | Feature/module | Current availability | Guide |
 | --- | --- | --- |
 | Per-user setup, Start Menu shortcut, optional desktop shortcut | Release installer; no separate .NET or admin permission needed | [Installation](01-installation-and-first-start.md) |
 | One instance per signed-in session, tray operation, welcome setup | Implemented in the app | [Installation](01-installation-and-first-start.md) |
 | Per-app Bangla mode, pause/resume | Implemented; app modes reset on restart | [Typing](02-typing-and-apps.md) |
-| Avro Phonetic, UniJoy, Kala Goti, Kala Jhor | Four supplied layouts in the manifest and Release copy rules | [Layouts](03-layouts-and-import.md) |
+| Avro Phonetic, Kala Goti, Kala Jhor | Three supplied layouts; UniJoy is retained for research/reference and is not bundled | [Layouts](03-layouts-and-import.md) |
 | Jhor context vowels/repeated vowel-key runs | Implemented in the current fixed-layout engine | [Jhor](layouts/kala-jhor.md) |
 | Unicode input/composition and enabled word corrections in ordinary external fields | Implemented with verified or checked compatibility delivery | [Typing](02-typing-and-apps.md) |
 | Physical and on-screen input | Shared layout/session/correction settings | [On-screen keyboard](04-onscreen-keyboard.md) |
@@ -23,7 +23,7 @@ This table describes the current code's normal Release configuration and recorde
 | Personal words, protections, replacements, shortcuts | Local explicit choices; export/import/reset implemented | [Personal words](06-personal-words.md) |
 | English/Bangla interface, light/dark themes, keyboard sizes | Implemented; Windows contrast themes respected | [Settings](07-settings-privacy-and-support.md) |
 | Local diagnostics and spelling-mark traces | Preview/share manually; no automatic upload | [Support](07-settings-privacy-and-support.md) |
-| Learn setup, Today, Course map, Progress, Results, problem keys, Library, Learning settings | Development module; excluded from normal Release unless explicitly included in a special build | [Learning](08-learning-module.md) |
+| Learn setup, Today, Course map, Progress, Results, problem keys, Library, Learning settings | Included in the standard release with resources and built-in course packs | [Learning](08-learning-module.md) |
 | Shohoj Phonetic | Required model is not supplied for the normal release | [Layouts](03-layouts-and-import.md) |
 | Original-source Avro parser / research and model-training tools | Source/development capability; not a separate selectable normal supplied layout or user-facing training feature | [Implementation reference](reference/implementation-and-evidence.md) |
 
@@ -34,7 +34,7 @@ This table describes the current code's normal Release configuration and recorde
 - Exact Undo and safe earlier-word suggestion acceptance are not available in every field. Current-word composition and enabled word correction remain part of compatibility delivery.
 - Automatic phrase correction, Bijoy/ANSI output, full old-style Avro 4 imports, and a supplied Shohoj model are unavailable.
 - Jhor/Goti have two symbol layers; several rare symbols/joiners have no key. Their current mixed-corpus layouts are best found, not globally proven optimal. Human speed/comfort/learning comparisons remain pending.
-- Learn is excluded from the standard release. Some settings in that development module are stored preferences with incomplete effects.
+- Learn ships with the standard release. Some learning settings are stored preferences with incomplete effects; the learning guide identifies them.
 
 ## How to read future releases
 

@@ -2,6 +2,7 @@
 
 [Guide index](../../USER_GUIDE.md) · [Choosing/importing layouts](../03-layouts-and-import.md) · [Kala Jhor](kala-jhor.md) · [Kala Goti](kala-goti.md)
 
+**Release policy:** UniJoy/UniBijoy is not bundled. The map below is retained for research/comparison and supported user imports. A layout reference does not grant rights to redistribute a third-party layout.
 ## Avro Phonetic: start with Roman spellings
 
 1. Open **Layouts → Avro Phonetic → Use this layout**.
@@ -26,9 +27,9 @@ Kala uses the Avro Phonetic layout and rules to mimic its behavior, with Kala's 
 
 Thank you to [OmicronLab](https://www.omicronlab.com/) and the [Avro Keyboard contributors](https://github.com/omicronlab/Avro-Keyboard). Their project is the source of the Avro layout/rule work acknowledged in Kala's README.
 
-## UniJoy: use fixed keys
+## UniJoy: research and imported-layout reference
 
-1. Choose **UniJoy → Use this layout** on Layouts.
+1. Import a supported UniJoy layout file you are entitled to use, then choose **Use this layout**.
 2. Open Kala's on-screen keyboard to inspect the mapping.
 3. Click an editable field and turn Bangla on.
 4. Press physical keys using the map below; uppercase position labels do not mean hold Shift.

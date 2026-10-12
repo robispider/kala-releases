@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Kala',
-      description: 'Free Bangla input for Windows. Guides, keyboard layouts, and research in English and Bangla.',
+      description: 'Free Bangla typing, plugin-free spellchecking, and autocorrection for Windows. Original layouts, built-in learning, and bilingual guides.',
       defaultLocale: 'en',
       locales: {
         en: { label: 'English', lang: 'en' },

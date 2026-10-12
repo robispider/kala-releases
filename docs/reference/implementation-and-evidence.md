@@ -2,6 +2,7 @@
 
 [Guide index](../../USER_GUIDE.md) · [Feature status](../FEATURES_AND_RELEASES.md) · [Layout research](../layouts/research-and-comparison.md)
 
+**Release decision update, 12 October 2026:** Learn is included in normal Release builds. The product layout manifest supplies Avro Phonetic, Kala Goti, and Kala Jhor; UniJoy/UniBijoy is not bundled. Source paths and tag identity below describe the historical review, while shipping policy follows this later decision. Published older installers are not changed by these documentation edits.
 This appendix makes the documentation's scope reviewable. The application source is planned for future publication; repository-internal source paths below identify the material reviewed and are not links to already-public source files.
 
 ## Source/release identity

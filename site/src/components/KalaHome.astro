@@ -5,148 +5,147 @@ const bn = locale === 'bn';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const href = (route: string) => `${base}/${locale}/${route}/`;
 const layouts = [
-  { name: 'Avro Phonetic', route: 'layouts/avro-unijoy', kind: bn ? 'রোমান হরফে বাংলা' : 'Roman spelling', description: bn ? 'রোমান হরফে বাংলা শব্দের উচ্চারণ লিখুন; কালা বাংলায় রূপান্তর করবে।' : 'Spell words in Roman letters and watch them become Bangla.', recipe: 'ami → আমি' },
-  { name: 'UniJoy', route: 'layouts/avro-unijoy', kind: bn ? 'পরিচিত ফিক্সড লেআউট' : 'Familiar fixed keys', description: bn ? 'অক্ষরের পরিচিত ম্যাপ, পূর্ণ স্বরবর্ণের জন্য হসন্ত + কার পদ্ধতি।' : 'The familiar Bangla key map and hasant + vowel-sign method.', recipe: 'G F M D → আমি' },
-  { name: bn ? 'কালা ঝড়' : 'Kala Jhor', route: 'layouts/kala-jhor', kind: bn ? 'আগের অক্ষর অনুযায়ী স্বরবর্ণ' : 'Context vowels', description: bn ? 'একই অক্ষর চেপে কার বা পূর্ণ স্বরবর্ণ লিখুন; আগের অক্ষর অনুযায়ী আউটপুট বদলাবে।' : 'One vowel key. The current word decides sign or full vowel.', recipe: 'F X L → আমি' },
-  { name: bn ? 'কালা গতি' : 'Kala Goti', route: 'layouts/kala-goti', kind: bn ? 'UniJoy-এর মতো স্বরবর্ণ' : 'UniJoy-style vowels', description: bn ? 'গবেষণায় বেছে নেওয়া অক্ষরের অবস্থান, সঙ্গে পরিচিত হসন্ত + কার পদ্ধতি।' : 'Research-designed key positions, familiar hasant + sign entry.', recipe: 'K F X C → আমি' },
+  { name: bn ? 'কালা ঝড়' : 'Kala Jhor', route: 'layouts/kala-jhor', kind: bn ? 'আগের অক্ষর অনুযায়ী স্বরবর্ণ' : 'CONTEXT VOWELS', description: bn ? 'একই অক্ষর চেপে কার বা পূর্ণ স্বরবর্ণ লিখুন। আগের অক্ষর অনুযায়ী কালা সঠিক রূপটি বেছে নেয়।' : 'One vowel key gives a sign after a consonant and a full vowel elsewhere. Fewer extra steps for vowels.', recipe: 'F X L → আমি' },
+  { name: bn ? 'কালা গতি' : 'Kala Goti', route: 'layouts/kala-goti', kind: bn ? 'হসন্ত + কারে পূর্ণ স্বরবর্ণ' : 'HASANT + SIGN VOWELS', description: bn ? 'গবেষণায় বেছে নেওয়া অক্ষরের অবস্থান। পূর্ণ স্বরবর্ণের জন্য হসন্তের পর কার লিখুন।' : 'Research-designed key positions with a consistent hasant + vowel-sign recipe for full vowels.', recipe: 'K F X C → আমি' },
+  { name: bn ? 'ফোনেটিক টাইপিং' : 'Phonetic typing', route: 'layouts/avro-unijoy', kind: bn ? 'রোমান হরফে বাংলা' : 'A FAMILIAR START', description: bn ? 'রোমান হরফে বাংলা শব্দের উচ্চারণ লিখুন। পরিচিত পদ্ধতিতে শুরু করে চাইলে পরে ফিক্সড লেআউট শিখুন।' : 'Spell Bangla words in Roman letters. Start with what you know and explore fixed layouts when you are ready.', recipe: 'ami → আমি' },
 ];
 const links = [
-  { title: bn ? 'কালা দিয়ে শুরু করুন' : 'Get your first word right', body: bn ? 'ডাউনলোড, ইনস্টল ও অন্য অ্যাপে বাংলা চালু করার ধাপ।' : 'Download, install, and turn Bangla on in another app.', route: 'guide/installation', number: '01' },
-  { title: bn ? 'লেখার সহায়তা বেছে নিন' : 'Choose your writing help', body: bn ? 'অটোকরেকশন, সাজেশন ও বানানের চিহ্ন আলাদাভাবে চালু বা বন্ধ করুন।' : 'Corrections, alternatives, and spelling marks, each with its own control.', route: 'guide/corrections', number: '02' },
-  { title: bn ? 'নিজের শব্দ সংরক্ষণ করুন' : 'Make Kala your own', body: bn ? 'নাম, পছন্দের বানান ও শর্টকাট নিজের কম্পিউটারে রাখুন।' : 'Keep names, preferred spellings, and shortcuts on your computer.', route: 'guide/personal-words', number: '03' },
+  { title: bn ? 'প্রথম শব্দটি লিখুন' : 'Write your first word', body: bn ? 'ইনস্টল করুন, পছন্দের লেআউটটিতে নিজের অ্যাপে বাংলা লিখুন।' : 'Install, choose a layout, and turn Bangla on in your everyday app.', route: 'guide/installation', number: '01' },
+  { title: bn ? 'বানান দেখুন, সংশোধন বেছে নিন' : 'Turn on writing assistance', body: bn ? 'অটোকরেকশন, সাজেশন ও বানানের চিহ্ন নিজের প্রয়োজন অনুযায়ী চালু করুন।' : 'Choose autocorrection, suggestions, and spelling marks to suit your work.', route: 'guide/corrections', number: '02' },
+  { title: bn ? 'নিজের শব্দ ও শর্টকাট রাখুন' : 'Keep your words and shortcuts', body: bn ? 'নাম ও পছন্দের বানান অপরিবর্তিত রাখুন। বারবার লেখা কথার জন্য শর্টকাট সংরক্ষণ করুন।' : 'Protect names and preferred spellings. Save shortcuts for phrases you use often.', route: 'guide/personal-words', number: '03' },
 ];
-const board = evidence.finalRoundedLeaderboard.entries;
-const maximum = Math.max(...board.map((row) => row.average));
+const searchRuns = evidence.finalLayouts.KalaJhor.search.independentRuns;
 ---
 <div class="kala-home">
   <div class="release-note">
     <span class="status-dot" aria-hidden="true"></span>
-    <span>{bn ? 'v0.1.0-alpha.1 · Windows x64 · বিনা মূল্যে ব্যবহার ও বিতরণ' : 'v0.1.0-alpha.1 · Windows x64 · Free to use and distribute'}</span>
-    <a href={href('release-status')}>{bn ? 'রিলিজের অবস্থা' : 'Release status'} <span aria-hidden="true">↗</span></a>
+    <span>{bn ? 'Windows x64 · বিনা মূল্যে ব্যবহার ও বিতরণ' : 'Windows x64 · Free to use and distribute'}</span>
+    <a href={href('release-status')}>{bn ? 'রিলিজের অবস্থা' : 'Release status'} ↗</a>
   </div>
-  <section class="home-section" aria-labelledby="layouts-title">
+  <section class="home-section" aria-labelledby="assistance-title">
     <div class="section-heading">
-      <p class="eyebrow">{bn ? 'আপনার লেখার ধরন' : 'YOUR WAY TO TYPE'}</p>
-      <h2 id="layouts-title">{bn ? 'চারটি লেআউট থেকে আপনার পছন্দ বেছে নিন।' : 'Four layouts. Your choice.'}</h2>
-      <p>{bn ? 'ফিজিক্যাল ও অন-স্ক্রিন কিবোর্ডে একই লেআউট ও সেটিংস ব্যবহার করুন।' : 'Use the same layout and settings on your physical and on-screen keyboards.'}</p>
+      <p class="eyebrow">{bn ? 'একসঙ্গে লেখার তিন সহায়তা' : 'THREE WAYS TO HELP YOU WRITE'}</p>
+      <h2 id="assistance-title">{bn ? 'টাইপ করুন। বানান যাচাই করুন। ভুল সংশোধন করুন।' : 'Type. Spellcheck. Autocorrect.'}</h2>
+      <p>{bn ? 'যে অ্যাপে কাজ করছেন, সেখানেই বাংলা লেখার সহায়তা পান। আলাদা প্লাগইন ইনস্টল করতে হয় না।' : 'Bangla writing assistance in the app you are already using. No separate plugin to install.'}</p>
     </div>
-    <div class="layout-grid">
-      {layouts.map((layout) => <a class="layout-card" href={href(layout.route)}>
-        <span class="layout-kind">{layout.kind}</span>
-        <h3>{layout.name}</h3>
-        <p>{layout.description}</p>
-        <div class="recipe"><code>{layout.recipe}</code><span aria-hidden="true">↗</span></div>
-      </a>)}
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-number">01 / {bn ? 'টাইপিং' : 'TYPE'}</span>
+        <h3>{bn ? 'নিজের অ্যাপেই বাংলা লিখুন' : 'Write where you work'}</h3>
+        <p>{bn ? 'ফোনেটিক বা ফিক্সড লেআউট বেছে নিন। ফিজিক্যাল ও অন-স্ক্রিন কিবোর্ডে একই লেআউট ও সংশোধন সেটিংস ব্যবহার করুন।' : 'Choose phonetic or fixed keys. Your physical and on-screen keyboards share the same layout and correction settings.'}</p>
+        <a class="text-link" href={href('guide/typing')}>{bn ? 'অন্য অ্যাপে লেখার ধাপ' : 'Type in another app'} →</a>
+      </article>
+      <article class="feature-card featured">
+        <span class="feature-number">02 / {bn ? 'স্পেলচেক' : 'SPELLCHECK'}</span>
+        <h3>{bn ? 'লিখতে লিখতেই বানান দেখুন' : 'Catch spelling errors as you type'}</h3>
+        <p>{bn ? 'বানানের চিহ্ন চালু করলে সম্ভাব্য ভুল চোখে পড়ে। সাজেশন থেকে বিকল্প বানান দেখুন এবং উপযুক্তটি বেছে নিন। লেখা অন্য কোথাও কপি করে নেওয়ার প্রয়োজন নেই।' : 'Enable spelling marks to spot likely errors. Review suggestions and choose the spelling you want, without copying your writing to a separate editor.'}</p>
+        <div class="mark-legend"><span class="mark-error">{bn ? 'সম্ভাব্য ভুল' : 'Likely error'}</span><span class="mark-confused">{bn ? 'সঠিক, তবে প্রায়ই গুলিয়ে যায়' : 'Correct, often confused'}</span><span class="mark-corrected">{bn ? 'স্বয়ংক্রিয়ভাবে সংশোধিত' : 'Autocorrected'}</span></div>
+        <a class="text-link" href={href('guide/corrections')}>{bn ? 'স্পেলচেক চালু করার ধাপ' : 'Set up spellchecking'} →</a>
+      </article>
+      <article class="feature-card">
+        <span class="feature-number">03 / {bn ? 'অটোকরেকশন' : 'AUTOCORRECT'}</span>
+        <h3>{bn ? 'পরিচিত ভুলে কম বাধা' : 'Keep common mistakes from slowing you down'}</h3>
+        <p>{bn ? 'Space চাপলে কালা চালু থাকা নিয়ম অনুযায়ী শব্দ সংশোধন করে। বানান নিজে নিয়ন্ত্রণ করতে চাইলে অটোকরেকশন বন্ধ করুন বা ব্যক্তিগত শব্দ সংরক্ষণ করুন।' : 'Finish a word with Space and Kala applies enabled word-correction rules. Turn autocorrection off or protect a personal spelling whenever you prefer.'}</p>
+        <div class="correction-example"><span>{bn ? 'Space চাপলে' : 'At Space'}</span><span>অংশিদার → <strong>অংশীদার</strong></span></div>
+        <a class="text-link" href={href('guide/personal-words')}>{bn ? 'নিজের বানান সংরক্ষণ করুন' : 'Protect your spellings'} →</a>
+      </article>
     </div>
+    <div class="app-strip" aria-label={bn ? 'যেসব অ্যাপে লিখতে পারেন' : 'Everyday writing destinations'}><span>Word</span><span>{bn ? 'ব্রাউজারের এডিটর' : 'Browser editors'}</span><span>Notepad</span><span>Paint</span><span>Photoshop</span><span>{bn ? 'ডেস্কটপ ব্যবসায়িক অ্যাপের ফর্ম' : 'Desktop business forms'}</span></div>
+    <p class="small-note">{bn ? 'সাধারণ সম্পাদনাযোগ্য টেক্সট ফিল্ডে লিখুন; Paint ও Photoshop-এ টেক্সট টুল চালু করুন। বানানের চিহ্ন ও সাজেশন প্রয়োগের সুবিধা অ্যাপের টেক্সট ও কার্সরের তথ্যের ওপর নির্ভর করে।' : 'Use an ordinary editable text field; activate the text tool in Paint or Photoshop. Spelling marks and suggestion replacement depend on the app’s text and caret support.'} <a href={href('release-status')}>{bn ? 'প্রাপ্যতা ও সীমাবদ্ধতা' : 'Availability and limits'} →</a></p>
+  </section>
+  <section class="home-section" aria-labelledby="layouts-title">
+    <div class="section-heading"><p class="eyebrow">{bn ? 'বাংলার জন্য কালার নিজস্ব লেআউট' : 'ORIGINAL LAYOUTS FOR BANGLA'}</p>
+      <h2 id="layouts-title">{bn ? 'ফিক্সড লেআউটে হাতের অভ্যাস গড়ে তুলুন।' : 'Build a rhythm with fixed keys.'}</h2>
+      <p>{bn ? 'প্রতিটি শব্দ রোমান হরফে বানান করে লেখার বদলে সরাসরি বাংলা অক্ষর টাইপ করুন। কালা ঝড় ও কালা গতি তৈরি হয়েছে আঙুলের পরিশ্রম কমানোর লক্ষ্য নিয়ে।' : 'Type Bangla letters directly instead of spelling every word in Roman letters. Kala Jhor and Kala Goti were designed to reduce modeled finger effort.'}</p>
+    </div>
+    <div class="layout-grid">{layouts.map((layout) => <a class="layout-card" href={href(layout.route)}><span class="layout-kind">{layout.kind}</span><h3>{layout.name}</h3><p>{layout.description}</p><div class="recipe"><code>{layout.recipe}</code><span aria-hidden="true">↗</span></div></a>)}</div>
+    <div class="import-note"><div><h3>{bn ? 'নিজের পছন্দের লেআউটও ব্যবহার করুন।' : 'Bring a layout of your own.'}</h3><p>{bn ? 'সমর্থিত ফরম্যাটের লেআউট ইমপোর্ট করুন, অক্ষরের ম্যাপ দেখুন এবং নিজের অ্যাপে লিখে পরীক্ষা করুন। কালার সংশোধন সেটিংস ইমপোর্ট করা লেআউটেও প্রযোজ্য।' : 'Import a layout in a supported format, inspect its keys, and try it in your apps. Kala’s correction settings also apply to imported layouts.'}</p></div><a class="text-link" href={href('guide/layouts')}>{bn ? 'লেআউট ইমপোর্ট' : 'Import a layout'} →</a></div>
     <p class="small-note">{bn ? 'ফিক্সড লেআউটের উদাহরণে ইংরেজি অক্ষরগুলো কিবোর্ডের অবস্থান বোঝায়। Shift উল্লেখ না থাকলে শুধু অক্ষর চাপুন।' : 'Fixed-layout examples name physical key positions. Use unshifted keys unless a recipe says Shift.'}</p>
   </section>
-  <section class="home-section guide-section" aria-labelledby="guide-title">
-    <div class="section-heading">
-      <p class="eyebrow">{bn ? 'ধাপে ধাপে নির্দেশিকা' : 'A GUIDE FOR EVERYDAY USE'}</p>
-      <h2 id="guide-title">{bn ? 'ইনস্টল করুন, নিজের মতো সেটিংস সাজান।' : 'From installation to your own routine.'}</h2>
-    </div>
-    <div class="guide-grid">
-      {links.map((link) => <a class="guide-card" href={href(link.route)}>
-        <span class="guide-number">{link.number}</span>
-        <h3>{link.title}</h3><p>{link.body}</p>
-        <span class="text-link">{bn ? 'ধাপগুলো দেখুন' : 'Follow the steps'} <span aria-hidden="true">→</span></span>
-      </a>)}
-    </div>
-    <a class="all-guides" href={href('guide')}>{bn ? 'সব ফিচার ও মডিউলের নির্দেশিকা' : 'Explore every feature and module'} <span aria-hidden="true">→</span></a>
-  </section>
   <section class="home-section research-section" aria-labelledby="research-title">
-    <div class="research-copy">
-      <p class="eyebrow">BANGLA-DH PURE</p>
-      <h2 id="research-title">{bn ? 'গবেষণায় তৈরি, বাংলা টেক্সটে যাচাই করা।' : 'Designed with a model. Checked against text.'}</h2>
-      <p>{bn ? 'কালা ঝড় ও কালা গতি তৈরিতে আঙুলের পরিশ্রমের নির্দিষ্ট মডেল, বড় বাংলা টেক্সট ডেটাসেট ও কম্পিউটার সার্চ ব্যবহার করা হয়েছে।' : 'Kala Jhor and Kala Goti were built with an explicit finger-effort model, large Bangla corpora, and computer search.'}</p>
-      <div class="research-stats">
-        <div><strong>35.7%</strong><span>{bn ? 'ঝড়: মডেলের হিসাবে UniJoy-এর চেয়ে কম পরিশ্রম' : 'Jhor: lower modeled effort than UniJoy'}</span></div>
-        <div><strong>34.1%</strong><span>{bn ? 'গতি: মডেলের হিসাবে UniJoy-এর চেয়ে কম পরিশ্রম' : 'Goti: lower modeled effort than UniJoy'}</span></div>
-      </div>
-      <a class="text-link" href={href('research')}>{bn ? 'পদ্ধতি, তুলনা ও সীমাবদ্ধতা পড়ুন' : 'Read the method, comparison, and limits'} <span aria-hidden="true">→</span></a>
+    <div><p class="eyebrow">BANGLA-DH PURE</p><h2 id="research-title">{bn ? 'নির্দিষ্ট মডেলে হিসাব করে তৈরি।' : 'Designed with evidence you can inspect.'}</h2>
+      <p class="section-body">{bn ? 'Colemak Mod-DH মডেল থেকে বাংলার জন্য আঙুলের পরিশ্রমের হিসাব তৈরি করা হয়েছে। বড় বাংলা টেক্সট ডেটাসেটে কম্পিউটার সার্চের পর আলাদা রাখা টেক্সটে ফল যাচাই করা হয়েছে। রেকর্ড করা আটটি ফিক্সড লেআউটের তুলনায় ঝড় প্রথম ও গতি দ্বিতীয়।' : 'An explicit finger-effort model builds on Colemak Mod-DH. Computer searches used large Bangla text datasets, then the results were checked on held-out text. Jhor ranks first and Goti second in the recorded eight-layout effort comparison.'}</p>
+      <a class="text-link" href={href('research')}>{bn ? 'পদ্ধতি, ফল ও গাণিতিক প্রমাণের পরিধি পড়ুন' : 'Explore the method, results, and mathematical scope'} →</a>
     </div>
-    <div class="effort-board">
-      <div class="board-heading"><h3>{bn ? 'গড় পরিশ্রম · J1' : 'Average effort · J1'}</h3><span>{bn ? 'কম হলে ভালো' : 'Lower is better'}</span></div>
-      <ol>
-        {board.map((row) => <li class:list={{ 'kala-row': row.kind === 'kala' }}>
-          <div class="bar-label"><span>{bn ? row.nameBn : row.name}</span><strong>{row.average.toFixed(4)}</strong></div>
-          <div class="bar-track" aria-hidden="true"><span style={`width:${row.average / maximum * 100}%`}></span></div>
-        </li>)}
-      </ol>
-      <p>{bn ? 'সার্চে ব্যবহার না করা উইকিপিডিয়া, সংবাদপত্র ও নতুন সংবাদের ফলকে সমান ওজন দিয়ে নেওয়া গড়।' : 'Equal-weight average of recorded held-out Wikipedia, newspaper, and unseen-news results.'}</p>
-    </div>
-    <p class="research-note">{bn ? 'এগুলো মডেলের ফল। মানুষের টাইপিং গতি, স্বাচ্ছন্দ্য ও শেখার সময়ের পরীক্ষা এখনো বাকি। বর্তমান লেআউটগুলো সার্চে পাওয়া সেরা; সব সম্ভাব্য লেআউটের মধ্যে সেরা হওয়ার প্রমাণ নেই।' : 'These are model results. Human speed, comfort, and learning-time trials remain pending. The current layouts are best found, without a global optimality proof.'}</p>
+    <div class="research-facts"><div><strong>{searchRuns}</strong><span>{bn ? 'প্রতি লেআউটের জন্য স্বতন্ত্র সার্চ রান' : 'Independent search runs per layout'}</span></div><div><strong>19,989,555</strong><span>{bn ? 'সার্চে ব্যবহার না করা টেক্সটের চলমান শব্দ দিয়ে মূল্যায়ন' : 'Running word tokens in held-out evaluation text'}</span></div><div><strong>{bn ? '৩টি' : '3'}</strong><span>{bn ? 'আলাদা মূল্যায়ন সেট: উইকিপিডিয়া, সংবাদপত্র ও নতুন সংবাদ' : 'Evaluation sets: Wikipedia, newspaper, and unseen news'}</span></div></div>
+    <p class="research-note">{bn ? 'গাণিতিক সীমা ও নির্দিষ্ট পরিধির প্রমাণ গবেষণার আগের লেআউটগুলোর জন্য আছে। বর্তমান ঝড় ও গতি সার্চে পাওয়া সেরা; সব সম্ভাব্য লেআউটের মধ্যে সেরা হওয়ার প্রমাণ নেই। মডেলে কম পরিশ্রম মানুষের গতি বৃদ্ধির মাপ নয়। গতি, স্বাচ্ছন্দ্য ও শেখার সময়ের পরীক্ষা এখনো বাকি।' : 'Mathematical bounds and scoped proofs exist for earlier research layouts. Current Jhor and Goti are best found, with no global optimality proof. Lower modeled effort is not a measured human speed gain; speed, comfort, and learning-time trials remain pending.'}</p>
   </section>
-  <section class="home-section credit-section" aria-labelledby="credit-title">
-    <div>
-      <p class="eyebrow">{bn ? 'কৃতজ্ঞতা ও অবদান' : 'CREDIT WHERE IT BELONGS'}</p>
-      <h2 id="credit-title">{bn ? 'ধন্যবাদ, OmicronLab।' : 'Thank you, OmicronLab.'}</h2>
-      <p>{bn ? 'কালার Avro Phonetic ফিচারে Avro-এর লেআউট ও নিয়ম ব্যবহার করা হয়েছে, যাতে পরিচিত টাইপিং পদ্ধতি অনুসরণ করা যায়। Avro Keyboard ও Avro Phonetic তৈরি এবং সবার সঙ্গে শেয়ার করার জন্য OmicronLab ও অবদানকারীদের ধন্যবাদ।' : 'Kala’s Avro Phonetic implementation uses Avro’s layout and rules to mimic its typing behavior. Thank you to OmicronLab and the contributors for creating and sharing Avro Keyboard and Avro Phonetic.'}</p>
-      <div class="credit-links"><a href="https://www.omicronlab.com/">OmicronLab ↗</a><a href="https://github.com/omicronlab/Avro-Keyboard">Avro Keyboard ↗</a></div>
+  <section class="home-section learn-section" aria-labelledby="learn-title">
+    <div><p class="eyebrow">{bn ? 'কালার সঙ্গে ফিক্সড লেআউট শিখুন' : 'LEARN WITH KALA'}</p><h2 id="learn-title">{bn ? 'অক্ষর চেনা থেকে সাবলীল টাইপিংয়ের পথে।' : 'From finding the keys to finding your flow.'}</h2>
+      <p class="section-body">{bn ? 'নতুন লেআউটের শুরুতে একা নন। Learn মডিউলে নিজের শুরুর অবস্থান বেছে নিন, ছোট দৈনিক সেশনে অনুশীলন করুন এবং কোন অক্ষরে আরও চর্চা দরকার দেখুন। ফোনেটিক থেকে ফিক্সড লেআউটে যেতে চাইলে ধাপে ধাপে অভ্যাস গড়ে তুলুন।' : 'A new layout comes with a way to learn it. Choose your starting point, practise in short daily sessions, and see which keys need more work. Build the habit step by step as you move from phonetic entry to fixed-layout typing.'}</p>
+      <div class="inline-links"><a href={href('guide/learning')}>{bn ? 'Learn দিয়ে শুরু করুন' : 'Start learning'} →</a><a href={href('layouts/kala-jhor')}>{bn ? 'ঝড়ের অক্ষরের ম্যাপ' : 'Jhor key map'} →</a><a href={href('layouts/kala-goti')}>{bn ? 'গতির অক্ষরের ম্যাপ' : 'Goti key map'} →</a></div>
     </div>
-    <div class="free-note">
-      <h3>{bn ? 'বিনা মূল্যে ব্যবহার করুন।' : 'Free, and on your computer.'}</h3>
-      <p>{bn ? 'কালা বিনা মূল্যে ব্যবহার ও বিতরণ করা যায়। অ্যাপের সোর্স কোড ভবিষ্যতে প্রকাশ করা হবে। ব্যক্তিগত শব্দ ও রিপোর্ট আপনার কম্পিউটারেই থাকে; কালা নিজে থেকে আপলোড করে না।' : 'Kala is free to use and distribute. The application source code will be available in the future. Kala does not automatically upload personal words or app reports.'}</p>
-      <a href={href('guide/settings')}>{bn ? 'গোপনীয়তা ও সহায়তা' : 'Privacy and support'} →</a>
-    </div>
+    <aside class="learn-preview"><span class="layout-kind">{bn ? 'রিলিজের সঙ্গে Learn মডিউল' : 'LEARN INCLUDED IN THE RELEASE'}</span><h3>{bn ? 'দিনে ৫, ১০ বা ১৫ মিনিট।' : '5, 10, or 15 minutes a day.'}</h3>
+      <ul><li>{bn ? 'শুরুর অবস্থান যাচাই বা মৌলিক পাঠ থেকে শুরু' : 'Placement check or a start from the basics'}</li><li>{bn ? 'কোর্স ম্যাপ ও দৈনিক অনুশীলন' : 'Course map and daily practice'}</li><li>{bn ? 'যেসব অক্ষরে সমস্যা হয়, সেগুলোর বিশেষ অনুশীলন' : 'Focused practice for problem keys'}</li><li>{bn ? 'নির্ভুলতা, অগ্রগতি ও উপযুক্ত পরীক্ষায় গতি দেখা' : 'Accuracy, progress, and qualified passage-speed results'}</li></ul>
+      <p>{bn ? 'ফিজিক্যাল ও অন-স্ক্রিন কিবোর্ডের অগ্রগতি আলাদা থাকে। শেখার তথ্য নিজের কম্পিউটারে সংরক্ষিত হয়।' : 'Physical and on-screen progress stay separate. Learning records are stored locally.'}</p>
+    </aside>
+  </section>
+  <section class="home-section guide-section" aria-labelledby="guide-title">
+    <div class="section-heading"><p class="eyebrow">{bn ? 'আজই শুরু করুন' : 'MAKE IT YOUR EVERYDAY KEYBOARD'}</p><h2 id="guide-title">{bn ? 'নিজের মতো বাংলা লেখার ব্যবস্থা সাজান।' : 'Make Kala work your way.'}</h2></div>
+    <div class="guide-grid">{links.map((link) => <a class="guide-card" href={href(link.route)}><span class="guide-number">{link.number}</span><h3>{link.title}</h3><p>{link.body}</p><span class="text-link">{bn ? 'ধাপগুলো দেখুন' : 'Follow the steps'} →</span></a>)}</div>
+    <a class="all-guides" href={href('guide')}>{bn ? 'সব ফিচারের নির্দেশিকা' : 'Explore the complete guide'} →</a>
+  </section>
+  <section class="home-section free-section" aria-labelledby="free-title">
+    <p class="eyebrow">{bn ? 'বিনা মূল্যে, নিজের কম্পিউটারে' : 'FREE TO USE. YOUR WORDS STAY LOCAL.'}</p><h2 id="free-title">{bn ? 'লিখুন, নিজের মতো ব্যবহার করুন, শেয়ার করুন।' : 'Write, make it yours, and share it.'}</h2>
+    <p class="section-body">{bn ? 'কালা ও এর নিজস্ব ঝড় ও গতি লেআউট বিনা মূল্যে ব্যবহার করুন। কালা বিতরণও করা যায়। ব্যক্তিগত শব্দ, শেখার অগ্রগতি ও রিপোর্ট আপনার কম্পিউটারেই থাকে; কালা নিজে থেকে আপলোড করে না। অ্যাপের সোর্স কোড ভবিষ্যতে প্রকাশের পরিকল্পনা আছে।' : 'Use Kala and its original Jhor and Goti layouts for free. Kala is also free to distribute. Personal words, learning progress, and reports stay on your computer; Kala does not upload them automatically. Application source publication is planned for the future.'}</p>
+    <div class="inline-links"><a href="https://github.com/robispider/kala-releases/releases">{bn ? 'কালা ডাউনলোড করুন' : 'Download Kala'} ↓</a><a href={href('guide/settings')}>{bn ? 'গোপনীয়তা ও সেটিংস' : 'Privacy and settings'} →</a></div>
   </section>
 </div>
 <style>
   .kala-home { --home-border: var(--sl-color-gray-5); line-height: 1.7; }
   .kala-home :is(h2,h3,p) { margin: 0; }
   .release-note { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; padding: 1rem 0; border-block: 1px solid var(--home-border); font-size: .83rem; color: var(--sl-color-gray-2); }
-  .release-note a { margin-left: auto; font-weight: 650; color: var(--sl-color-text-accent); }
+  .release-note a { margin-left: auto; font-weight: 650; }
   .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sl-color-accent); }
-  .home-section { padding-block: 3.2rem; }
-  .eyebrow { font-size: .72rem; letter-spacing: .12em; color: var(--sl-color-text-accent); font-weight: 750; margin-bottom: .65rem !important; }
+  .home-section { padding-block: 3.2rem; border-bottom: 1px solid var(--home-border); }
+  .eyebrow { font-size: .72rem; letter-spacing: .1em; color: var(--sl-color-text-accent); font-weight: 750; margin-bottom: .65rem !important; }
   h2 { font-size: clamp(1.65rem,3vw,2.2rem); line-height: 1.3; letter-spacing: -.035em; color: var(--sl-color-white); }
-  .section-heading > p:last-child { margin-top: .8rem; color: var(--sl-color-gray-2); }
-  .layout-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: .8rem; margin-top: 1.7rem; }
-  .layout-card, .guide-card { text-decoration: none; color: var(--sl-color-text); border: 1px solid var(--home-border); border-radius: 16px; padding: 1.2rem; display: flex; flex-direction: column; transition: border-color .15s, background .15s; }
+  h3 { font-size: 1.15rem; line-height: 1.45; }
+  .section-heading > p:last-child, .section-body { margin-top: .8rem !important; color: var(--sl-color-gray-2); }
+  .section-body { margin-bottom: 1.3rem !important; }
+  .feature-grid, .layout-grid, .guide-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; margin-top: 1.7rem; }
+  .feature-grid > *, .layout-grid > *, .guide-grid > * { margin-top: 0 !important; }
+  .feature-card, .layout-card, .guide-card { border: 1px solid var(--home-border); border-radius: 16px; padding: 1.3rem; display: flex; flex-direction: column; min-width: 0; }
+  .feature-card { background: var(--sl-color-gray-6); }
+  .feature-card.featured { border-color: var(--sl-color-accent); background: var(--sl-color-accent-low); }
+  .feature-number, .guide-number { font-size: .75rem; font-weight: 750; color: var(--sl-color-text-accent); margin-bottom: 1rem; }
+  .feature-card p, .layout-card p, .guide-card p { margin-top: .7rem; font-size: .9rem; color: var(--sl-color-gray-2); flex: 1; }
+  .text-link { font-size: .86rem; font-weight: 650; color: var(--sl-color-text-accent); }
+  .feature-card > .text-link, .guide-card .text-link { margin-top: 1.3rem; }
+  .mark-legend { display: flex; flex-wrap: wrap; gap: .65rem 1rem; margin-top: 1.2rem; font-size: .72rem; }
+  .mark-error { text-decoration: underline wavy #d04444 2px; text-underline-offset: 5px; }
+  .mark-confused { text-decoration: underline dotted #268eaa 2px; text-underline-offset: 5px; }
+  .mark-corrected { background: #c5e8a3; color: #21351d; border-radius: 3px; padding-inline: .25rem; }
+  .correction-example { display: flex; flex-wrap: wrap; gap: .35rem .7rem; margin-top: 1.2rem; font-size: .8rem; }
+  .correction-example > span:first-child { color: var(--sl-color-gray-2); }
+  .correction-example strong { color: var(--sl-color-text-accent); }
+  .app-strip { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
+  .app-strip span { padding: .35rem .8rem; border: 1px solid var(--home-border); border-radius: 999px; font-size: .8rem; }
+  .small-note { font-size: .8rem; color: var(--sl-color-gray-2); margin-top: 1rem !important; }
+  .layout-card, .guide-card { text-decoration: none; color: var(--sl-color-text); transition: border-color .15s, background .15s; }
   .layout-card:hover, .guide-card:hover { border-color: var(--sl-color-accent); background: var(--sl-color-accent-low); }
   .layout-kind { font-size: .72rem; color: var(--sl-color-gray-2); }
-  .layout-card h3 { margin-block: .65rem .7rem; font-size: 1.15rem; letter-spacing: -.025em; }
-  .layout-card p { font-size: .86rem; color: var(--sl-color-gray-2); flex: 1; }
+  .layout-card h3 { margin-top: .6rem; }
   .recipe { margin-top: 1.5rem; display: flex; align-items: center; gap: .35rem; font-size: .78rem; }
   .recipe code { padding: .25rem .4rem; border-radius: 6px; background: var(--sl-color-gray-6); font-family: var(--sl-font); }
   .recipe > span { margin-left: auto; }
-  .small-note { font-size: .78rem; color: var(--sl-color-gray-3); margin-top: .85rem !important; }
-  .guide-section { border-top: 1px solid var(--home-border); }
-  .guide-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1.7rem; }
-  .guide-number { font-size: .85rem; font-weight: 750; color: var(--sl-color-text-accent); margin-bottom: 1rem; }
-  .guide-card h3 { font-size: 1.1rem; margin-bottom: .65rem; }
-  .guide-card p { font-size: .88rem; flex: 1; color: var(--sl-color-gray-2); }
-  .text-link { font-size: .86rem; font-weight: 650; color: var(--sl-color-text-accent); }
-  .guide-card .text-link { margin-top: 1.2rem; }
-  .all-guides { display: inline-block; margin-top: 1.2rem; font-size: .9rem; font-weight: 650; }
-  .research-section { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-top: 1px solid var(--home-border); }
-  .research-copy > p:not(.eyebrow) { margin-block: 1rem; color: var(--sl-color-gray-2); }
-  .research-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-block: 1.8rem; }
-  .research-stats strong { display: block; font-size: clamp(2rem,4vw,2.8rem); letter-spacing: -.055em; color: var(--sl-color-text-accent); }
-  .research-stats span { display: block; max-width: 22ch; font-size: .8rem; color: var(--sl-color-gray-2); }
-  .effort-board { border: 1px solid var(--home-border); border-radius: 16px; padding: 1.3rem; background: var(--sl-color-gray-6); }
-  .board-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .4rem; }
-  .board-heading h3 { font-size: .95rem; }
-  .board-heading > span { font-size: .7rem; color: var(--sl-color-gray-2); }
-  .effort-board ol { list-style: none; padding: 0; margin: 1.1rem 0; }
-  .effort-board li + li { margin-top: .65rem; }
-  .bar-label { display: flex; justify-content: space-between; align-items: baseline; font-size: .75rem; gap: .6rem; }
-  .bar-label strong { font-variant-numeric: tabular-nums; font-size: .72rem; }
-  .bar-track { margin-top: .2rem; height: 5px; background: var(--sl-color-gray-5); border-radius: 5px; }
-  .bar-track > span { display: block; height: 100%; background: var(--sl-color-gray-3); border-radius: inherit; }
-  .kala-row .bar-track > span { background: var(--sl-color-accent); }
-  .kala-row .bar-label { color: var(--sl-color-text-accent); font-weight: 700; }
-  .effort-board p { font-size: .7rem; color: var(--sl-color-gray-2); }
+  .import-note { display: flex; align-items: center; gap: 1.5rem; margin-top: 1rem; border: 1px dashed var(--home-border); border-radius: 16px; padding: 1.3rem; }
+  .import-note p { margin-top: .5rem; font-size: .9rem; color: var(--sl-color-gray-2); }
+  .import-note a { flex-shrink: 0; }
+  .research-section, .learn-section { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; }
+  .research-facts, .learn-preview { border: 1px solid var(--home-border); border-radius: 16px; padding: 1.5rem; background: var(--sl-color-gray-6); }
+  .research-facts > div + div { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--home-border); }
+  .research-facts strong { display: block; font-size: clamp(1.8rem,3vw,2.4rem); letter-spacing: -.04em; color: var(--sl-color-text-accent); }
+  .research-facts span { display: block; font-size: .83rem; color: var(--sl-color-gray-2); }
   .research-note { grid-column: 1 / -1; padding: 1rem; border-left: 3px solid var(--sl-color-accent); border-radius: 0 8px 8px 0; background: var(--sl-color-gray-6); color: var(--sl-color-gray-2); font-size: .82rem; }
-  .credit-section { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.2rem; border-top: 1px solid var(--home-border); }
-  .credit-section p:not(.eyebrow) { font-size: .9rem; color: var(--sl-color-gray-2); margin-top: .9rem; }
-  .credit-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; font-size: .85rem; }
-  .free-note { background: var(--sl-color-gray-6); border-radius: 16px; padding: 1.5rem; }
-  .free-note h3 { font-size: 1.15rem; }
-  .free-note a { display: inline-block; margin-top: 1rem; font-size: .85rem; font-weight: 650; }
+  .learn-preview h3 { margin-top: .7rem; }
+  .learn-preview ul { padding-left: 1.3rem; font-size: .9rem; }
+  .learn-preview p { margin-top: .8rem; font-size: .85rem; color: var(--sl-color-gray-2); }
+  .inline-links { display: flex; flex-wrap: wrap; gap: .7rem 1.5rem; font-size: .9rem; font-weight: 650; }
+  .all-guides { display: inline-block; margin-top: 1.2rem; font-size: .9rem; font-weight: 650; }
+  .free-section { padding: 2rem; margin-top: 2rem; border: 1px solid var(--home-border); border-radius: 16px; background: var(--sl-color-gray-6); }
   :global(html[lang='bn']) :is(h2,h3) { letter-spacing: 0; line-height: 1.5; }
-  @media (max-width: 70rem) { .layout-grid { grid-template-columns: repeat(2,1fr); } }
-  @media (max-width: 45rem) { .research-section, .credit-section { grid-template-columns: 1fr; } .guide-grid { grid-template-columns: 1fr; } .home-section { padding-block: 2rem; } .release-note a { margin-left: 0; } }
-  @media (max-width: 26rem) { .layout-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 55rem) { .feature-grid, .layout-grid, .guide-grid, .research-section, .learn-section { grid-template-columns: 1fr; } .import-note { align-items: flex-start; flex-direction: column; gap: .8rem; } }
+  @media (max-width: 45rem) { .home-section { padding-block: 2rem; } .release-note a { margin-left: 0; } .free-section { padding: 1.3rem; } }
   @media (prefers-reduced-motion: reduce) { .layout-card, .guide-card { transition: none; } }
 </style>
