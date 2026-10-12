@@ -1,85 +1,50 @@
 # Kala User Guide
 
-Kala helps you type Bangla in Windows apps. It runs in the background and is available from its icon near the clock.
+Kala lets you type Unicode Bangla in Windows applications with your physical keyboard or Kala's on-screen keyboard. It is free to use and distribute. Its source code will be made available in the future.
 
-## Download and install
+This guide describes the current implementation reviewed on **12 October 2026**, at the application source tag **v0.1.0-alpha.1**. The public release is an **alpha pre-release**. Feature availability follows the normal Release configuration; the learning module has a separate availability note. Recorded research results are identified as such, rather than presented as new live app tests.
 
-1. Open the [Kala releases page](https://github.com/robispider/kala-releases/releases).
-2. Open the release you want and download its setup `.exe` from the **Assets** list. The current file is `KalaSetup-v0.1.0-alpha.1.exe`; **v0.1.0-alpha.1** is a pre-release.
-3. Run the downloaded file. The installer is unsigned, so Windows may show a SmartScreen warning. Only use a setup file downloaded from the official Kala releases page.
-4. Follow the wizard. The default install location is `%LOCALAPPDATA%\Programs\Kala`. A Start Menu shortcut is created; creating a desktop shortcut is optional.
-5. When setup finishes, choose **Open Kala** to start.
+## Start here
 
-The setup is for 64-bit Windows, installs only for your Windows account, and does not need administrator permission or a separate .NET runtime. Close Kala before installing an update. Your settings and personal words are kept when you update.
+1. Download the setup executable from [Kala releases](https://github.com/robispider/kala-releases/releases). For v0.1.0-alpha.1, it is `KalaSetup-v0.1.0-alpha.1.exe`.
+2. Run setup normally and choose **Open Kala** when installation finishes.
+3. Follow the welcome steps. Choose Avro Phonetic for Roman spelling, UniJoy for its familiar fixed keys, or one of Kala's research layouts: Kala Goti or Kala Jhor.
+4. Click an editable field in the app where you want to write.
+5. Press **Ctrl + Alt + V**, the default shortcut, to turn Bangla on for that app.
+6. Type, then press the shortcut again when you want ordinary input.
 
-## First time using Kala
+Kala remembers each app's on/off choice until Kala restarts. Closing Kala's main window leaves it running near the clock. Right-click its tray icon and choose **Exit Kala** to stop it.
 
-When Kala opens for the first time, follow its welcome steps and choose a layout:
+## Read by feature
 
-- **Avro Phonetic** — type Bangla using familiar Roman spellings.
-- **UniJoy** — type using the UniJoy key arrangement.
+| Guide | What you will learn |
+| --- | --- |
+| [1. Installation and first start](docs/01-installation-and-first-start.md) | Download, install, complete the welcome steps, update, and uninstall |
+| [2. Everyday typing and external apps](docs/02-typing-and-apps.md) | Turn Bangla on, use the tray, pause Kala, type in documents and text tools, and recover from an incomplete edit |
+| [3. Layouts and importing](docs/03-layouts-and-import.md) | Choose among four supplied layouts; import, replace, export, and remove layouts |
+| [4. On-screen keyboard](docs/04-onscreen-keyboard.md) | Select a destination, use modifiers, switch layouts, and understand disabled keys |
+| [5. Corrections, suggestions, and spelling marks](docs/05-corrections-suggestions-and-marks.md) | Configure automatic help, choose alternatives, undo a correction, and read spelling marks |
+| [6. Personal words and shortcuts](docs/06-personal-words.md) | Protect names, save replacements, expand shortcuts, back up choices, and delete personal learning |
+| [7. Settings, privacy, and support](docs/07-settings-privacy-and-support.md) | Change appearance and startup behavior, understand local storage, troubleshoot, and share diagnostics |
+| [8. Learning module — availability and use](docs/08-learning-module.md) | Use setup, daily practice, the course map, problem-key practice, progress, and course packs when Learn is included in your build |
 
-Try the layout in Kala's practice field, then choose **Start using Kala**. The default shortcut is **Ctrl + Alt + V**. You can choose **Ctrl + Alt + B** instead in Settings.
+For the default layouts, read the [Avro Phonetic tutorial and complete UniJoy key reference](docs/layouts/avro-phonetic-and-unijoy.md).
 
-## Type in another app
+## Kala's research layouts
 
-1. Open the app where you want to write and click the text field.
-2. Press **Ctrl + Alt + V** (or your selected shortcut) to turn Bangla typing on in that app.
-3. Type with your selected layout. Press the shortcut again to turn Bangla off for that app.
+| Layout | Main difference | Recorded result |
+| --- | --- | --- |
+| [Kala Jhor / Kala ঝড়](docs/layouts/kala-jhor.md) | A vowel key produces a sign after a consonant and a full vowel elsewhere | Lowest average modeled effort in the eight-layout comparison; **35.7% lower than UniJoy** |
+| [Kala Goti / Kala গতি](docs/layouts/kala-goti.md) | Vowel signs have fixed keys; hasant + sign produces the full vowel, as in UniJoy | Second-lowest average modeled effort; **34.1% lower than UniJoy** |
 
-Kala remembers each app's Bangla on/off choice while it is running. After restarting Kala, Bangla starts off in each app. Your layout, shortcut, and correction settings remain saved.
+These percentages measure the research model's effort on held-out text. They are not measured typing-speed gains. Read [how the layouts were built, tested, and compared](docs/layouts/research-and-comparison.md) for the method, complete results, and scientific scope.
 
-With Avro Phonetic, for example, typing `bangla` produces Bangla text. With UniJoy or another fixed layout, the output follows that layout's key map. You can change the active layout from Kala's window or tray menu.
+## Feature and release status
 
-## Tray menu and pausing
+[Features and release availability](docs/FEATURES_AND_RELEASES.md) distinguishes supplied features, optional assistance, the development learning module, and work still pending. [Implementation and evidence reference](docs/reference/implementation-and-evidence.md) identifies the source snapshot and recorded results behind this guide.
 
-Right-click Kala's tray icon to see its status and open the main window, settings, personal words, or on-screen keyboard. The icon indicates whether Bangla is on for the current app or Kala is paused.
+## Credit and feedback
 
-Choose **Pause Kala** when you want ordinary keyboard input in every app without Kala processing keys. Choose **Resume Kala** to continue. Closing Kala's main window leaves Kala running in the tray. Choose **Exit Kala** from the tray menu to stop it completely.
+Kala's Avro Phonetic implementation uses Avro Phonetic's layout and rules to mimic its typing behavior. Thank you to [OmicronLab](https://www.omicronlab.com/) and the Avro Keyboard contributors. The [Avro Keyboard repository](https://github.com/omicronlab/Avro-Keyboard) contains their original project.
 
-## On-screen keyboard
-
-Open **On-screen keyboard** from the Kala window or tray menu. Click the destination text field first, then use the on-screen keys. The keyboard follows the selected layout and shares its typing and correction settings with the physical keyboard. Shift and Caps change key mappings; the window can be moved by dragging its title bar.
-
-## Corrections and personal words
-
-Automatic corrections are controlled in **Settings**. When enabled, Kala can correct supported single-word mistakes when you press Space. You can turn automatic corrections off while continuing to use Kala for Bangla input. Suggestions and other optional help can also be changed in Settings.
-
-Use **Personal words** to save words or shortcuts that should be handled according to your preferences. Personal words and settings are stored under `%LOCALAPPDATA%\Kala` and are kept when Kala is updated or uninstalled.
-
-## Layouts
-
-Choose a supplied layout in Kala's Settings or tray menu. To add a layout, open **Layouts → Import layout…**, select a supported Kala `.json` or Avro `.avrolayout` file, review it, and import it. The imported layout is saved on your computer and does not change the original file. Kala's importer supports specified modern Unicode layouts; it does not support Avro 4 format, Bijoy/ANSI output, or layouts that require a separate trained model.
-
-## Settings
-
-Open **Settings** to change the layout, mode shortcut, correction options, interface language, light/dark theme, on-screen keyboard size, and whether Kala starts when you sign in to Windows. Changes are saved for your Windows account.
-
-## Troubleshooting
-
-**Bangla does not appear in an app**
-
-- Click inside an editable text field before using the shortcut.
-- Check that Kala is not paused and that Bangla is on for that app.
-- Confirm the selected layout in Kala's window or tray menu.
-- Try another ordinary text field. Password, read-only, disabled, or protected fields may not accept Kala's input.
-
-**Kala says “Typing needs attention”**
-
-Check the text at the insertion point because an edit may have been incomplete. Fix the text if needed, then toggle Bangla off and on or pause and resume Kala to clear the notice. Kala does not automatically replay an uncertain edit.
-
-**Windows shows a security warning**
-
-The current installer is unsigned. Check that you downloaded the Kala setup `.exe` from the official [Kala releases page](https://github.com/robispider/kala-releases/releases). Do not run a file from an unknown source.
-
-As an alpha release, Kala may have issues in some apps. When reporting a problem on the [Issues page](https://github.com/robispider/kala-releases/issues), include the Kala version, Windows version, app name, what you expected, and what happened. Leave out passwords and private text.
-
-## Update or uninstall
-
-To update, download the setup `.exe` from a newer release, close Kala, and run setup. The installer updates the current per-user installation and keeps your settings and personal words.
-
-To uninstall, use **Settings → Apps → Installed apps** in Windows and uninstall Kala. Your settings and personal words remain under `%LOCALAPPDATA%\Kala`. To remove them too, delete that folder after uninstalling, if you no longer need the data.
-
-## Free to use
-
-Kala is free to use and share. Its source code is planned to be made available in the future. The source code is not included in this releases repository at this time.
+Report issues through [Kala's public Issues page](https://github.com/robispider/kala-releases/issues). Include the version, app, layout, and steps that reproduce the problem. Use a short public example instead of private document text.

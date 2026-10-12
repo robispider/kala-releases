@@ -1,0 +1,1455 @@
+{
+  "schema": "kala-public-documentation-evidence-v1",
+  "reviewedDate": "2026-10-12",
+  "sourceTag": "v0.1.0-alpha.1",
+  "sourceCommit": "df967fbe9ac038cf7dabff0cb9c1f5a455dbc76b",
+  "scope": "Source/configuration review and existing research records; no fresh evaluation, binary audit, live app validation, or human typing study.",
+  "finalLayouts": {
+    "KalaJhor": {
+      "style": "D",
+      "version": "1.0",
+      "classification": "best found on mixed objective; not re-certified",
+      "scores": {
+        "metric": "J1: modelled finger effort per typed character (lower is better)",
+        "rank": 1,
+        "score": 100.0,
+        "average": 1.8,
+        "effortIndex": 64.3,
+        "lessEffortThanUniJoyPercent": 35.7,
+        "heldout": {
+          "wikipedia": {
+            "J1": 1.8348,
+            "keyEffort": 1.5116,
+            "keyPairPenalty": 0.0354,
+            "shift": 0.2878,
+            "keystrokesPerCharacter": 1.002
+          },
+          "newspaper": {
+            "J1": 1.7822,
+            "keyEffort": 1.475,
+            "keyPairPenalty": 0.0391,
+            "shift": 0.2681,
+            "keystrokesPerCharacter": 1.0026
+          },
+          "unseenNews": {
+            "J1": 1.783,
+            "keyEffort": 1.4818,
+            "keyPairPenalty": 0.0386,
+            "shift": 0.2626,
+            "keystrokesPerCharacter": 1.0026
+          }
+        }
+      },
+      "search": {
+        "method": "simulated annealing, steepest descent and iterated local search",
+        "independentRuns": 512,
+        "movesPerRun": 1000000,
+        "candidateLayoutsScored": 512000000,
+        "localSearchIterationsPerRun": 1000,
+        "polishAndConfirmationRuns": 9,
+        "runsReachingThisLayout": 24,
+        "cpuHours": 7.8
+      },
+      "mixedTrainingJ1": 1.8087958948695024,
+      "fullPrecisionRecordedScores": {
+        "bnwiki/train": {
+          "J1": 1.8350547252590803,
+          "J0": 1.547176503038852,
+          "E1": 1.5118575892980177,
+          "E2": 0.03531891374083433,
+          "M": 0.2878782222202282
+        },
+        "newspaper/train": {
+          "J1": 1.7825370644799248,
+          "J0": 1.5146197892891988,
+          "E1": 1.4753352340316934,
+          "E2": 0.039284555257505446,
+          "M": 0.267917275190726
+        },
+        "bnwiki/heldout": {
+          "J1": 1.8348230650448565,
+          "J0": 1.5470552672223616,
+          "E1": 1.511629884173118,
+          "E2": 0.03542538304924376,
+          "M": 0.2877677978224949
+        },
+        "newspaper/heldout": {
+          "J1": 1.7822231857586552,
+          "J0": 1.5141367516190125,
+          "E1": 1.4750212241449245,
+          "E2": 0.03911552747408789,
+          "M": 0.26808643413964284
+        },
+        "bard-novel/heldout": {
+          "J1": 1.7830314132595748,
+          "J0": 1.5204333522460243,
+          "E1": 1.481814860533085,
+          "E2": 0.03861849171293924,
+          "M": 0.2625980610135505
+        }
+      }
+    },
+    "KalaGoti": {
+      "style": "A",
+      "version": "1.0",
+      "classification": "best found on mixed objective; not re-certified",
+      "scores": {
+        "metric": "J1: modelled finger effort per typed character (lower is better)",
+        "rank": 2,
+        "score": 97.7,
+        "average": 1.8432,
+        "effortIndex": 65.9,
+        "lessEffortThanUniJoyPercent": 34.1,
+        "heldout": {
+          "wikipedia": {
+            "J1": 1.8689,
+            "keyEffort": 1.541,
+            "keyPairPenalty": 0.0313,
+            "shift": 0.2967,
+            "keystrokesPerCharacter": 1.0385
+          },
+          "newspaper": {
+            "J1": 1.83,
+            "keyEffort": 1.5225,
+            "keyPairPenalty": 0.0406,
+            "shift": 0.2669,
+            "keystrokesPerCharacter": 1.0423
+          },
+          "unseenNews": {
+            "J1": 1.8308,
+            "keyEffort": 1.5291,
+            "keyPairPenalty": 0.0403,
+            "shift": 0.2613,
+            "keystrokesPerCharacter": 1.0421
+          }
+        }
+      },
+      "search": {
+        "method": "simulated annealing, steepest descent and iterated local search",
+        "independentRuns": 512,
+        "movesPerRun": 1000000,
+        "candidateLayoutsScored": 512000000,
+        "localSearchIterationsPerRun": 1000,
+        "polishAndConfirmationRuns": 9,
+        "runsReachingThisLayout": 36,
+        "cpuHours": 7.3
+      },
+      "mixedTrainingJ1": 1.8496860307151324,
+      "fullPrecisionRecordedScores": {
+        "bnwiki/train": {
+          "J1": 1.8690209593105476,
+          "J0": 1.572109688543701,
+          "E1": 1.5409782412969317,
+          "E2": 0.03113144724676911,
+          "M": 0.29691127076684665
+        },
+        "newspaper/train": {
+          "J1": 1.8303511021197174,
+          "J0": 1.5638217226842999,
+          "E1": 1.5229984828025318,
+          "E2": 0.04082323988176806,
+          "M": 0.2665293794354176
+        },
+        "bnwiki/heldout": {
+          "J1": 1.8689183637981814,
+          "J0": 1.5722590745574876,
+          "E1": 1.5410053786708493,
+          "E2": 0.03125369588663822,
+          "M": 0.29665928924069385
+        },
+        "newspaper/heldout": {
+          "J1": 1.8300175794817153,
+          "J0": 1.5631474135662204,
+          "E1": 1.5225370388649686,
+          "E2": 0.040610374701251756,
+          "M": 0.2668701659154948
+        },
+        "bard-novel/heldout": {
+          "J1": 1.8307517389541572,
+          "J0": 1.5694220946016442,
+          "E1": 1.529075115421699,
+          "E2": 0.04034697917994522,
+          "M": 0.2613296443525131
+        }
+      }
+    }
+  },
+  "model": "Colemak Mod-DH effort model (key effort, same-finger and neighbour bigram penalties) with a Shift cost, J1 (RESEARCH_SPEC section 6.6); model-optimal ANSI fingering; space on the thumb",
+  "trainingWeights": {
+    "bnwiki/train": 0.5,
+    "newspaper/train": 0.5
+  },
+  "training": [
+    {
+      "name": "bnwiki/train",
+      "label": "Bangla Wikipedia articles",
+      "labelBn": "বাংলা উইকিপিডিয়ার নিবন্ধ",
+      "articles": 171685,
+      "words": 58136180,
+      "typedCharacters": 390391661
+    },
+    {
+      "name": "newspaper/train",
+      "label": "Prothom Alo newspaper articles (many sections)",
+      "labelBn": "প্রথম আলো সংবাদপত্রের লেখা (নানা বিভাগ)",
+      "articles": 386205,
+      "words": 110175696,
+      "typedCharacters": 717543857
+    }
+  ],
+  "heldout": [
+    {
+      "name": "bnwiki/heldout",
+      "label": "Bangla Wikipedia articles",
+      "labelBn": "বাংলা উইকিপিডিয়ার নিবন্ধ",
+      "articles": 19063,
+      "words": 6604805,
+      "typedCharacters": 44388875
+    },
+    {
+      "name": "newspaper/heldout",
+      "label": "Prothom Alo newspaper articles (many sections)",
+      "labelBn": "প্রথম আলো সংবাদপত্রের লেখা (নানা বিভাগ)",
+      "articles": 43022,
+      "words": 12286444,
+      "typedCharacters": 80039818
+    },
+    {
+      "name": "bard-novel/heldout",
+      "label": "BARD news articles that share no sentence with the newspaper set (never used in the search)",
+      "labelBn": "BARD সংবাদ-নিবন্ধ, সংবাদপত্রের সংগ্রহের সঙ্গে কোনো বাক্য মেলে না (অনুসন্ধানে কখনো ব্যবহৃত হয়নি)",
+      "articles": 5131,
+      "words": 1098306,
+      "typedCharacters": 7209251
+    }
+  ],
+  "finalRoundedLeaderboard": {
+    "metric": "average held-out J1 (Wikipedia, newspaper, unseen news); lower is better",
+    "note": "Only fixed layouts are compared (phonetic layouts such as Avro Phonetic are not). Market layouts are the fixed layouts installed in Kala when the research ran.",
+    "entries": [
+      {
+        "rank": 1,
+        "name": "Kala Jhor",
+        "nameBn": "Kala ঝড়",
+        "kind": "kala",
+        "developer": "Kala — Bangla-DH Pure research",
+        "score": 100.0,
+        "average": 1.8,
+        "effortIndex": 64.3,
+        "lessEffortThanUniJoyPercent": 35.7,
+        "j1": {
+          "wikipedia": 1.8348,
+          "newspaper": 1.7822,
+          "unseenNews": 1.783
+        },
+        "fingering": "model-optimal (Colemak Mod-DH)"
+      },
+      {
+        "rank": 2,
+        "name": "Kala Goti",
+        "nameBn": "Kala গতি",
+        "kind": "kala",
+        "developer": "Kala — Bangla-DH Pure research",
+        "score": 97.7,
+        "average": 1.8432,
+        "effortIndex": 65.9,
+        "lessEffortThanUniJoyPercent": 34.1,
+        "j1": {
+          "wikipedia": 1.8689,
+          "newspaper": 1.83,
+          "unseenNews": 1.8308
+        },
+        "fingering": "model-optimal (Colemak Mod-DH)"
+      },
+      {
+        "rank": 3,
+        "name": "Windows Default",
+        "nameBn": "Windows Default",
+        "kind": "market",
+        "developer": "BrownVinci",
+        "score": 83.7,
+        "average": 2.1498,
+        "effortIndex": 76.8,
+        "lessEffortThanUniJoyPercent": 23.2,
+        "j1": {
+          "wikipedia": 2.1435,
+          "newspaper": 2.151,
+          "unseenNews": 2.1549
+        },
+        "fingering": "best of model-optimal and traditional fingering"
+      },
+      {
+        "rank": 4,
+        "name": "Probhat",
+        "nameBn": "Probhat",
+        "kind": "market",
+        "developer": "Shabab Mustafa",
+        "score": 70.4,
+        "average": 2.5553,
+        "effortIndex": 91.3,
+        "lessEffortThanUniJoyPercent": 8.7,
+        "j1": {
+          "wikipedia": 2.6022,
+          "newspaper": 2.5337,
+          "unseenNews": 2.5299
+        },
+        "fingering": "best of model-optimal and traditional fingering"
+      },
+      {
+        "rank": 5,
+        "name": "Munir Optima (uni)",
+        "nameBn": "Munir Optima (uni)",
+        "kind": "market",
+        "developer": "Shabab Mustafa",
+        "score": 69.6,
+        "average": 2.5855,
+        "effortIndex": 92.4,
+        "lessEffortThanUniJoyPercent": 7.6,
+        "j1": {
+          "wikipedia": 2.5898,
+          "newspaper": 2.5783,
+          "unseenNews": 2.5885
+        },
+        "fingering": "best of model-optimal and traditional fingering"
+      },
+      {
+        "rank": 6,
+        "name": "Bornona",
+        "nameBn": "Bornona",
+        "kind": "market",
+        "developer": "The Safeworks",
+        "score": 68.9,
+        "average": 2.6119,
+        "effortIndex": 93.4,
+        "lessEffortThanUniJoyPercent": 6.6,
+        "j1": {
+          "wikipedia": 2.6534,
+          "newspaper": 2.5923,
+          "unseenNews": 2.59
+        },
+        "fingering": "best of model-optimal and traditional fingering"
+      },
+      {
+        "rank": 7,
+        "name": "UniJoy",
+        "nameBn": "UniJoy",
+        "kind": "market",
+        "developer": "Kala's built-in UniJoy (Kala's Bijoy file has the same keys)",
+        "score": 64.3,
+        "average": 2.7974,
+        "effortIndex": 100.0,
+        "lessEffortThanUniJoyPercent": 0.0,
+        "j1": {
+          "wikipedia": 2.7976,
+          "newspaper": 2.7948,
+          "unseenNews": 2.7998
+        },
+        "fingering": "best of model-optimal and traditional fingering"
+      },
+      {
+        "rank": 8,
+        "name": "National (Jatiya)",
+        "nameBn": "National (Jatiya)",
+        "kind": "market",
+        "developer": "Bangladesh Computer Council (BCC)",
+        "score": 62.8,
+        "average": 2.8657,
+        "effortIndex": 102.4,
+        "lessEffortThanUniJoyPercent": -2.4,
+        "j1": {
+          "wikipedia": 2.8913,
+          "newspaper": 2.8503,
+          "unseenNews": 2.8554
+        },
+        "fingering": "best of model-optimal and traditional fingering"
+      }
+    ]
+  },
+  "benchmarkVariants": [
+    {
+      "name": "UniJoy",
+      "normalizedLayoutSha256": "f594f330e5c5c4d17c23769a370b5f064bc37b2d754291dfa27c8dbb73960ee4",
+      "kind": "kala",
+      "recordedScores": {
+        "bnwiki/heldout": {
+          "unrounded": {
+            "J0": 2.174183382904136,
+            "E1": 1.771842098066421,
+            "E2": 0.40234128483771525,
+            "E2_same_finger": 0.4043414481669112,
+            "E2_neighbour_penalty": 0.005202618899445553,
+            "E2_neighbour_benefit": -0.007202782228641492,
+            "M": 0.6342443247743514,
+            "J1": 2.8084277076784874,
+            "keystrokes_excluding_space": 37988613,
+            "keystrokes_per_non_space_unit": 1.0020114022985014,
+            "escaped_characters": 184672,
+            "escaped_units": 2962,
+            "escaped_share": 6.672843139187466E-05
+          },
+          "traditional_unrounded": {
+            "J0": 2.194263185484566,
+            "E1": 1.8686575669596017,
+            "E2": 0.3256056185249642,
+            "E2_same_finger": 0.33450761029649884,
+            "E2_neighbour_penalty": 0.007428471660975229,
+            "E2_neighbour_benefit": -0.01633046343250981,
+            "M": 0.6402582476766157,
+            "J1": 2.834521433161181,
+            "keystrokes_excluding_space": 37988613,
+            "keystrokes_per_non_space_unit": 1.0020114022985014,
+            "escaped_characters": 184672,
+            "escaped_units": 2962,
+            "escaped_share": 6.672843139187466E-05
+          },
+          "one_decimal": {
+            "J0": 2.164800853817834,
+            "E1": 1.7624595689801184,
+            "E2": 0.40234128483771525,
+            "E2_same_finger": 0.4043414481669112,
+            "E2_neighbour_penalty": 0.005202618899445553,
+            "E2_neighbour_benefit": -0.007202782228641492,
+            "M": 0.6328411702272227,
+            "J1": 2.7976420240450564,
+            "keystrokes_excluding_space": 37988613,
+            "keystrokes_per_non_space_unit": 1.0020114022985014,
+            "escaped_characters": 184672,
+            "escaped_units": 2962,
+            "escaped_share": 6.672843139187466E-05
+          }
+        },
+        "newspaper/heldout": {
+          "one_decimal": {
+            "J0": 2.169745712065436,
+            "E1": 1.750128055013758,
+            "E2": 0.41961765705167847,
+            "E2_same_finger": 0.4225381297093904,
+            "E2_neighbour_penalty": 0.004756495073490455,
+            "E2_neighbour_benefit": -0.007676967731202434,
+            "M": 0.6250995735656332,
+            "J1": 2.7948452856310695,
+            "keystrokes_excluding_space": 68751760,
+            "keystrokes_per_non_space_unit": 1.0140913942734493,
+            "escaped_characters": 74071,
+            "escaped_units": 14654,
+            "escaped_share": 0.0001830838745785254
+          },
+          "traditional_unrounded": {
+            "J0": 2.208465420651812,
+            "E1": 1.8567077779745347,
+            "E2": 0.3517576426772773,
+            "E2_same_finger": 0.36149352563495335,
+            "E2_neighbour_penalty": 0.006902879264414007,
+            "E2_neighbour_benefit": -0.01663876222209005,
+            "M": 0.6306766882348175,
+            "J1": 2.8391421088866293,
+            "keystrokes_excluding_space": 68751760,
+            "keystrokes_per_non_space_unit": 1.0140913942734493,
+            "escaped_characters": 74071,
+            "escaped_units": 14654,
+            "escaped_share": 0.0001830838745785254
+          },
+          "unrounded": {
+            "J0": 2.179122536108948,
+            "E1": 1.7595048790572696,
+            "E2": 0.41961765705167847,
+            "E2_same_finger": 0.4225381297093904,
+            "E2_neighbour_penalty": 0.004756495073490455,
+            "E2_neighbour_benefit": -0.007676967731202434,
+            "M": 0.6264844648348356,
+            "J1": 2.8056070009437835,
+            "keystrokes_excluding_space": 68751760,
+            "keystrokes_per_non_space_unit": 1.0140913942734493,
+            "escaped_characters": 74071,
+            "escaped_units": 14654,
+            "escaped_share": 0.0001830838745785254
+          }
+        },
+        "bard-novel/heldout": {
+          "unrounded": {
+            "J0": 2.1847663135722755,
+            "E1": 1.763988357582114,
+            "E2": 0.42077795599016143,
+            "E2_same_finger": 0.4236777163119997,
+            "E2_neighbour_penalty": 0.004904143301432383,
+            "E2_neighbour_benefit": -0.007803903623270634,
+            "M": 0.6258572967619777,
+            "J1": 2.810623610334253,
+            "keystrokes_excluding_space": 6205317,
+            "keystrokes_per_non_space_unit": 1.0133235854570264,
+            "escaped_characters": 1924,
+            "escaped_units": 957,
+            "escaped_share": 0.0001327461063569572
+          },
+          "one_decimal": {
+            "J0": 2.1753029406244906,
+            "E1": 1.7545249846343294,
+            "E2": 0.42077795599016143,
+            "E2_same_finger": 0.4236777163119997,
+            "E2_neighbour_penalty": 0.004904143301432383,
+            "E2_neighbour_benefit": -0.007803903623270634,
+            "M": 0.6244754690879131,
+            "J1": 2.7997784097124034,
+            "keystrokes_excluding_space": 6205317,
+            "keystrokes_per_non_space_unit": 1.0133235854570264,
+            "escaped_characters": 1924,
+            "escaped_units": 957,
+            "escaped_share": 0.0001327461063569572
+          },
+          "traditional_unrounded": {
+            "J0": 2.2147678134940785,
+            "E1": 1.8611933714334568,
+            "E2": 0.3535744420606219,
+            "E2_same_finger": 0.3636248758712937,
+            "E2_neighbour_penalty": 0.006860088516823104,
+            "E2_neighbour_benefit": -0.01691052232749495,
+            "M": 0.6299698437733392,
+            "J1": 2.8447376572674177,
+            "keystrokes_excluding_space": 6205317,
+            "keystrokes_per_non_space_unit": 1.0133235854570264,
+            "escaped_characters": 1924,
+            "escaped_units": 957,
+            "escaped_share": 0.0001327461063569572
+          }
+        }
+      }
+    },
+    {
+      "name": "National (Jatiya)",
+      "normalizedLayoutSha256": "e603d73981343c1087e8e2a956542ee6afcd9d5279cbafa9ea1fca7c4941e1f0",
+      "kind": "avro-fixed",
+      "recordedScores": {
+        "bnwiki/heldout": {
+          "one_decimal": {
+            "J0": 2.362592120210817,
+            "E1": 1.8549449811472403,
+            "E2": 0.5076471390635767,
+            "E2_same_finger": 0.5143616953572263,
+            "E2_neighbour_penalty": 0.0034947134839554816,
+            "E2_neighbour_benefit": -0.010209269777605012,
+            "M": 0.5639119441545752,
+            "J1": 2.9265040643653926,
+            "keystrokes_excluding_space": 38001087,
+            "keystrokes_per_non_space_unit": 1.0023404243197125,
+            "escaped_characters": 211845,
+            "escaped_units": 30185,
+            "escaped_share": 0.0006800127284144957
+          },
+          "traditional_unrounded": {
+            "J0": 2.3199020503555876,
+            "E1": 1.9434577723692077,
+            "E2": 0.37644427798637975,
+            "E2_same_finger": 0.39010084170864884,
+            "E2_neighbour_penalty": 0.005291089265050825,
+            "E2_neighbour_benefit": -0.018947652987319936,
+            "M": 0.5713897140464762,
+            "J1": 2.8912917644020637,
+            "keystrokes_excluding_space": 38001087,
+            "keystrokes_per_non_space_unit": 1.0023404243197125,
+            "escaped_characters": 211845,
+            "escaped_units": 30185,
+            "escaped_share": 0.0006800127284144957
+          },
+          "unrounded": {
+            "J0": 2.3726113870396968,
+            "E1": 1.8649607651214632,
+            "E2": 0.5076506219182335,
+            "E2_same_finger": 0.5143651534308991,
+            "E2_neighbour_penalty": 0.003494708978322032,
+            "E2_neighbour_benefit": -0.010209240490987592,
+            "M": 0.5651702220223253,
+            "J1": 2.937781609062022,
+            "keystrokes_excluding_space": 38001087,
+            "keystrokes_per_non_space_unit": 1.0023404243197125,
+            "escaped_characters": 211845,
+            "escaped_units": 30185,
+            "escaped_share": 0.0006800127284144957
+          }
+        },
+        "newspaper/heldout": {
+          "unrounded": {
+            "J0": 2.341272534487925,
+            "E1": 1.8465620067852935,
+            "E2": 0.4947105277026315,
+            "E2_same_finger": 0.5015056755876182,
+            "E2_neighbour_penalty": 0.0034488134393305604,
+            "E2_neighbour_benefit": -0.010243961324317234,
+            "M": 0.5555928940841333,
+            "J1": 2.8968654285720583,
+            "keystrokes_excluding_space": 67990995,
+            "keystrokes_per_non_space_unit": 1.002870078054571,
+            "escaped_characters": 117480,
+            "escaped_units": 58621,
+            "escaped_share": 0.0007323979672217646
+          },
+          "traditional_unrounded": {
+            "J0": 2.2904475290090924,
+            "E1": 1.9310801313970802,
+            "E2": 0.3593673976120123,
+            "E2_same_finger": 0.37251847574166147,
+            "E2_neighbour_penalty": 0.005590166384434903,
+            "E2_neighbour_benefit": -0.018741244514084023,
+            "M": 0.5598627036792267,
+            "J1": 2.850310232688319,
+            "keystrokes_excluding_space": 67990995,
+            "keystrokes_per_non_space_unit": 1.002870078054571,
+            "escaped_characters": 117480,
+            "escaped_units": 58621,
+            "escaped_share": 0.0007323979672217646
+          },
+          "one_decimal": {
+            "J0": 2.331511108633403,
+            "E1": 1.836816018247233,
+            "E2": 0.4946950903861698,
+            "E2_same_finger": 0.501490258261207,
+            "E2_neighbour_penalty": 0.0034487946986582613,
+            "E2_neighbour_benefit": -0.010243962573695385,
+            "M": 0.5543575423931363,
+            "J1": 2.8858686510265392,
+            "keystrokes_excluding_space": 67990995,
+            "keystrokes_per_non_space_unit": 1.002870078054571,
+            "escaped_characters": 117480,
+            "escaped_units": 58621,
+            "escaped_share": 0.0007323979672217646
+          }
+        },
+        "bard-novel/heldout": {
+          "traditional_unrounded": {
+            "J0": 2.2958786465181937,
+            "E1": 1.9363586492258358,
+            "E2": 0.35951999729235806,
+            "E2_same_finger": 0.3728225719981174,
+            "E2_neighbour_penalty": 0.005626340378493211,
+            "E2_neighbour_benefit": -0.018928915084252547,
+            "M": 0.5595083407366616,
+            "J1": 2.8553869872548554,
+            "keystrokes_excluding_space": 6138740,
+            "keystrokes_per_non_space_unit": 1.002451611575761,
+            "escaped_characters": 5949,
+            "escaped_units": 4998,
+            "escaped_share": 0.000693275903419093
+          },
+          "unrounded": {
+            "J0": 2.3485684479837134,
+            "E1": 1.852010206357784,
+            "E2": 0.49655824162592954,
+            "E2_same_finger": 0.5032562328596966,
+            "E2_neighbour_penalty": 0.0035936326811203045,
+            "E2_neighbour_benefit": -0.010291623914887336,
+            "M": 0.5553302687916133,
+            "J1": 2.903898716775327,
+            "keystrokes_excluding_space": 6138740,
+            "keystrokes_per_non_space_unit": 1.002451611575761,
+            "escaped_characters": 5949,
+            "escaped_units": 4998,
+            "escaped_share": 0.000693275903419093
+          },
+          "one_decimal": {
+            "J0": 2.338713522389467,
+            "E1": 1.8421670711700584,
+            "E2": 0.49654645121940877,
+            "E2_same_finger": 0.5032445118085083,
+            "E2_neighbour_penalty": 0.0035936326811203045,
+            "E2_neighbour_benefit": -0.01029169327021981,
+            "M": 0.5540971593305621,
+            "J1": 2.892810681720029,
+            "keystrokes_excluding_space": 6138740,
+            "keystrokes_per_non_space_unit": 1.002451611575761,
+            "escaped_characters": 5949,
+            "escaped_units": 4998,
+            "escaped_share": 0.000693275903419093
+          }
+        }
+      }
+    },
+    {
+      "name": "Bornona",
+      "normalizedLayoutSha256": "58ca3340c6fef7e711fffe112fc59b11e0ce84e6635212c556d47198ed07d0dc",
+      "kind": "avro-fixed",
+      "recordedScores": {
+        "bnwiki/heldout": {
+          "traditional_unrounded": {
+            "J0": 2.094207601154137,
+            "E1": 1.8275346701551431,
+            "E2": 0.26667293099899386,
+            "E2_same_finger": 0.2585632436055205,
+            "E2_neighbour_penalty": 0.017603102128590672,
+            "E2_neighbour_benefit": -0.009493414735117335,
+            "M": 0.620286175967518,
+            "J1": 2.714493777121655,
+            "keystrokes_excluding_space": 36598541,
+            "keystrokes_per_non_space_unit": 0.9653459943243833,
+            "escaped_characters": 186499,
+            "escaped_units": 4833,
+            "escaped_share": 0.00010887863231496631
+          },
+          "one_decimal": {
+            "J0": 2.0569441307084566,
+            "E1": 1.794451307900984,
+            "E2": 0.2624928228074726,
+            "E2_same_finger": 0.25222841308773875,
+            "E2_neighbour_penalty": 0.019793973152018838,
+            "E2_neighbour_benefit": -0.009529563432284989,
+            "M": 0.5964881380768341,
+            "J1": 2.6534322687852905,
+            "keystrokes_excluding_space": 36598541,
+            "keystrokes_per_non_space_unit": 0.9653459943243833,
+            "escaped_characters": 186499,
+            "escaped_units": 4833,
+            "escaped_share": 0.00010887863231496631
+          },
+          "unrounded": {
+            "J0": 2.062062003337994,
+            "E1": 1.800102602474646,
+            "E2": 0.26195940086334807,
+            "E2_same_finger": 0.25168247674670735,
+            "E2_neighbour_penalty": 0.01979103773182627,
+            "E2_neighbour_benefit": -0.009514113615185544,
+            "M": 0.5978523754784605,
+            "J1": 2.6599143788164543,
+            "keystrokes_excluding_space": 36598541,
+            "keystrokes_per_non_space_unit": 0.9653459943243833,
+            "escaped_characters": 186499,
+            "escaped_units": 4833,
+            "escaped_share": 0.00010887863231496631
+          }
+        },
+        "newspaper/heldout": {
+          "unrounded": {
+            "J0": 2.0229007862830723,
+            "E1": 1.7724211874913718,
+            "E2": 0.2504795987917006,
+            "E2_same_finger": 0.23812236804436512,
+            "E2_neighbour_penalty": 0.021875766883905717,
+            "E2_neighbour_benefit": -0.009518536136570244,
+            "M": 0.5763746036259064,
+            "J1": 2.599275389908979,
+            "keystrokes_excluding_space": 66049514,
+            "keystrokes_per_non_space_unit": 0.9742331504436208,
+            "escaped_characters": 75793,
+            "escaped_units": 16377,
+            "escaped_share": 0.00020461066015917226
+          },
+          "one_decimal": {
+            "J0": 2.0171981650433017,
+            "E1": 1.7665473377263188,
+            "E2": 0.25065082731698296,
+            "E2_same_finger": 0.23832890899377107,
+            "E2_neighbour_penalty": 0.021877743400144173,
+            "E2_neighbour_benefit": -0.009555825076932332,
+            "M": 0.5750592248968721,
+            "J1": 2.592257389940174,
+            "keystrokes_excluding_space": 66049514,
+            "keystrokes_per_non_space_unit": 0.9742331504436208,
+            "escaped_characters": 75793,
+            "escaped_units": 16377,
+            "escaped_share": 0.00020461066015917226
+          },
+          "traditional_unrounded": {
+            "J0": 2.0684914243998023,
+            "E1": 1.799303257330248,
+            "E2": 0.269188167069554,
+            "E2_same_finger": 0.25974579302516654,
+            "E2_neighbour_penalty": 0.019004162403245258,
+            "E2_neighbour_benefit": -0.009561788358857773,
+            "M": 0.6010642640807652,
+            "J1": 2.6695556884805676,
+            "keystrokes_excluding_space": 66049514,
+            "keystrokes_per_non_space_unit": 0.9742331504436208,
+            "escaped_characters": 75793,
+            "escaped_units": 16377,
+            "escaped_share": 0.00020461066015917226
+          }
+        },
+        "bard-novel/heldout": {
+          "traditional_unrounded": {
+            "J0": 2.071601361544673,
+            "E1": 1.8021198439778665,
+            "E2": 0.2694815175668066,
+            "E2_same_finger": 0.26030297738280994,
+            "E2_neighbour_penalty": 0.018785502127754056,
+            "E2_neighbour_benefit": -0.00960696194375736,
+            "M": 0.5978717453670219,
+            "J1": 2.669473106911695,
+            "keystrokes_excluding_space": 5962023,
+            "keystrokes_per_non_space_unit": 0.973593858772607,
+            "escaped_characters": 2297,
+            "escaped_units": 1330,
+            "escaped_share": 0.00018448518438323204
+          },
+          "unrounded": {
+            "J0": 2.0242985602834893,
+            "E1": 1.7755448270593182,
+            "E2": 0.24875373322417108,
+            "E2_same_finger": 0.2367268805039525,
+            "E2_neighbour_penalty": 0.02159623794484071,
+            "E2_neighbour_benefit": -0.009569385224622121,
+            "M": 0.5726933834357113,
+            "J1": 2.5969919437192006,
+            "keystrokes_excluding_space": 5962023,
+            "keystrokes_per_non_space_unit": 0.973593858772607,
+            "escaped_characters": 2297,
+            "escaped_units": 1330,
+            "escaped_share": 0.00018448518438323204
+          },
+          "one_decimal": {
+            "J0": 2.0185825129407013,
+            "E1": 1.7696498984430111,
+            "E2": 0.24893261449769005,
+            "E2_same_finger": 0.2369326577754055,
+            "E2_neighbour_penalty": 0.021598915060674233,
+            "E2_neighbour_benefit": -0.009598958338389706,
+            "M": 0.5713865420970343,
+            "J1": 2.5899690550377357,
+            "keystrokes_excluding_space": 5962023,
+            "keystrokes_per_non_space_unit": 0.973593858772607,
+            "escaped_characters": 2297,
+            "escaped_units": 1330,
+            "escaped_share": 0.00018448518438323204
+          }
+        }
+      }
+    },
+    {
+      "name": "Probhat",
+      "normalizedLayoutSha256": "77061f3a5a898a3206ea19519d4e22668b3419cfdd6b01bec39e5a1d06fa4402",
+      "kind": "avro-fixed",
+      "recordedScores": {
+        "bnwiki/heldout": {
+          "one_decimal": {
+            "J0": 2.2381111280701997,
+            "E1": 2.0114777385103295,
+            "E2": 0.22663338955987,
+            "E2_same_finger": 0.18871818670781812,
+            "E2_neighbour_penalty": 0.04112780285600326,
+            "E2_neighbour_benefit": -0.0032126000039513643,
+            "M": 0.3640564916326517,
+            "J1": 2.6021676197028514,
+            "keystrokes_excluding_space": 37916654,
+            "keystrokes_per_non_space_unit": 1.0001133667345812,
+            "escaped_characters": 216707,
+            "escaped_units": 4248,
+            "escaped_share": 9.569965447423482E-05
+          },
+          "unrounded": {
+            "J0": 2.243382945210206,
+            "E1": 2.0167364172231963,
+            "E2": 0.22664652798700965,
+            "E2_same_finger": 0.18862510032074478,
+            "E2_neighbour_penalty": 0.04123400964768246,
+            "E2_neighbour_benefit": -0.0032125819814175656,
+            "M": 0.36486930173474885,
+            "J1": 2.608252246944955,
+            "keystrokes_excluding_space": 37916654,
+            "keystrokes_per_non_space_unit": 1.0001133667345812,
+            "escaped_characters": 216707,
+            "escaped_units": 4248,
+            "escaped_share": 9.569965447423482E-05
+          },
+          "traditional_unrounded": {
+            "J0": 2.3098161916500626,
+            "E1": 2.067976802839259,
+            "E2": 0.24183938881080347,
+            "E2_same_finger": 0.21555522639400074,
+            "E2_neighbour_penalty": 0.029402250000691466,
+            "E2_neighbour_benefit": -0.0031180875838887254,
+            "M": 0.3731092034949586,
+            "J1": 2.682925395145021,
+            "keystrokes_excluding_space": 37916654,
+            "keystrokes_per_non_space_unit": 1.0001133667345812,
+            "escaped_characters": 216707,
+            "escaped_units": 4248,
+            "escaped_share": 9.569965447423482E-05
+          }
+        },
+        "newspaper/heldout": {
+          "unrounded": {
+            "J0": 2.201101796054876,
+            "E1": 1.9873776868870854,
+            "E2": 0.21372410916779103,
+            "E2_same_finger": 0.17466815704153651,
+            "E2_neighbour_penalty": 0.042223865376637235,
+            "E2_neighbour_benefit": -0.0031679132503827055,
+            "M": 0.3388810260859911,
+            "J1": 2.539982822140867,
+            "keystrokes_excluding_space": 67783112,
+            "keystrokes_per_non_space_unit": 0.9998037949322807,
+            "escaped_characters": 138693,
+            "escaped_units": 16109,
+            "escaped_share": 0.00020126232670843904
+          },
+          "one_decimal": {
+            "J0": 2.1956127324028585,
+            "E1": 1.981887909840142,
+            "E2": 0.21372482256271647,
+            "E2_same_finger": 0.17494866742450613,
+            "E2_neighbour_penalty": 0.041944083381130905,
+            "E2_neighbour_benefit": -0.003167928242920545,
+            "M": 0.33813134857564014,
+            "J1": 2.5337440809784986,
+            "keystrokes_excluding_space": 67783112,
+            "keystrokes_per_non_space_unit": 0.9998037949322807,
+            "escaped_characters": 138693,
+            "escaped_units": 16109,
+            "escaped_share": 0.00020126232670843904
+          },
+          "traditional_unrounded": {
+            "J0": 2.270094171670279,
+            "E1": 2.036792547970906,
+            "E2": 0.2333016236993728,
+            "E2_same_finger": 0.20532660381611562,
+            "E2_neighbour_penalty": 0.031115400587276278,
+            "E2_neighbour_benefit": -0.0031403807040190843,
+            "M": 0.34593722800813026,
+            "J1": 2.6160313996784095,
+            "keystrokes_excluding_space": 67783112,
+            "keystrokes_per_non_space_unit": 0.9998037949322807,
+            "escaped_characters": 138693,
+            "escaped_units": 16109,
+            "escaped_share": 0.00020126232670843904
+          }
+        },
+        "bard-novel/heldout": {
+          "unrounded": {
+            "J0": 2.206593460331601,
+            "E1": 1.9925155207509142,
+            "E2": 0.21407793958068697,
+            "E2_same_finger": 0.17461245280543014,
+            "E2_neighbour_penalty": 0.042705934361281526,
+            "E2_neighbour_benefit": -0.0032404475860247166,
+            "M": 0.32958516481046907,
+            "J1": 2.53617862514207,
+            "keystrokes_excluding_space": 6122429,
+            "keystrokes_per_non_space_unit": 0.9997880375790756,
+            "escaped_characters": 5694,
+            "escaped_units": 1322,
+            "escaped_share": 0.00018337549906363365
+          },
+          "one_decimal": {
+            "J0": 2.2010004506710086,
+            "E1": 1.987004142316644,
+            "E2": 0.21399630835436434,
+            "E2_same_finger": 0.17486199329167482,
+            "E2_neighbour_penalty": 0.042374776519780735,
+            "E2_neighbour_benefit": -0.003240461457091212,
+            "M": 0.32885484220200634,
+            "J1": 2.529855292873015,
+            "keystrokes_excluding_space": 6122429,
+            "keystrokes_per_non_space_unit": 0.9997880375790756,
+            "escaped_characters": 5694,
+            "escaped_units": 1322,
+            "escaped_share": 0.00018337549906363365
+          },
+          "traditional_unrounded": {
+            "J0": 2.2768694436129233,
+            "E1": 2.04210411223522,
+            "E2": 0.23476533137770336,
+            "E2_same_finger": 0.20652873648039166,
+            "E2_neighbour_penalty": 0.03144039512565672,
+            "E2_neighbour_benefit": -0.003203800228345028,
+            "M": 0.3364979703057363,
+            "J1": 2.6133674139186596,
+            "keystrokes_excluding_space": 6122429,
+            "keystrokes_per_non_space_unit": 0.9997880375790756,
+            "escaped_characters": 5694,
+            "escaped_units": 1322,
+            "escaped_share": 0.00018337549906363365
+          }
+        }
+      }
+    },
+    {
+      "name": "Windows Default",
+      "normalizedLayoutSha256": "c75738148814614a781af86a18f9c65235e8f897e5812d4ee36acfc03dd19fad",
+      "kind": "avro-fixed",
+      "recordedScores": {
+        "bnwiki/heldout": {
+          "unrounded": {
+            "J0": 1.7433923510988714,
+            "E1": 1.5893174911255246,
+            "E2": 0.15407485997334683,
+            "E2_same_finger": 0.1518404217272909,
+            "E2_neighbour_penalty": 0.006309328632455605,
+            "E2_neighbour_benefit": -0.00407489038639967,
+            "M": 0.40405430944053694,
+            "J1": 2.1474466605394085,
+            "keystrokes_excluding_space": 35633925,
+            "keystrokes_per_non_space_unit": 0.9399026797490507,
+            "escaped_characters": 1492526,
+            "escaped_units": 1310865,
+            "escaped_share": 0.029531385961009373
+          },
+          "traditional_unrounded": {
+            "J0": 1.805872311432234,
+            "E1": 1.6267033620051663,
+            "E2": 0.17916894942706765,
+            "E2_same_finger": 0.176575110317619,
+            "E2_neighbour_penalty": 0.007103155914630577,
+            "E2_neighbour_benefit": -0.004509316805181896,
+            "M": 0.4040225324481253,
+            "J1": 2.209894843880359,
+            "keystrokes_excluding_space": 35633925,
+            "keystrokes_per_non_space_unit": 0.9399026797490507,
+            "escaped_characters": 1492526,
+            "escaped_units": 1310865,
+            "escaped_share": 0.029531385961009373
+          },
+          "one_decimal": {
+            "J0": 1.7404593876287864,
+            "E1": 1.585696546714269,
+            "E2": 0.15476284091451734,
+            "E2_same_finger": 0.15252268727243032,
+            "E2_neighbour_penalty": 0.006315041775669968,
+            "E2_neighbour_benefit": -0.004074888133582945,
+            "M": 0.40308998594998385,
+            "J1": 2.1435493735787703,
+            "keystrokes_excluding_space": 35633925,
+            "keystrokes_per_non_space_unit": 0.9399026797490507,
+            "escaped_characters": 1492526,
+            "escaped_units": 1310865,
+            "escaped_share": 0.029531385961009373
+          }
+        },
+        "newspaper/heldout": {
+          "unrounded": {
+            "J0": 1.7665880092141928,
+            "E1": 1.5946218385764621,
+            "E2": 0.1719661706377307,
+            "E2_same_finger": 0.17039678925806653,
+            "E2_neighbour_penalty": 0.005141855769836965,
+            "E2_neighbour_benefit": -0.0035724743901727972,
+            "M": 0.3885156847599259,
+            "J1": 2.1551036939741186,
+            "keystrokes_excluding_space": 64725577,
+            "keystrokes_per_non_space_unit": 0.9547050231889846,
+            "escaped_characters": 1975862,
+            "escaped_units": 1910064,
+            "escaped_share": 0.023863922329258668
+          },
+          "one_decimal": {
+            "J0": 1.763456747240634,
+            "E1": 1.5909616023865951,
+            "E2": 0.17249514485403888,
+            "E2_same_finger": 0.1709228586701684,
+            "E2_neighbour_penalty": 0.005144203351386932,
+            "E2_neighbour_benefit": -0.003571917167516456,
+            "M": 0.387585041736306,
+            "J1": 2.15104178897694,
+            "keystrokes_excluding_space": 64725577,
+            "keystrokes_per_non_space_unit": 0.9547050231889846,
+            "escaped_characters": 1975862,
+            "escaped_units": 1910064,
+            "escaped_share": 0.023863922329258668
+          },
+          "traditional_unrounded": {
+            "J0": 1.8211139935556084,
+            "E1": 1.6284998649227718,
+            "E2": 0.19261412863283672,
+            "E2_same_finger": 0.19015137565655135,
+            "E2_neighbour_penalty": 0.006692080434264384,
+            "E2_neighbour_benefit": -0.004229327457979022,
+            "M": 0.3884767528145263,
+            "J1": 2.209590746370135,
+            "keystrokes_excluding_space": 64725577,
+            "keystrokes_per_non_space_unit": 0.9547050231889846,
+            "escaped_characters": 1975862,
+            "escaped_units": 1910064,
+            "escaped_share": 0.023863922329258668
+          }
+        },
+        "bard-novel/heldout": {
+          "unrounded": {
+            "J0": 1.7720885940525308,
+            "E1": 1.598297488707467,
+            "E2": 0.17379110534506384,
+            "E2_same_finger": 0.17246257620937322,
+            "E2_neighbour_penalty": 0.004928154117535463,
+            "E2_neighbour_benefit": -0.0035996249818448464,
+            "M": 0.38687747008424983,
+            "J1": 2.1589660641367807,
+            "keystrokes_excluding_space": 5842967,
+            "keystrokes_per_non_space_unit": 0.9541521037760174,
+            "escaped_characters": 172602,
+            "escaped_units": 171222,
+            "escaped_share": 0.023750317474034405
+          },
+          "one_decimal": {
+            "J0": 1.7689422798567722,
+            "E1": 1.5945686174610523,
+            "E2": 0.17437366239572,
+            "E2_same_finger": 0.17304543842349226,
+            "E2_neighbour_penalty": 0.004927307982479272,
+            "E2_neighbour_benefit": -0.003599084010251542,
+            "M": 0.3859509538506169,
+            "J1": 2.154893233707389,
+            "keystrokes_excluding_space": 5842967,
+            "keystrokes_per_non_space_unit": 0.9541521037760174,
+            "escaped_characters": 172602,
+            "escaped_units": 171222,
+            "escaped_share": 0.023750317474034405
+          },
+          "traditional_unrounded": {
+            "J0": 1.8252102404149426,
+            "E1": 1.6325204172973944,
+            "E2": 0.1926898231175482,
+            "E2_same_finger": 0.19053775489298402,
+            "E2_neighbour_penalty": 0.006428989641225824,
+            "E2_neighbour_benefit": -0.004276921416661637,
+            "M": 0.3868256783594223,
+            "J1": 2.212035918774365,
+            "keystrokes_excluding_space": 5842967,
+            "keystrokes_per_non_space_unit": 0.9541521037760174,
+            "escaped_characters": 172602,
+            "escaped_units": 171222,
+            "escaped_share": 0.023750317474034405
+          }
+        }
+      }
+    },
+    {
+      "name": "Munir Optima (uni)",
+      "normalizedLayoutSha256": "ba54b7063707c7e1bd02237bf8006d8fdb204ed90628edc33c348cac958567f7",
+      "kind": "avro-fixed",
+      "recordedScores": {
+        "bnwiki/heldout": {
+          "one_decimal": {
+            "J0": 2.150370397988025,
+            "E1": 1.8299255072355594,
+            "E2": 0.3204448907524656,
+            "E2_same_finger": 0.3044594844992129,
+            "E2_neighbour_penalty": 0.024137741720187882,
+            "E2_neighbour_benefit": -0.008152335466935163,
+            "M": 0.4393942018151043,
+            "J1": 2.589764599803129,
+            "keystrokes_excluding_space": 36260569,
+            "keystrokes_per_non_space_unit": 0.9564314335938394,
+            "escaped_characters": 260119,
+            "escaped_units": 73818,
+            "escaped_share": 0.001662984249995072
+          },
+          "unrounded": {
+            "J0": 2.1506049050715057,
+            "E1": 1.8311040751901495,
+            "E2": 0.31950082988135603,
+            "E2_same_finger": 0.30361948799107885,
+            "E2_neighbour_penalty": 0.024063585752052304,
+            "E2_neighbour_benefit": -0.008182243861775155,
+            "M": 0.44040867192784744,
+            "J1": 2.591013576999353,
+            "keystrokes_excluding_space": 36260569,
+            "keystrokes_per_non_space_unit": 0.9564314335938394,
+            "escaped_characters": 260119,
+            "escaped_units": 73818,
+            "escaped_share": 0.001662984249995072
+          },
+          "traditional_unrounded": {
+            "J0": 2.148827481066841,
+            "E1": 1.8919144414820115,
+            "E2": 0.25691303958482953,
+            "E2_same_finger": 0.23698036951826332,
+            "E2_neighbour_penalty": 0.028186202060790626,
+            "E2_neighbour_benefit": -0.008253531994224432,
+            "M": 0.4432683884358133,
+            "J1": 2.5920958695026544,
+            "keystrokes_excluding_space": 36260569,
+            "keystrokes_per_non_space_unit": 0.9564314335938394,
+            "escaped_characters": 260119,
+            "escaped_units": 73818,
+            "escaped_share": 0.001662984249995072
+          }
+        },
+        "newspaper/heldout": {
+          "unrounded": {
+            "J0": 2.192950484308413,
+            "E1": 1.849387234326946,
+            "E2": 0.3435632499814671,
+            "E2_same_finger": 0.32475228142072987,
+            "E2_neighbour_penalty": 0.026874164056729103,
+            "E2_neighbour_benefit": -0.008063195495991904,
+            "M": 0.3882279449275869,
+            "J1": 2.581178429236,
+            "keystrokes_excluding_space": 65479167,
+            "keystrokes_per_non_space_unit": 0.9658205078516394,
+            "escaped_characters": 120602,
+            "escaped_units": 57848,
+            "escaped_share": 0.000722740274097075
+          },
+          "traditional_unrounded": {
+            "J0": 2.186887674696517,
+            "E1": 1.9097958277359615,
+            "E2": 0.2770918469605554,
+            "E2_same_finger": 0.2550012357599314,
+            "E2_neighbour_penalty": 0.030815418645806263,
+            "E2_neighbour_benefit": -0.008724807445182291,
+            "M": 0.3913686105704727,
+            "J1": 2.5782562852669897,
+            "keystrokes_excluding_space": 65479167,
+            "keystrokes_per_non_space_unit": 0.9658205078516394,
+            "escaped_characters": 120602,
+            "escaped_units": 57848,
+            "escaped_share": 0.000722740274097075
+          },
+          "one_decimal": {
+            "J0": 2.193073627428854,
+            "E1": 1.8483051897994067,
+            "E2": 0.3447684376294473,
+            "E2_same_finger": 0.32581465265200876,
+            "E2_neighbour_penalty": 0.026996874230810052,
+            "E2_neighbour_benefit": -0.008043089253371516,
+            "M": 0.3873377398245048,
+            "J1": 2.5804113672533586,
+            "keystrokes_excluding_space": 65479167,
+            "keystrokes_per_non_space_unit": 0.9658205078516394,
+            "escaped_characters": 120602,
+            "escaped_units": 57848,
+            "escaped_share": 0.000722740274097075
+          }
+        },
+        "bard-novel/heldout": {
+          "unrounded": {
+            "J0": 2.2009437058727674,
+            "E1": 1.853436010551842,
+            "E2": 0.34750769532092557,
+            "E2_same_finger": 0.32826135475099977,
+            "E2_neighbour_penalty": 0.027319370625332677,
+            "E2_neighbour_benefit": -0.008073030055406858,
+            "M": 0.3897595452949961,
+            "J1": 2.5907032511677635,
+            "keystrokes_excluding_space": 5911323,
+            "keystrokes_per_non_space_unit": 0.9653145870153911,
+            "escaped_characters": 4975,
+            "escaped_units": 3870,
+            "escaped_share": 0.0005368102733557203
+          },
+          "one_decimal": {
+            "J0": 2.2009397508839568,
+            "E1": 1.8523537882090437,
+            "E2": 0.3485859626749129,
+            "E2_same_finger": 0.3292151986385271,
+            "E2_neighbour_penalty": 0.02741677325426042,
+            "E2_neighbour_benefit": -0.008046009217874631,
+            "M": 0.3888665688015397,
+            "J1": 2.5898063196854966,
+            "keystrokes_excluding_space": 5911323,
+            "keystrokes_per_non_space_unit": 0.9653145870153911,
+            "escaped_characters": 4975,
+            "escaped_units": 3870,
+            "escaped_share": 0.0005368102733557203
+          },
+          "traditional_unrounded": {
+            "J0": 2.1955547995305014,
+            "E1": 1.9145398924340389,
+            "E2": 0.28101490709646265,
+            "E2_same_finger": 0.258191801062274,
+            "E2_neighbour_penalty": 0.031511789504908405,
+            "E2_neighbour_benefit": -0.008688683470719773,
+            "M": 0.3929874804460363,
+            "J1": 2.588542279976538,
+            "keystrokes_excluding_space": 5911323,
+            "keystrokes_per_non_space_unit": 0.9653145870153911,
+            "escaped_characters": 4975,
+            "escaped_units": 3870,
+            "escaped_share": 0.0005368102733557203
+          }
+        }
+      }
+    }
+  ],
+  "predecessorCertificates": [
+    {
+      "style": "A",
+      "corpus": "bnwiki/train",
+      "upperBound": 1.867435,
+      "certifiedLowerBound": 1.786935,
+      "gapPercent": 4.31,
+      "appliesTo": "Earlier Phase 3 Wikipedia-only A layout and objective; not final Goti mixed objective"
+    },
+    {
+      "style": "D",
+      "corpus": "bnwiki/train",
+      "upperBound": 1.834624,
+      "certifiedLowerBound": 1.757831,
+      "gapPercent": 4.19,
+      "appliesTo": "Earlier Phase 3 Wikipedia-only D layout and objective; not final Jhor mixed objective"
+    }
+  ],
+  "recordedExportVerification": {
+    "settings": {
+      "top_word_types": 200000,
+      "random_sequences": 20000,
+      "alphabet": "kala/layout/bn/Alphabet.json"
+    },
+    "styles": {
+      "A": {
+        "kala_import_problems": [],
+        "key_map_problems": [],
+        "file_bytes": 17202,
+        "sequences": 10,
+        "heldout_words": {
+          "bnwiki/heldout": {
+            "word_types": 200000,
+            "typed_exactly": 191791,
+            "failures": 0,
+            "skipped_need_keys_outside_v1": 8209,
+            "running_words_typed_exactly_share": 0.9932655226657546,
+            "running_words_skipped_share": 0.006734477334245405,
+            "failure_examples": []
+          },
+          "newspaper/heldout": {
+            "word_types": 200000,
+            "typed_exactly": 195614,
+            "failures": 0,
+            "skipped_need_keys_outside_v1": 4386,
+            "running_words_typed_exactly_share": 0.9950164924803787,
+            "running_words_skipped_share": 0.0049835075196212565,
+            "failure_examples": []
+          },
+          "bard-novel/heldout": {
+            "word_types": 100254,
+            "typed_exactly": 97916,
+            "failures": 0,
+            "skipped_need_keys_outside_v1": 2338,
+            "running_words_typed_exactly_share": 0.995612333903302,
+            "running_words_skipped_share": 0.004387666096698006,
+            "failure_examples": []
+          }
+        },
+        "random_key_sequences": {
+          "sequences": 20000,
+          "seed": 20261111,
+          "agree": 20000,
+          "mismatches": 0,
+          "mismatch_examples": []
+        },
+        "pass": true
+      },
+      "D": {
+        "kala_import_problems": [],
+        "key_map_problems": [],
+        "file_bytes": 19100,
+        "sequences": 0,
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "originalModelSources": [
+    "https://colemakmods.github.io/mod-dh/model.html",
+    "https://colemakmods.github.io/mod-dh/compare.html",
+    "https://github.com/stevep99/keyboard-layout-analysis-tool"
+  ],
+  "sourceFileHashes": [
+    {
+      "path": "Directory.Build.props",
+      "sha256": "c5b0c5e63ba5f4d46bed4df62a6c98a6f24e0ab31a2f44b30b3b82ed9181ed69"
+    },
+    {
+      "path": "kala/kala.csproj",
+      "sha256": "70a4d3582d96c4a2d174d2b840cfc6d53f24ea31367b6957739c41362468e8c3"
+    },
+    {
+      "path": "kala/layout/manifest.json",
+      "sha256": "da1b243a7f7e934690091627df8d894e39f82efb70177dd9909bdf89de63cadd"
+    },
+    {
+      "path": "kala/layout/bn/KalaJhor.json",
+      "sha256": "08440eb002badb65e182473adaae4c5887880937ee52faab12527dd420d373d0"
+    },
+    {
+      "path": "kala/layout/bn/KalaGoti.json",
+      "sha256": "7c9da66d8aea4f7647a9b70341c3ecef640f2b55b9655ecf667a2434565bc64d"
+    },
+    {
+      "path": "kala/Keyboard/FixedLayoutManager.cs",
+      "sha256": "9afba74396a12531d0f0a72bf994c932330ce6ff449189cb000668cc92798c22"
+    },
+    {
+      "path": "kala/ProductPreferences.cs",
+      "sha256": "b3bbe501b230e3162e1ac63c0ea3f126016246147b811378add6fd4f2266624e"
+    },
+    {
+      "path": "colemak-bangla/docs/RESEARCH_SPEC.md",
+      "sha256": "894fc689ec577f1cfe5af94979c87e50112ae8c09a65e0c2697a87be51a8e57a"
+    },
+    {
+      "path": "colemak-bangla/docs/colemak-model-spec.md",
+      "sha256": "556beb254b4933830880410d187e11767db477f2c0b91f3df869515c66b38a94"
+    },
+    {
+      "path": "colemak-bangla/results/phase1/REPORT.md",
+      "sha256": "33f950bb7116d776ba34ec81f0ba5cbdadb9fdfc84f2edcbea0adcfbbfccaac8"
+    },
+    {
+      "path": "colemak-bangla/results/phase2/REPORT.md",
+      "sha256": "580fef3e1f7a6ca699aab77fedb58994baccfb870f9da8fb51e11c0864f48b07"
+    },
+    {
+      "path": "colemak-bangla/results/phase3/REPORT.md",
+      "sha256": "dbd06a5aab896bfe8357bf51466f1e84ad976a0fcd470ca65e95c7e7fb10c665"
+    },
+    {
+      "path": "colemak-bangla/results/phase3-crosscheck/REPORT.md",
+      "sha256": "97ca48ef5293a442bcb843d1ac2840715cd04d01989c96152ac4077a4c832273"
+    },
+    {
+      "path": "colemak-bangla/results/phase3-crosscheck/crosscheck.json",
+      "sha256": "105f48f3bb25f407ee906e4f8701d3aa8308b0e84da120a90bb847e3ce0e1c78"
+    },
+    {
+      "path": "colemak-bangla/results/phase4/REPORT.md",
+      "sha256": "058efede29bcd642df1672303489320a07800caa1f43effd9215f8ea1edcb22f"
+    },
+    {
+      "path": "colemak-bangla/results/phase4/phase4.json",
+      "sha256": "4cb7ac157fff3e620206d79b37b17887f8fc568b3d3b6740c99a8ba005b666b2"
+    },
+    {
+      "path": "colemak-bangla/results/mix-search/REPORT.md",
+      "sha256": "44d32a93c96835bf82882377a8607e7ccf252a72971f2b50ea50552190ac3c2c"
+    },
+    {
+      "path": "colemak-bangla/results/mix-search/mix-search.json",
+      "sha256": "3fa61ddc8a56512de63c3f5c4d79eb36db9e805e4c7892a1ccda5487132743fd"
+    },
+    {
+      "path": "colemak-bangla/results/kala-keyboards/verification.json",
+      "sha256": "a3dbf3d8f9a21c176e6aa52ad5d8c0e85941be01c7409bbf3829a8b59ffef85c"
+    },
+    {
+      "path": "kala/layout/bn/UniJoy.json",
+      "sha256": "f594f330e5c5c4d17c23769a370b5f064bc37b2d754291dfa27c8dbb73960ee4"
+    }
+  ],
+  "reductionsFromRoundedAverages": [
+    {
+      "baseline": "Windows Default",
+      "jhorReductionPercent": 16.3,
+      "gotiReductionPercent": 14.3
+    },
+    {
+      "baseline": "Probhat",
+      "jhorReductionPercent": 29.6,
+      "gotiReductionPercent": 27.9
+    },
+    {
+      "baseline": "Munir Optima (uni)",
+      "jhorReductionPercent": 30.4,
+      "gotiReductionPercent": 28.7
+    },
+    {
+      "baseline": "Bornona",
+      "jhorReductionPercent": 31.1,
+      "gotiReductionPercent": 29.4
+    },
+    {
+      "baseline": "UniJoy",
+      "jhorReductionPercent": 35.7,
+      "gotiReductionPercent": 34.1
+    },
+    {
+      "baseline": "National (Jatiya)",
+      "jhorReductionPercent": 37.2,
+      "gotiReductionPercent": 35.7
+    }
+  ]
+}
