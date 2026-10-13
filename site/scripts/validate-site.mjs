@@ -52,5 +52,13 @@ const data = JSON.parse(await readFile(path.join(root, 'evidence/layout-research
 assert.equal(data.finalLayouts.KalaJhor.scores.lessEffortThanUniJoyPercent, 35.7);
 assert.equal(data.finalLayouts.KalaGoti.scores.lessEffortThanUniJoyPercent, 34.1);
 const bytes = await stat(path.join(root, 'en/index.html'));
+for (const locale of locales) {
+  const home = await readFile(path.join(root, locale, 'index.html'), 'utf8');
+  assert(home.includes(`https://robispider.github.io/kala-layout/${locale}/how/`), `Missing localized layout-origin link: ${locale}`);
+  const research = await readFile(path.join(root, locale, 'research/index.html'), 'utf8');
+  for (const route of ['', 'how/', 'reproduce/', 'challenge/']) {
+    assert(research.includes(`https://robispider.github.io/kala-layout/${locale}/${route}`), `Missing localized research link: ${locale}/${route}`);
+  }
+}
 assert(bytes.size > 1000);
 console.log(`Site checks passed: ${locales.length * (pages.length + 1)} pages; ${checkedLinks} local links/assets/anchors; language switching, search, and research download.`);

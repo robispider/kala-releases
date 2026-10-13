@@ -31,6 +31,9 @@ export function sourcePath(page, locale) {
 const sourceRoutes = new Map(pages.map((page) => [page.source, page.route]));
 export function rewriteLinks(markdown, source, locale) {
   return markdown.replace(/(!?\[[^\]]*\])\(([^)]+)\)/g, (match, label, href) => {
+    // Keep paired Markdown targets identical while linking to the matching research language.
+    const research = 'https://robispider.github.io/kala-layout/';
+    if (href.startsWith(`${research}en/`)) return `${label}(${href.replace(`${research}en/`, `${research}${locale}/`)})`;
     if (/^(?:https?:|mailto:|#)/.test(href)) return match;
     const [target, anchor] = href.split('#');
     const resolved = path.posix.normalize(path.posix.join(path.posix.dirname(source), decodeURIComponent(target)));

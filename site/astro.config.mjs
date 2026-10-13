@@ -20,6 +20,7 @@ export default defineConfig({
         { icon: 'github', label: 'Kala on GitHub', href: 'https://github.com/robispider/kala-releases' },
       ],
       customCss: ['./src/styles/kala.css'],
+      components: { Hero: './src/components/AppHero.astro' },
       sidebar: [
         {
           label: 'Start here', translations: { bn: 'শুরু করুন' },

@@ -43,6 +43,8 @@ Write Bangla in a natural, formal Bangladeshi style, with short instructions and
 
 The site reuses Kala's existing mark and Black Bengal goat mascot. Fonts are self-hosted through the locked Inter and Noto Sans Bengali packages; their license notices are published with the site. The layout model results remain qualified as modeled effort, with human trials pending. Learn ships with the standard release under the user decision of 12 October 2026. UniJoy/UniBijoy is not bundled; historical mappings and benchmarks remain research references. Keep older installer availability distinct from the next release.
 
+The homepage hero is `site/src/components/AppHero.astro`. It preserves the mascot's full portrait dimensions instead of Starlight's default square image crop. The app keeps its green product design; kala-layout uses a separate blue research design. Layout-origin links on the homepage and research guide lead to the matching language on kala-layout. Canonical paired Markdown keeps English research URLs; `rewriteLinks` localizes them when building the site.
+
 ## Website validation — 12 October 2026
 
 - All 15 English/Bangla guide pairs passed the content consistency checks.

@@ -21,7 +21,6 @@ for (const locale of locales) {
   }
   const hero = {
     tagline: locale === 'en' ? 'Type Bangla, check spelling, and autocorrect together in your everyday Windows apps. No separate plugins. Learn Kala’s own research-designed fixed layouts.' : 'উইন্ডোজের প্রতিদিনের অ্যাপে বাংলা টাইপ করুন, বানান যাচাই করুন ও ভুল সংশোধন করুন—একসঙ্গে। আলাদা প্লাগইন লাগে না। কালার নিজস্ব গবেষণায় তৈরি ফিক্সড লেআউট শিখুন।',
-    image: { file: '../../../assets/kala-mascot-520.png', alt: locale === 'en' ? 'Kala’s Black Bengal goat mascot' : 'কালার ব্ল্যাক বেঙ্গল ছাগলের মাসকট' },
     actions: [
       { text: locale === 'en' ? 'Download Kala' : 'কালা ডাউনলোড করুন', link: 'https://github.com/robispider/kala-releases/releases', icon: 'download' },
       { text: locale === 'en' ? 'Read the guide' : 'ব্যবহার নির্দেশিকা পড়ুন', link: `${base}/${locale}/guide/`, variant: 'secondary', icon: 'right-arrow' },

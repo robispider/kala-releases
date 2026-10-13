@@ -8,6 +8,10 @@ Kala Jhor and Kala Goti are scientifically designed, data-driven Bangla layouts 
 
 “Most scientific” is not a ranking established by these tests. The evidence is stronger and more specific: a reproducible ergonomic model, large corpora, explicit typing rules, extensive searches, independent verification, scoped mathematical bounds for earlier layouts, and disclosed limits. Real typing speed, error rates, comfort, learning time, and superiority over every possible layout remain unmeasured or unproven.
 
+**Repeat or challenge it:** the research code, scorer, text-dataset lockfile, result reports, and layout files are public in the [kala-layout repository](https://github.com/robispider/kala-layout), with instructions to rerun the search and submit a layout of your own.
+
+The [Kala Layout research website](https://robispider.github.io/kala-layout/en/) brings together the [method and checks](https://robispider.github.io/kala-layout/en/how/), [reproduction guide](https://robispider.github.io/kala-layout/en/reproduce/), and [open layout challenge](https://robispider.github.io/kala-layout/en/challenge/). To use the results, follow the [Jhor](kala-jhor.md) or [Goti](kala-goti.md) typing guide, then [practise with Learn](../08-learning-module.md) in Kala.
+
 ## 1. Start with an existing ergonomic model
 
 The project used the [Colemak Mod-DH typing-effort model](https://colemakmods.github.io/mod-dh/model.html) and its [layout-comparison approach](https://colemakmods.github.io/mod-dh/compare.html). The grid models reach distance, finger factors, lateral movement, and keyboard geometry; pair costs model awkward consecutive keys. These weights include human judgment, as the upstream pages explain.
@@ -163,4 +167,4 @@ The machine-readable snapshot retains the recorded export check and source hashe
 
 Human trials are still needed for actual speed, errors, learning curves, sustained comfort, and whether the Shift/finger assumptions fit different typists. Literature, government writing, conversational text, other keyboard geometries, and alternative model weights can produce different conclusions.
 
-The scientific claim is therefore: **Kala Jhor and Kala Goti were systematically optimized and independently evaluated, and rank first and second under the recorded fixed-layout model comparison.** Source code and fuller reproduction materials are planned for future availability. The included result snapshot documents the current claims; it does not replace the full scorer and datasets needed for independent reproduction.
+The scientific claim is therefore: **Kala Jhor and Kala Goti were systematically optimized and independently evaluated, and rank first and second under the recorded fixed-layout model comparison.** The full scorer, search code, and reproduction instructions are public in the [kala-layout repository](https://github.com/robispider/kala-layout); the result snapshot included here documents the current claims. The Kala application source is a separate matter and remains planned for future publication.

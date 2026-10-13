@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import { LinkButton } from '@astrojs/starlight/components';
+import mascot from '../assets/kala-mascot-520.png';
+const { data } = Astro.locals.starlightRoute.entry;
+const { title = data.title, tagline, actions = [] } = data.hero || {};
+const bn = Astro.locals.starlightRoute.locale === 'bn';
+---
+<div class="hero">
+  <div class="hero-copy"><h1 id="_top" data-page-title>{title}</h1><p class="tagline">{tagline}</p><div class="actions">{actions.map(({text, link, variant, icon}) => <LinkButton href={link} variant={variant} icon={icon?.name}>{text}</LinkButton>)}</div></div>
+  <div class="mascot-frame"><Image src={mascot} width={300} height={520} alt={bn ? 'কালার ব্ল্যাক বেঙ্গল ছাগলের মাসকট' : 'Kala’s Black Bengal goat mascot'} loading="eager" /></div>
+</div>
+<style>
+  .hero { display:grid; grid-template-columns:7fr 4fr; gap:3%; }
+  h1 { margin:0; font-weight:650; color:var(--sl-color-white); }
+  .tagline { margin-block:1.5rem 2rem; font-size:1.2rem; color:var(--sl-color-gray-2); }
+  .actions { display:flex; flex-wrap:wrap; gap:1rem 2rem; align-items:center; }
+  .mascot-frame { display:flex; align-items:center; justify-content:center; width:100%; max-width:24rem; aspect-ratio:1; padding:1.5rem; background:#e5edda; border-radius:45% 45% 38% 38%; justify-self:center; }
+  .mascot-frame img { width:auto; height:20rem; max-height:100%; max-width:100%; object-fit:contain; }
+  @media(max-width:50rem) { .hero { grid-template-columns:1fr; gap:2rem; } .mascot-frame { grid-row:1; max-width:15rem; padding:1rem; } .mascot-frame img { height:13rem; } .hero-copy { text-align:center; } h1 { margin-inline:auto; } .tagline { margin-inline:auto; } .actions { justify-content:center; } }
+</style>
