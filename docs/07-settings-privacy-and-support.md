@@ -40,6 +40,8 @@ Settings are stored in `%LOCALAPPDATA%\Kala\settings.json`, with a previous copy
 
 ## What is stored on your computer
 
+Read the [Kala privacy notice](privacy.md) for local data, optional research sharing, public dataset use, retention, and deletion controls.
+
 | Location | Contents |
 | --- | --- |
 | `%LOCALAPPDATA%\Programs\Kala` | Installed app and runtime files |

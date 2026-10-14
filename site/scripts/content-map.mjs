@@ -14,6 +14,7 @@ export const pages = [
   { source: 'docs/05-corrections-suggestions-and-marks.md', route: 'guide/corrections' },
   { source: 'docs/06-personal-words.md', route: 'guide/personal-words' },
   { source: 'docs/07-settings-privacy-and-support.md', route: 'guide/settings' },
+  { source: 'docs/privacy.md', route: 'privacy' },
   { source: 'docs/08-learning-module.md', route: 'guide/learning' },
   { source: 'docs/layouts/avro-phonetic-and-unijoy.md', route: 'layouts/avro-unijoy' },
   { source: 'docs/layouts/kala-jhor.md', route: 'layouts/kala-jhor' },

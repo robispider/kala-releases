@@ -8,6 +8,8 @@ Kala brings **Bangla typing, plugin-free spellchecking, and autocorrection toget
 
 Read the website: [English](https://robispider.github.io/kala-releases/en/) · [বাংলা](https://robispider.github.io/kala-releases/bn/). The complete guides include search, keyboard references, and research comparisons in both languages.
 
+Read the [privacy notice](docs/privacy.md), including optional typing-check sharing and public research dataset use.
+
 ## Download and install
 
 The current release is [**v0.1.0-alpha.1**](https://github.com/robispider/kala-releases/releases/tag/v0.1.0-alpha.1), an **alpha pre-release**. Download `KalaSetup-v0.1.0-alpha.1.exe` from its Assets list. `SHA256SUMS.txt` is also supplied.

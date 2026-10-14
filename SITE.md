@@ -61,3 +61,11 @@ The homepages now lead with typing, plugin-free spellchecking and autocorrection
 Validation: npm run check and npm run build passed for 16 language pairs and 34 language pages, checking 1,910 local links/assets/anchors plus search and language destinations. Desktop Bangla and English screenshots were reviewed. Bangla at 390 × 844 showed no horizontal overflow. The browser reported no warnings/errors during the homepage review. These checks validate the website, not new live app compatibility or human typing-speed gains.
 
 The owner also approved CC0 dedication for the original Jhor/Goti layout maps. A bilingual license page and downloadable notices define its scope. The application code and third-party materials retain their existing terms.
+
+## Research privacy notice — 15 October 2026
+
+Canonical privacy pages live at `docs/privacy.md` and `translations/bn/docs/privacy.md`, published as `/en/privacy/` and `/bn/privacy/`. The owner specified that shared check data is retained for research and will be prepared for public dataset use. The notice lists collected and excluded data, explains that user-entered names can be included, distinguishes ordinary local typing from deliberate per-check sharing, and states deletion limits for public copies and backups. No automatic expiry, publication date, or private contact address is invented.
+
+The homepage, research sidebar, settings guide, and repository overview link to the notice. The server's privacy URL should be `https://robispider.github.io/kala-releases/en/privacy/` once deployment succeeds; publishing the website does not change the Ubuntu service's collection switch.
+
+Validation: `npm run check` and `npm run build` passed with 17 language pairs, 36 language pages, and 2,069 local links/assets/anchors. English/Bangla browser previews and same-page language switching passed. Bangla at 390 × 844 had no horizontal page overflow. The browser reported no warnings/errors. Astro retains the existing duplicate `/404` route warning; it does not affect the privacy routes. No application behavior or live server setting is established by these website checks.
