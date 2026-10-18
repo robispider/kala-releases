@@ -1,5 +1,6 @@
 ---
 import evidence from '../../../docs/reference/layout-research-snapshot.json';
+import latest from '../data/latest-release.json';
 const { locale = 'en' } = Astro.props;
 const bn = locale === 'bn';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -20,6 +21,7 @@ const searchRuns = evidence.finalLayouts.KalaJhor.search.independentRuns;
   <div class="release-note">
     <span class="status-dot" aria-hidden="true"></span>
     <span>{bn ? 'Windows x64 · বিনা মূল্যে ব্যবহার ও বিতরণ' : 'Windows x64 · Free to use and distribute'}</span>
+    <a class="latest-release" href={latest.releaseUrl}>{bn ? 'সর্বশেষ রিলিজ' : 'Latest release'} {latest.tag} · {latest.label[bn ? 'bn' : 'en']}</a>
     <a href={href('release-status')}>{bn ? 'রিলিজের অবস্থা' : 'Release status'} ↗</a>
   </div>
   <section class="home-section" aria-labelledby="assistance-title">
@@ -90,7 +92,7 @@ const searchRuns = evidence.finalLayouts.KalaJhor.search.independentRuns;
   <section class="home-section free-section" aria-labelledby="free-title">
     <p class="eyebrow">{bn ? 'বিনা মূল্যে, নিজের কম্পিউটারে' : 'FREE TO USE. YOUR WORDS STAY LOCAL.'}</p><h2 id="free-title">{bn ? 'লিখুন, নিজের মতো ব্যবহার করুন, শেয়ার করুন।' : 'Write, make it yours, and share it.'}</h2>
     <p class="section-body">{bn ? 'কালা ও এর নিজস্ব ঝড় ও গতি লেআউট বিনা মূল্যে ব্যবহার করুন। কালা বিতরণও করা যায়। ব্যক্তিগত শব্দ, শেখার অগ্রগতি ও রিপোর্ট আপনার কম্পিউটারেই থাকে; কালা নিজে থেকে আপলোড করে না। অ্যাপের সোর্স কোড ভবিষ্যতে প্রকাশের পরিকল্পনা আছে।' : 'Use Kala and its original Jhor and Goti layouts for free. Kala is also free to distribute. Personal words, learning progress, and reports stay on your computer; Kala does not upload them automatically. Application source publication is planned for the future.'}</p>
-    <div class="inline-links"><a href="https://github.com/robispider/kala-releases/releases">{bn ? 'কালা ডাউনলোড করুন' : 'Download Kala'} ↓</a><a href={href('guide/settings')}>{bn ? 'গোপনীয়তা ও সেটিংস' : 'Privacy and settings'} →</a><a href={href('privacy')}>{bn ? 'গোপনীয়তা নীতি' : 'Privacy notice'} →</a></div>
+    <div class="inline-links"><a href={latest.installerUrl}>{bn ? `কালা ${latest.tag} ডাউনলোড করুন` : `Download Kala ${latest.tag}`} ↓</a><a href={href('guide/settings')}>{bn ? 'গোপনীয়তা ও সেটিংস' : 'Privacy and settings'} →</a><a href={href('privacy')}>{bn ? 'গোপনীয়তা নীতি' : 'Privacy notice'} →</a></div>
   </section>
 </div>
 <style>
@@ -98,6 +100,8 @@ const searchRuns = evidence.finalLayouts.KalaJhor.search.independentRuns;
   .kala-home :is(h2,h3,p) { margin: 0; }
   .release-note { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; padding: 1rem 0; border-block: 1px solid var(--home-border); font-size: .83rem; color: var(--sl-color-gray-2); }
   .release-note a { margin-left: auto; font-weight: 650; }
+  .release-note a.latest-release { font-weight: 500; }
+  .release-note a.latest-release + a { margin-left: 0; }
   .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sl-color-accent); }
   .home-section { padding-block: 3.2rem; border-bottom: 1px solid var(--home-border); }
   .eyebrow { font-size: .72rem; letter-spacing: .1em; color: var(--sl-color-text-accent); font-weight: 750; margin-bottom: .65rem !important; }

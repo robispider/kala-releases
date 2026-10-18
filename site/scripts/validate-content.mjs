@@ -3,6 +3,7 @@ import { readFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pages, locales, sourcePath, repoRoot, rewriteLinks } from './content-map.mjs';
+import { readLatest, applyLatest, localeOf } from './latest-release.mjs';
 
 const matches = (text, regex) => [...text.matchAll(regex)].map((match) => match[1]);
 const linkTargets = (text) => matches(text, /\[[^\]]*\]\(([^)]+)\)/g).sort();
@@ -31,10 +32,22 @@ const keyMaps = (text) => {
 
 export async function validateContent() {
   let links = 0;
+  let markers = 0;
+  const latest = await readLatest();
+  // Marked release text must already match site/src/data/latest-release.json, so a hand edit
+  // cannot leave a stale or garbled version that the release workflow would later overwrite.
+  const checkMarkers = (text, file) => {
+    const result = applyLatest(text, latest, localeOf(file), file);
+    assert.equal(result.text, text, `Latest-release text is stale in ${file}; run node site/scripts/update-latest-release.mjs`);
+    markers += result.kinds.length;
+    return result.kinds;
+  };
+  checkMarkers(await readFile(path.join(repoRoot, 'README.md'), 'utf8'), 'README.md');
   for (const page of pages) {
     const english = await readFile(sourcePath(page, 'en'), 'utf8');
     const bangla = await readFile(sourcePath(page, 'bn'), 'utf8');
     assert(/[\u0980-\u09FF]/.test(bangla), `Bangla text missing: ${page.source}`);
+    assert.deepEqual(checkMarkers(bangla, `translations/bn/${page.source}`), checkMarkers(english, page.source), `Latest-release markers differ between languages: ${page.source}`);
     assert.deepEqual(linkTargets(bangla), linkTargets(english), `Translated link drift: ${page.source}`);
     assert.deepEqual(codeTokens(bangla), codeTokens(english), `Filename/code drift: ${page.source}`);
     assert.equal(count(bangla, /^#{1,6} /gm), count(english, /^#{1,6} /gm), `Heading omitted: ${page.source}`);
@@ -56,6 +69,6 @@ export async function validateContent() {
     }
   }
   await access(path.join(repoRoot, 'docs/reference/layout-research-snapshot.json'));
-  console.log(`Content checks passed: ${pages.length} complete language pairs; ${links} links; table numbers, key maps, steps, and code/paths preserved.`);
+  console.log(`Content checks passed: ${pages.length} complete language pairs; ${links} links; ${markers} latest-release markers at ${latest.tag}; table numbers, key maps, steps, and code/paths preserved.`);
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await validateContent();

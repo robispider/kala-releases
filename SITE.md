@@ -35,6 +35,17 @@ In GitHub **Settings → Pages → Build and deployment → Source**, choose **G
 
 Installers remain attached to GitHub Releases. The website links to those downloads; it does not include the large setup executable in its Pages artifact. Publishing the website does not publish Kala's application source.
 
+## Latest release references
+
+Download buttons, the homepage release line, the README and the installation guides point at the newest published release automatically. `.github/workflows/latest-release.yml` runs when a release is published, unpublished or deleted, when `site/public/updates/withdrawn.json` changes, or manually from **Actions → Point website and guides at the latest Kala release**. It picks the highest non-draft, non-withdrawn version that has a `KalaSetup-<tag>.exe` asset, writes `site/src/data/latest-release.json`, commits the changed text to `main`, and starts the Pages workflow.
+
+The workflow changes only text inside these markers, so review statements such as “reviewed against v0.1.0-alpha.1” stay accurate:
+
+- `<!-- kala:latest -->…<!-- /kala:latest -->` — every version, `KalaSetup-v….exe` name, and release tag/download URL inside is replaced with the latest release's values. Other files on a download URL, such as `SHA256SUMS.txt`, keep their names.
+- `<!-- kala:latest-channel -->…<!-- /kala:latest-channel -->` — replaced with the release type: “an **alpha pre-release**”, “a **stable release**”, and so on; in Bangla “**আলফা প্রি-রিলিজ**”, “**স্টেবল রিলিজ**” (write “যা একটি” before it).
+
+Write the surrounding sentence so it reads correctly for any version, for example “The latest release is …”. A marker must open and close on one line, and English and Bangla pages must carry the same markers in the same order. `npm run check` fails on a broken marker or on marked text that differs from `latest-release.json`. To update by hand, run `node site/scripts/update-latest-release.mjs` from the repository root. The site removes the markers from generated pages.
+
 ## Translation and asset notes
 
 Bangla guides are maintained translations, not an automatic browser-translation widget. The build fails if a language pair is missing or preserved facts drift. Review the meaning when changing either language; structural checks cannot prove translation quality.

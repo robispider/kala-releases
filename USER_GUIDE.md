@@ -2,11 +2,11 @@
 
 Kala lets you type Unicode Bangla in Windows applications with your physical keyboard or Kala's on-screen keyboard. It is free to use and distribute. Its source code will be made available in the future.
 
-This guide describes the current implementation reviewed on **12 October 2026**, at the application source tag **v0.1.0-alpha.1**. The public release is an **alpha pre-release**. Feature availability incorporates the 12 October release decisions: Learn is included and UniJoy is not bundled. Previously published installers may differ; see release status. Recorded research results are identified as such, rather than presented as new live app tests.
+This guide describes the current implementation reviewed on **12 October 2026**, at the application source tag **v0.1.0-alpha.1**. The latest public release is <!-- kala:latest -->**v0.5.0-alpha.1**<!-- /kala:latest -->, <!-- kala:latest-channel -->an **alpha pre-release**<!-- /kala:latest-channel -->; read its release notes for any changes since this review. Feature availability incorporates the 12 October release decisions: Learn is included and UniJoy is not bundled. Previously published installers may differ; see release status. Recorded research results are identified as such, rather than presented as new live app tests.
 
 ## Start here
 
-1. Download the setup executable from [Kala releases](https://github.com/robispider/kala-releases/releases). For v0.1.0-alpha.1, it is `KalaSetup-v0.1.0-alpha.1.exe`.
+1. Download the latest setup file, <!-- kala:latest -->[`KalaSetup-v0.5.0-alpha.1.exe`](https://github.com/robispider/kala-releases/releases/download/v0.5.0-alpha.1/KalaSetup-v0.5.0-alpha.1.exe)<!-- /kala:latest -->. Older versions are on [Kala releases](https://github.com/robispider/kala-releases/releases).
 2. Run setup normally and choose **Open Kala** when installation finishes.
 3. Follow the welcome steps. Choose Avro Phonetic for Roman spelling or one of Kala's original research layouts: Kala Goti or Kala Jhor.
 4. Click an editable field in the app where you want to write.

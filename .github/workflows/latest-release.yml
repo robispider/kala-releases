@@ -1,0 +1,75 @@
+name: Point website and guides at the latest Kala release
+
+# Runs when a Kala release is published, unpublished or deleted (including the
+# releases created by robispider/kala's "Publish Kala Windows Installer" workflow),
+# and when an update is withdrawn. Only the <!-- kala:latest --> marked spans change.
+on:
+  release:
+    types: [published, unpublished, deleted]
+  push:
+    branches: [main]
+    paths:
+      - 'site/public/updates/withdrawn.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kala-latest-release
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: main
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+      - name: Point the README, guides and website at the newest release
+        id: latest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node site/scripts/update-latest-release.mjs
+      - name: Check paired guides and release markers
+        run: node site/scripts/validate-content.mjs
+      - name: Commit to main
+        id: commit
+        if: steps.latest.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KALA_TAG: ${{ steps.latest.outputs.tag }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          commit() {
+            git add README.md USER_GUIDE.md docs translations site/src/data/latest-release.json
+            git diff --cached --quiet && return 1
+            git commit --quiet -m "Point website and guides at Kala $KALA_TAG"
+          }
+          commit || exit 0
+          # The release workflow pushes its signed update feed to main at about the same time.
+          # On a race, start again from the new main instead of replaying an old edit.
+          for attempt in 1 2 3 4; do
+            if git push origin HEAD:main; then echo "pushed=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+            sleep $((attempt * 5))
+            git fetch --quiet origin main
+            git reset --quiet --hard origin/main
+            node site/scripts/update-latest-release.mjs
+            node site/scripts/validate-content.mjs
+            commit || exit 0
+          done
+          echo 'main kept changing; rerun this workflow.' >&2
+          exit 1
+      # Pushes made with GITHUB_TOKEN do not start other workflows, so request the Pages build directly.
+      - name: Rebuild the website
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main --repo "$GITHUB_REPOSITORY"

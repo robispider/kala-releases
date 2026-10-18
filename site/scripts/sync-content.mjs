@@ -2,8 +2,10 @@ import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
 import path from 'node:path';
 import { base, siteRoot, repoRoot, pages, locales, sourcePath, rewriteLinks } from './content-map.mjs';
 import { validateContent } from './validate-content.mjs';
+import { readLatest, stripMarkers } from './latest-release.mjs';
 
 await validateContent();
+const latest = await readLatest();
 for (const locale of locales) {
   const contentRoot = path.join(siteRoot, 'src/content/docs', locale);
   await mkdir(contentRoot, { recursive: true });
@@ -12,7 +14,7 @@ for (const locale of locales) {
     const heading = source.match(/^# (.+)\r?$/m);
     if (!heading) throw new Error(`Missing title: ${page.source} (${locale})`);
     const title = heading[1].replace(/^[0-9০-৯]+\.\s*/, '');
-    const body = rewriteLinks(source.replace(/^# .+\r?\n/, '').trim(), page.source, locale);
+    const body = rewriteLinks(stripMarkers(source).replace(/^# .+\r?\n/, '').trim(), page.source, locale);
     const sourceInRepo = locale === 'en' ? page.source : `translations/${locale}/${page.source}`;
     const frontmatter = `---\ntitle: ${JSON.stringify(title)}\neditUrl: ${JSON.stringify(`https://github.com/robispider/kala-releases/edit/main/${sourceInRepo}`)}\n---\n\n`;
     const destination = path.join(contentRoot, `${page.route}.md`);
@@ -22,7 +24,7 @@ for (const locale of locales) {
   const hero = {
     tagline: locale === 'en' ? 'Type Bangla, check spelling, and autocorrect together in your everyday Windows apps. No separate plugins. Learn Kala’s own research-designed fixed layouts.' : 'উইন্ডোজের প্রতিদিনের অ্যাপে বাংলা টাইপ করুন, বানান যাচাই করুন ও ভুল সংশোধন করুন—একসঙ্গে। আলাদা প্লাগইন লাগে না। কালার নিজস্ব গবেষণায় তৈরি ফিক্সড লেআউট শিখুন।',
     actions: [
-      { text: locale === 'en' ? 'Download Kala' : 'কালা ডাউনলোড করুন', link: 'https://github.com/robispider/kala-releases/releases', icon: 'download' },
+      { text: locale === 'en' ? 'Download Kala' : 'কালা ডাউনলোড করুন', link: latest.installerUrl, icon: 'download' },
       { text: locale === 'en' ? 'Read the guide' : 'ব্যবহার নির্দেশিকা পড়ুন', link: `${base}/${locale}/guide/`, variant: 'secondary', icon: 'right-arrow' },
       { text: locale === 'en' ? 'বাংলায় পড়ুন' : 'Read in English', link: `${base}/${locale === 'en' ? 'bn' : 'en'}/`, variant: 'minimal', icon: 'translate' },
     ],

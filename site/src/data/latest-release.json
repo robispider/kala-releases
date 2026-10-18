@@ -1,0 +1,12 @@
+{
+  "tag": "v0.5.0-alpha.1",
+  "channel": "alpha",
+  "label": {
+    "en": "alpha pre-release",
+    "bn": "আলফা প্রি-রিলিজ"
+  },
+  "publishedAt": "2026-10-18T18:13:44Z",
+  "releaseUrl": "https://github.com/robispider/kala-releases/releases/tag/v0.5.0-alpha.1",
+  "installer": "KalaSetup-v0.5.0-alpha.1.exe",
+  "installerUrl": "https://github.com/robispider/kala-releases/releases/download/v0.5.0-alpha.1/KalaSetup-v0.5.0-alpha.1.exe"
+}
