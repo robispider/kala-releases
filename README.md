@@ -4,7 +4,7 @@ Kala brings **Bangla typing, plugin-free spellchecking, and autocorrection toget
 
 **Kala is free to use and distribute.** The application source code will be made available in the future. This repository provides releases and user documentation.
 
-<!-- kala:latest -->[Download Kala v0.7.0-alpha.1](https://github.com/robispider/kala-releases/releases/download/v0.7.0-alpha.1/KalaSetup-v0.7.0-alpha.1.exe)<!-- /kala:latest --> · [All releases](https://github.com/robispider/kala-releases/releases) · [User guide](USER_GUIDE.md) · [Report an issue](https://github.com/robispider/kala-releases/issues)
+<!-- kala:latest -->[Download Kala v0.8.0-alpha.1](https://github.com/robispider/kala-releases/releases/download/v0.8.0-alpha.1/KalaSetup-v0.8.0-alpha.1.exe)<!-- /kala:latest --> · [All releases](https://github.com/robispider/kala-releases/releases) · [User guide](USER_GUIDE.md) · [Report an issue](https://github.com/robispider/kala-releases/issues)
 
 Read the website: [English](https://robispider.github.io/kala-releases/en/) · [বাংলা](https://robispider.github.io/kala-releases/bn/). The complete guides include search, keyboard references, and research comparisons in both languages.
 
@@ -12,7 +12,7 @@ Read the [privacy notice](docs/privacy.md), including optional typing-check shar
 
 ## Download and install
 
-The latest release is <!-- kala:latest -->[**v0.7.0-alpha.1**](https://github.com/robispider/kala-releases/releases/tag/v0.7.0-alpha.1)<!-- /kala:latest -->, <!-- kala:latest-channel -->an **alpha pre-release**<!-- /kala:latest-channel -->. Download its setup file directly: <!-- kala:latest -->[`KalaSetup-v0.7.0-alpha.1.exe`](https://github.com/robispider/kala-releases/releases/download/v0.7.0-alpha.1/KalaSetup-v0.7.0-alpha.1.exe)<!-- /kala:latest -->. The release page also supplies `SHA256SUMS.txt` for checking the download. Older versions remain on [Kala releases](https://github.com/robispider/kala-releases/releases).
+The latest release is <!-- kala:latest -->[**v0.8.0-alpha.1**](https://github.com/robispider/kala-releases/releases/tag/v0.8.0-alpha.1)<!-- /kala:latest -->, <!-- kala:latest-channel -->an **alpha pre-release**<!-- /kala:latest-channel -->. Download its setup file directly: <!-- kala:latest -->[`KalaSetup-v0.8.0-alpha.1.exe`](https://github.com/robispider/kala-releases/releases/download/v0.8.0-alpha.1/KalaSetup-v0.8.0-alpha.1.exe)<!-- /kala:latest -->. The release page also supplies `SHA256SUMS.txt` for checking the download. Older versions remain on [Kala releases](https://github.com/robispider/kala-releases/releases).
 
 Setup targets **Windows x64**, installs for your Windows account, and includes its .NET runtime. It needs no administrator permission. The current executable is unsigned, so Windows may show a SmartScreen warning.
 
