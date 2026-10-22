@@ -2,7 +2,7 @@
 
 [নির্দেশিকার সূচি](../USER_GUIDE.md) · [বাস্তবায়ন ও প্রমাণ](reference/implementation-and-evidence.md)
 
-**১২ অক্টোবর ২০২৬** তারিখে অ্যাপের **v0.1.0-alpha.1** ট্যাগের সোর্স পর্যালোচনা করা হয়েছে; কমিট `df967fbe9ac038cf7dabff0cb9c1f5a455dbc76b`। প্রকাশ্য [v0.1.0-alpha.1 সংস্করণ](https://github.com/robispider/kala-releases/releases/tag/v0.1.0-alpha.1) প্রি-রিলিজ হিসেবে চিহ্নিত; এতে Windows x64 সেটআপ ফাইল ও `SHA256SUMS.txt` আছে। সর্বশেষ প্রকাশিত সংস্করণ <!-- kala:latest -->[v0.6.0-alpha.1](https://github.com/robispider/kala-releases/releases/tag/v0.6.0-alpha.1)<!-- /kala:latest -->, যা একটি <!-- kala:latest-channel -->**আলফা প্রি-রিলিজ**<!-- /kala:latest-channel -->; এই পর্যালোচনার পর কী বদলেছে, তা জানতে এর রিলিজ নোট পড়ুন।
+**১২ অক্টোবর ২০২৬** তারিখে অ্যাপের **v0.1.0-alpha.1** ট্যাগের সোর্স পর্যালোচনা করা হয়েছে; কমিট `df967fbe9ac038cf7dabff0cb9c1f5a455dbc76b`। প্রকাশ্য [v0.1.0-alpha.1 সংস্করণ](https://github.com/robispider/kala-releases/releases/tag/v0.1.0-alpha.1) প্রি-রিলিজ হিসেবে চিহ্নিত; এতে Windows x64 সেটআপ ফাইল ও `SHA256SUMS.txt` আছে। সর্বশেষ প্রকাশিত সংস্করণ <!-- kala:latest -->[v0.7.0-alpha.1](https://github.com/robispider/kala-releases/releases/tag/v0.7.0-alpha.1)<!-- /kala:latest -->, যা একটি <!-- kala:latest-channel -->**আলফা প্রি-রিলিজ**<!-- /kala:latest-channel -->; এই পর্যালোচনার পর কী বদলেছে, তা জানতে এর রিলিজ নোট পড়ুন।
 
 এই তালিকা বর্তমান বাস্তবায়ন এবং **১২ অক্টোবর ২০২৬** তারিখের রিলিজের সিদ্ধান্ত অনুসরণ করে: Learn থাকবে, UniJoy সঙ্গে দেওয়া হবে না। সিদ্ধান্তগুলো পরবর্তী ইনস্টলারের জন্য; ওয়েবসাইট বদলালে আগে প্রকাশিত ইনস্টলার বদলে যায় না। ওপরের সোর্স স্ন্যাপশট আগের বাস্তবায়নের তথ্যসূত্র। এটি নতুন করে সব অ্যাপে কাজ করার অনুমোদন বা ডাউনলোড করা এক্সিকিউটেবলের স্বাধীন অডিট নয়।
 
