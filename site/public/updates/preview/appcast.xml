@@ -5,12 +5,12 @@
     <description>Most recent changes with links to updates</description>
     <language>en</language>
     <item>
-      <title>Kala 0.6.0-alpha.1</title>
-      <pubDate>Wed, 21 Oct 2026 11:03:27 +00:00</pubDate>
-      <sparkle:version>0.6.0-alpha.1</sparkle:version>
-      <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
-      <enclosure url="https://github.com/robispider/kala-releases/releases/download/v0.6.0-alpha.1/KalaSetup-v0.6.0-alpha.1.exe" sparkle:version="0.6.0-alpha.1" sparkle:shortVersionString="0.6.0" length="329617411" sparkle:os="windows-x64" type="application/x-msdos-program" sparkle:criticalUpdate="false" sparkle:signature="8h+QfJOST3VMPNHbmx7cl/JPoZdoGVan5xeV0leVTndegP7lo2+lq2+VncW0Qufn/t0pbaAAdOZsCIWvFPIxDw==" />
+      <title>Kala 0.7.0-alpha.1</title>
+      <pubDate>Thu, 22 Oct 2026 05:28:59 +00:00</pubDate>
+      <sparkle:version>0.7.0-alpha.1</sparkle:version>
+      <sparkle:shortVersionString>0.7.0</sparkle:shortVersionString>
+      <enclosure url="https://github.com/robispider/kala-releases/releases/download/v0.7.0-alpha.1/KalaSetup-v0.7.0-alpha.1.exe" sparkle:version="0.7.0-alpha.1" sparkle:shortVersionString="0.7.0" length="329650179" sparkle:os="windows-x64" type="application/x-msdos-program" sparkle:criticalUpdate="false" sparkle:signature="zLB0qCdsl8WYc3eW2deFJcg8zXcR4nYBwDO6q8uF2OvXAQ6q9qrmE7lqYDLP7Dx/LNcMhPRb92EMlpd277moDw==" />
     </item>
-    <kala:revision xmlns:kala="https://robispider.github.io/kala-releases/updates/schema/1">1792580727378</kala:revision>
+    <kala:revision xmlns:kala="https://robispider.github.io/kala-releases/updates/schema/1">1792647052570</kala:revision>
   </channel>
 </rss>
