@@ -6,12 +6,12 @@
 
 সেটআপ প্যাকেজটি **64-bit Windows (x64)**-এর জন্য। প্রয়োজনীয় .NET রানটাইম এতে দেওয়া আছে; আলাদা করে .NET ইনস্টল করতে হবে না। কালা আপনার Windows অ্যাকাউন্টে ইনস্টল হয়, তাই অ্যাডমিন অনুমতি লাগে না। এই রিলিজে অন্য অপারেটিং সিস্টেম বা নেটিভ ARM64/x86-এর প্যাকেজ নেই।
 
-এই নির্দেশিকা **v0.1.0-alpha.1** সংস্করণের ভিত্তিতে পর্যালোচনা করা হয়েছে। সর্বশেষ রিলিজ <!-- kala:latest -->**v0.8.0-alpha.1**<!-- /kala:latest -->, যা একটি <!-- kala:latest-channel -->**আলফা প্রি-রিলিজ**<!-- /kala:latest-channel -->; ইনস্টল করার আগে এর রিলিজ নোট পড়ুন।
+এই নির্দেশিকা **v0.1.0-alpha.1** সংস্করণের ভিত্তিতে পর্যালোচনা করা হয়েছে। সর্বশেষ রিলিজ <!-- kala:latest -->**v0.9.0-alpha.1**<!-- /kala:latest -->, যা একটি <!-- kala:latest-channel -->**আলফা প্রি-রিলিজ**<!-- /kala:latest-channel -->; ইনস্টল করার আগে এর রিলিজ নোট পড়ুন।
 
 ## কালা ডাউনলোড করুন
 
-1. সর্বশেষ সেটআপ ফাইল ডাউনলোড করুন: <!-- kala:latest -->[`KalaSetup-v0.8.0-alpha.1.exe`](https://github.com/robispider/kala-releases/releases/download/v0.8.0-alpha.1/KalaSetup-v0.8.0-alpha.1.exe)<!-- /kala:latest -->।
-2. ফাইলটি ঠিকমতো ডাউনলোড হয়েছে কি না যাচাই করতে <!-- kala:latest -->[v0.8.0-alpha.1 রিলিজ পেজ](https://github.com/robispider/kala-releases/releases/tag/v0.8.0-alpha.1)<!-- /kala:latest --> খুলুন এবং **Assets** তালিকার `SHA256SUMS.txt`-এর সঙ্গে ফাইলটির SHA-256 চেকসাম মিলিয়ে দেখুন।
+1. সর্বশেষ সেটআপ ফাইল ডাউনলোড করুন: <!-- kala:latest -->[`KalaSetup-v0.9.0-alpha.1.exe`](https://github.com/robispider/kala-releases/releases/download/v0.9.0-alpha.1/KalaSetup-v0.9.0-alpha.1.exe)<!-- /kala:latest -->।
+2. ফাইলটি ঠিকমতো ডাউনলোড হয়েছে কি না যাচাই করতে <!-- kala:latest -->[v0.9.0-alpha.1 রিলিজ পেজ](https://github.com/robispider/kala-releases/releases/tag/v0.9.0-alpha.1)<!-- /kala:latest --> খুলুন এবং **Assets** তালিকার `SHA256SUMS.txt`-এর সঙ্গে ফাইলটির SHA-256 চেকসাম মিলিয়ে দেখুন।
 3. পুরোনো কোনো সংস্করণ দরকার হলে [কালার রিলিজ পেজ](https://github.com/robispider/kala-releases/releases) খুলুন, রিলিজটি বেছে নিন এবং **Assets** থেকে তার কালা সেটআপ `.exe` ডাউনলোড করুন। GitHub স্বয়ংক্রিয়ভাবে যে **Source code (zip/tar.gz)** আর্কাইভ তৈরি করে, তাতে এই রিলিজ রিপোজিটরির ফাইলগুলো থাকে; সেগুলো ইনস্টলার বা অ্যাপ্লিকেশনের সোর্স কোড নয়।
 
 বর্তমান ইনস্টলারে ডিজিটাল সিগনেচার নেই, তাই Windows-এর SmartScreen সতর্কতা দেখা যেতে পারে। চালানোর আগে ফাইলটি অফিসিয়াল রিলিজ পেজ থেকে ডাউনলোড করেছেন কি না নিশ্চিত করুন।
