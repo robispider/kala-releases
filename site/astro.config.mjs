@@ -17,6 +17,7 @@ export default defineConfig({
       logo: { src: './src/assets/kala-mark-256.png', alt: 'Kala', replacesTitle: false },
       favicon: '/favicon.ico',
       social: [
+        { icon: 'facebook', label: 'Follow Kala on Facebook', href: 'https://www.facebook.com/profile.php?id=61595586673887' },
         { icon: 'github', label: 'Kala on GitHub', href: 'https://github.com/robispider/kala-releases' },
       ],
       customCss: ['./src/styles/kala.css'],

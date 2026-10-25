@@ -7,7 +7,7 @@ const { title = data.title, tagline, actions = [] } = data.hero || {};
 const bn = Astro.locals.starlightRoute.locale === 'bn';
 ---
 <div class="hero">
-  <div class="hero-copy"><h1 id="_top" data-page-title>{title}</h1><p class="tagline">{tagline}</p><div class="actions">{actions.map(({text, link, variant, icon}) => <LinkButton href={link} variant={variant} icon={icon?.name}>{text}</LinkButton>)}</div></div>
+  <div class="hero-copy"><h1 id="_top" data-page-title>{title}</h1><p class="tagline">{tagline}</p><div class="actions">{actions.map(({text, link, variant, icon}) => <LinkButton href={link} variant={variant} icon={icon?.name}>{text}</LinkButton>)}<LinkButton href="https://www.facebook.com/profile.php?id=61595586673887" variant="secondary" icon="facebook" target="_blank" rel="noopener noreferrer">{bn ? 'ফেসবুকে ফলো করুন' : 'Follow on Facebook'}</LinkButton></div></div>
   <div class="mascot-frame"><Image src={mascot} width={300} height={520} alt={bn ? 'কালার ব্ল্যাক বেঙ্গল ছাগলের মাসকট' : 'Kala’s Black Bengal goat mascot'} loading="eager" /></div>
 </div>
 <style>
