@@ -6,12 +6,12 @@
 
 The distributed setup package targets **64-bit Windows (x64)**. It includes its .NET runtime, so you do not need to install .NET separately. Setup installs for your Windows account and does not need administrator permission. Other operating systems and native ARM64/x86 packages are not supplied by this release.
 
-This guide was reviewed against **v0.1.0-alpha.1**. The latest release is <!-- kala:latest -->**v0.10.0-alpha.1**<!-- /kala:latest -->, <!-- kala:latest-channel -->an **alpha pre-release**<!-- /kala:latest-channel -->; read its release notes before installing it.
+This guide was reviewed against **v0.1.0-alpha.1**. The latest release is <!-- kala:latest -->**v0.11.0-alpha.1**<!-- /kala:latest -->, <!-- kala:latest-channel -->an **alpha pre-release**<!-- /kala:latest-channel -->; read its release notes before installing it.
 
 ## Download Kala
 
-1. Download the latest setup file: <!-- kala:latest -->[`KalaSetup-v0.10.0-alpha.1.exe`](https://github.com/robispider/kala-releases/releases/download/v0.10.0-alpha.1/KalaSetup-v0.10.0-alpha.1.exe)<!-- /kala:latest -->.
-2. To check the download, open the <!-- kala:latest -->[v0.10.0-alpha.1 release page](https://github.com/robispider/kala-releases/releases/tag/v0.10.0-alpha.1)<!-- /kala:latest --> and compare the file's SHA-256 checksum with `SHA256SUMS.txt` in its **Assets** list.
+1. Download the latest setup file: <!-- kala:latest -->[`KalaSetup-v0.11.0-alpha.1.exe`](https://github.com/robispider/kala-releases/releases/download/v0.11.0-alpha.1/KalaSetup-v0.11.0-alpha.1.exe)<!-- /kala:latest -->.
+2. To check the download, open the <!-- kala:latest -->[v0.11.0-alpha.1 release page](https://github.com/robispider/kala-releases/releases/tag/v0.11.0-alpha.1)<!-- /kala:latest --> and compare the file's SHA-256 checksum with `SHA256SUMS.txt` in its **Assets** list.
 3. For an older version, open [Kala releases](https://github.com/robispider/kala-releases/releases), choose the release, and download its Kala setup `.exe` from **Assets**. GitHub's automatically generated **Source code (zip/tar.gz)** archives contain this release repository's files; they are not the installer or the application source.
 
 The current installer is unsigned. Windows may display a SmartScreen warning. Confirm that the file came from the official release page before deciding to run it.
