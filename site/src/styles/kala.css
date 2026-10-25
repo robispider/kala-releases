@@ -38,6 +38,11 @@ html[lang='bn'] .sl-markdown-content :is(h2,h3,h4) { letter-spacing: 0; }
 @media (max-width: 50rem) {
   .hero { padding-block: 1.7rem 1rem; }
 }
+@media (max-width: 49.999rem) {
+  header .right-group { display: flex; }
+  header .right-group > :not(.social-icons) { display: none; }
+  header .social-icons::after { display: none; }
+}
 @media print {
   header, nav, .sidebar-pane, .right-sidebar, .pagination-links { display: none !important; }
   main { margin: 0 !important; padding: 0 !important; }
