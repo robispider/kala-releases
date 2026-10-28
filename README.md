@@ -33,13 +33,21 @@ See the [installation guide](docs/01-installation-and-first-start.md) for the co
 
 The release supplies Avro Phonetic, Kala Goti, and Kala Jhor. UniJoy/UniBijoy is not bundled; its retained references are for research and comparison. The layout page lets you select a supplied layout or import a supported Kala `.json` or Avro `.avrolayout` file.
 
-## Kala Jhor and Kala Goti
+## Kala Layout: one map, two styles
+
+The current research publication is **provisional B01**, one shared arrangement with **Goti and Jhor typing styles**. The updated Kala source and rebuilt app match it. A 29 October 2026 audit found the previously installed copy still had the older maps; an installed application needs its own update. See the [shared key map, typing examples and availability](docs/layouts/kala-layout.md).
+
+A local certificate rules out eligible improvements among 45,526 two/three-symbol alternatives under the relaxed shared eligibility policy, with R calibrated separately by style. It does not prove global optimality or fastest typing. Shared held-out modeled-effort reductions versus the tested UniJoy variant are 33.709% (Goti) and 35.366% (Jhor).
+
+Practise online in [Kala Typing Master](https://robispider.github.io/kala-typing-master/) and read its [research page](https://robispider.github.io/kala-typing-master/research/). Follow the [Kala Bangla Keyboard Facebook page](https://www.facebook.com/kalabanglakeyboard) for updates. The shared map uses MIT; the earlier separate maps retain CC0.
+
+## Historical separate Kala Jhor and Kala Goti maps
 
 The original Jhor/Goti layout maps are dedicated under [CC0 1.0 Universal](docs/reference/original-layout-license.md): use, adapt and share them without permission or royalties. The application and third-party material keep their existing terms.
 
 Kala's **Bangla-DH Pure** research used an explicit ergonomic effort model, large Bangla corpora, 512 search runs per layout, held-out text evaluation, and independent verification.
 
-In the recorded comparison of eight fixed layouts, **Kala Jhor ranked first and Kala Goti second**, with **35.7% and 34.1% lower modeled effort than UniJoy**, respectively. These are model results, not measured speed or comfort gains. The current layouts are the best found by the search, without a global optimality proof.
+In the recorded comparison of eight fixed layouts, **Kala Jhor ranked first and Kala Goti second**, with **35.7% and 34.1% lower modeled effort than UniJoy**, respectively. These are model results, not measured speed or comfort gains. Those original layouts are the best found by that search, without a global optimality proof.
 
 Read the [Jhor key map and typing steps](docs/layouts/kala-jhor.md), [Goti key map and typing steps](docs/layouts/kala-goti.md), and [scientific method, test results, and full comparison](docs/layouts/research-and-comparison.md).
 

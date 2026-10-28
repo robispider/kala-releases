@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile, access } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pages, locales, sourcePath, repoRoot, rewriteLinks } from './content-map.mjs';
@@ -68,7 +68,24 @@ export async function validateContent() {
       links += linkTargets(text).length;
     }
   }
-  await access(path.join(repoRoot, 'docs/reference/layout-research-snapshot.json'));
+  const snapshot = JSON.parse(await readFile(path.join(repoRoot, 'docs/reference/layout-research-snapshot.json'), 'utf8'));
+  const shared = snapshot.sharedPublication;
+  assert.equal(shared.arrangementId, 'shared-76c9b9dbfc689d0b');
+  assert.equal(shared.status, 'provisional');
+  for (const locale of locales) {
+    const guide = await readFile(sourcePath({ source: 'docs/layouts/kala-layout.md' }, locale), 'utf8');
+    const expected = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'].flatMap((keys) =>
+      [0, 1].map((layer) => [...keys].map((key) => shared.layout[key][layer].normalize('NFC'))));
+    assert.deepEqual(keyMaps(guide).map((row) => row.map((cell) => cell.replaceAll('◌', ''))), expected, `B01 key-map drift: ${locale}`);
+    const examples = rows(guide).map((row) => row.split('|').slice(1, -1).map((cell) => cell.trim()))
+      .filter((cells) => cells.length === 3 && shared.examples.some((example) => example.text === cells[0]));
+    assert(examples.length >= 6, `Missing shared typing examples: ${locale}`);
+    for (const [text, goti, jhor] of examples) {
+      for (const [style, keys] of [['A', goti], ['D', jhor]]) {
+        assert(shared.examples.some((example) => example.style === style && example.text === text && example.keys === keys), `B01 recipe drift: ${locale}/${style}/${text}`);
+      }
+    }
+  }
   console.log(`Content checks passed: ${pages.length} complete language pairs; ${links} links; ${markers} latest-release markers at ${latest.tag}; table numbers, key maps, steps, and code/paths preserved.`);
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await validateContent();

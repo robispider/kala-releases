@@ -1451,5 +1451,307 @@
       "jhorReductionPercent": 37.2,
       "gotiReductionPercent": 35.7
     }
-  ]
+  ],
+  "historicalScope": "Existing finalLayouts, leaderboard and bounds describe the original separate-map study reviewed 2026-10-12. Current B01 evidence is in sharedPublication.",
+  "sharedPublication": {
+    "reviewedDate": "2026-10-29",
+    "arrangementId": "shared-76c9b9dbfc689d0b",
+    "researchLabel": "B01/P01",
+    "status": "provisional",
+    "publicationDescriptor": "https://github.com/robispider/kala-layout/blob/main/data/layout-publications/shared-v1.json",
+    "sourceMapSha256": "0570b0ca0f0e72f69920a91c8cd9b04ac6ce5f936becb8b076eb103c3fc5afe0",
+    "arrangementSha256": "c00c4dbef480c1a1096c0f93c906398aa469d57b8ccecb0cc06ef491d9ab0e9b",
+    "layout": {
+      "Q": [
+        "ী",
+        "ঢ়"
+      ],
+      "W": [
+        "হ",
+        "ৌ"
+      ],
+      "E": [
+        "ু",
+        "ৃ"
+      ],
+      "R": [
+        "য",
+        "ৎ"
+      ],
+      "T": [
+        "ট",
+        "ঢ"
+      ],
+      "Y": [
+        "শ",
+        "ঘ"
+      ],
+      "U": [
+        "স",
+        "ণ"
+      ],
+      "I": [
+        "প",
+        "ং"
+      ],
+      "O": [
+        "ম",
+        "ফ"
+      ],
+      "P": [
+        "দ",
+        "ঠ"
+      ],
+      "A": [
+        "ি",
+        "ঁ"
+      ],
+      "S": [
+        "্",
+        "ূ"
+      ],
+      "D": [
+        "া",
+        "অ"
+      ],
+      "F": [
+        "র",
+        "ষ"
+      ],
+      "G": [
+        "গ",
+        "ঝ"
+      ],
+      "H": [
+        "জ",
+        "ড"
+      ],
+      "J": [
+        "ক",
+        "থ"
+      ],
+      "K": [
+        "ে",
+        "ভ"
+      ],
+      "L": [
+        "ব",
+        "চ"
+      ],
+      "Z": [
+        "।",
+        "ঃ"
+      ],
+      "X": [
+        "ো",
+        "ৈ"
+      ],
+      "C": [
+        "ন",
+        "ড়"
+      ],
+      "V": [
+        "ল",
+        "ঙ"
+      ],
+      "B": [
+        "ছ",
+        "ঞ"
+      ],
+      "N": [
+        "য়",
+        "খ"
+      ],
+      "M": [
+        "ত",
+        "ধ"
+      ]
+    },
+    "examples": [
+      {
+        "style": "A",
+        "text": "আমি",
+        "keys": "S D O A",
+        "labels": "্ া ম ি"
+      },
+      {
+        "style": "A",
+        "text": "কী",
+        "keys": "J Q",
+        "labels": "ক ী"
+      },
+      {
+        "style": "A",
+        "text": "বই",
+        "keys": "L S A",
+        "labels": "ব ্ ি"
+      },
+      {
+        "style": "A",
+        "text": "এবং",
+        "keys": "S K L Shift+I",
+        "labels": "্ ে ব ং"
+      },
+      {
+        "style": "A",
+        "text": "তিনিই",
+        "keys": "M A C A S A",
+        "labels": "ত ি ন ি ্ ি"
+      },
+      {
+        "style": "A",
+        "text": "আকাশ",
+        "keys": "S D J D Y",
+        "labels": "্ া ক া শ"
+      },
+      {
+        "style": "A",
+        "text": "ক্ষেত্রে",
+        "keys": "J S Shift+F K M S F K",
+        "labels": "ক ্ ষ ে ত ্ র ে"
+      },
+      {
+        "style": "A",
+        "text": "গাই",
+        "keys": "G D S A",
+        "labels": "গ া ্ ি"
+      },
+      {
+        "style": "A",
+        "text": "ইই",
+        "keys": "S A S A",
+        "labels": "্ ি ্ ি"
+      },
+      {
+        "style": "A",
+        "text": "ড়",
+        "keys": "Shift+C",
+        "labels": "ড়"
+      },
+      {
+        "style": "A",
+        "text": "ঢ়",
+        "keys": "Shift+Q",
+        "labels": "ঢ়"
+      },
+      {
+        "style": "A",
+        "text": "য়",
+        "keys": "N",
+        "labels": "য়"
+      },
+      {
+        "style": "D",
+        "text": "আমি",
+        "keys": "D O A",
+        "labels": "া ম ি"
+      },
+      {
+        "style": "D",
+        "text": "কী",
+        "keys": "J Q",
+        "labels": "ক ী"
+      },
+      {
+        "style": "D",
+        "text": "বই",
+        "keys": "L A A",
+        "labels": "ব ি ি"
+      },
+      {
+        "style": "D",
+        "text": "এবং",
+        "keys": "K L Shift+I",
+        "labels": "ে ব ং"
+      },
+      {
+        "style": "D",
+        "text": "তিনিই",
+        "keys": "M A C A A A",
+        "labels": "ত ি ন ি ি ি"
+      },
+      {
+        "style": "D",
+        "text": "আকাশ",
+        "keys": "D J D Y",
+        "labels": "া ক া শ"
+      },
+      {
+        "style": "D",
+        "text": "ক্ষেত্রে",
+        "keys": "J S Shift+F K M S F K",
+        "labels": "ক ্ ষ ে ত ্ র ে"
+      },
+      {
+        "style": "D",
+        "text": "গাই",
+        "keys": "G D A",
+        "labels": "গ া ি"
+      },
+      {
+        "style": "D",
+        "text": "ইই",
+        "keys": "A A",
+        "labels": "ি ি"
+      },
+      {
+        "style": "D",
+        "text": "ড়",
+        "keys": "Shift+C",
+        "labels": "ড়"
+      },
+      {
+        "style": "D",
+        "text": "ঢ়",
+        "keys": "Shift+Q",
+        "labels": "ঢ়"
+      },
+      {
+        "style": "D",
+        "text": "য়",
+        "keys": "N",
+        "labels": "য়"
+      }
+    ],
+    "eligibilityPolicy": "shared-layout-relaxed-v1",
+    "effortCapRatio": 1.0075,
+    "withinWordDistanceCapRatio": 1.075,
+    "rCalibration": "Separate by style; never add, average or compare R across styles.",
+    "heldoutMeanJ1": {
+      "Goti": 1.854428,
+      "Jhor": 1.80808
+    },
+    "lessEffortThanUniJoyPercent": {
+      "Goti": 33.709,
+      "Jhor": 35.366
+    },
+    "localCertificate": {
+      "alternatives": 45526,
+      "moves": [
+        2,
+        3
+      ],
+      "scope": "No jointly eligible alternative improves one style R without worsening the other; not global optimality or human typing speed."
+    },
+    "reportedAudit": {
+      "date": "2026-10-29",
+      "source": "Owner-supplied certified-layout-audit.md from kala-typing-master/artifacts; summarized here, not a public-installer or deployed-site audit.",
+      "sourceAndRebuiltKalaPositionMismatches": {
+        "Goti": 0,
+        "Jhor": 0
+      },
+      "typingMasterSourceAndBuiltLegendsPositionMismatches": {
+        "Goti": 0,
+        "Jhor": 0
+      },
+      "previouslyInstalledKalaPositionMismatches": {
+        "Goti": 43,
+        "Jhor": 39
+      },
+      "sequencesPassedPerApplication": 13012,
+      "certificateDecisionsReplayed": 45526,
+      "limits": "Decoder parity only; no keyboard hook, external document, public installer or live website checked."
+    },
+    "mapLicense": "MIT; original separate maps retain CC0"
+  }
 }

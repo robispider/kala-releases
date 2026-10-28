@@ -2,6 +2,18 @@
 
 [Guide index](../../USER_GUIDE.md) · [Jhor typing guide](kala-jhor.md) · [Goti typing guide](kala-goti.md) · [Evidence snapshot](../reference/layout-research-snapshot.json)
 
+## Current publication: one shared Kala Layout
+
+Since 28 October 2026, the research publication is **one provisional B01 arrangement with Goti (A) and Jhor (D) typing styles**. Use the [shared map, current scores and typing examples](kala-layout.md). The shared held-out modeled-effort reduction versus the tested UniJoy variant is **33.709% for Goti and 35.366% for Jhor**; the older percentages below belong to the original separate maps.
+
+The local certificate checks **45,526 two/three-symbol alternatives** under the **relaxed shared eligibility policy**, with **R calibrated separately by style**. No eligible alternative improves one style's R without worsening the other's. This does not prove global optimality or fastest human typing. The 29 October audit also checked **13,012 sequences through each application's real decoder**. Updated source/build maps match B01, while the previously installed Kala copy still needs updating. These checks do not audit a public installer or establish external-app compatibility.
+
+Practise in [Kala Typing Master](https://robispider.github.io/kala-typing-master/), read its [research page](https://robispider.github.io/kala-typing-master/research/), and follow [Kala Bangla Keyboard on Facebook](https://www.facebook.com/kalabanglakeyboard). The [shared-layout guide](kala-layout.md) explains availability, migration costs, certificate scope and MIT licensing.
+
+## Historical separate-layout research
+
+All sections below preserve the original separate-map study and its recorded scores, searches and bounds. References to final or current layouts within this historical account mean those original arrangements.
+
 Kala Jhor and Kala Goti are scientifically designed, data-driven Bangla layouts from **Bangla-DH Pure**. Their symbol positions were selected by a defined optimization process and evaluated on text that was held out from that process.
 
 **The recorded result:** Jhor has the lowest average modeled finger effort among the eight fixed layouts tested; Goti is second. Compared with the tested UniJoy variant, Jhor uses **35.7% less modeled effort**, and Goti **34.1% less**, averaged equally over three held-out text sets.

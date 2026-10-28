@@ -2,9 +2,11 @@
 
 [Guide index](../../USER_GUIDE.md) · [Kala Goti](kala-goti.md) · [Research and full comparison](research-and-comparison.md)
 
+**Historical separate map.** This guide preserves the original arrangement for older installations. For the provisional shared B01 map, where Goti and Jhor use the same positions, follow the [Kala Layout guide](kala-layout.md). Check your on-screen keyboard: B01 has hasant on S and ি on A. The scores and recipes below describe the original map; file-format version 1.0 does not identify the arrangement.
+
 **Jhor (ঝড়)** means storm. Kala Jhor is a fixed Bangla layout from the **Bangla-DH Pure** research project. Its key positions were found by computer search using Bangla Wikipedia and newspaper text. Its distinguishing feature is **context-sensitive vowels**: the same vowel key can produce a sign or a full vowel.
 
-The current bundled layout is version **1.0**. It has the lowest average modeled effort in the recorded eight-layout comparison: **J1 = 1.8000**, or **35.7% less modeled effort than UniJoy**. This is a result under the stated research model and text sets, not a timed typing-speed result or a proof of the best possible keyboard.
+The original layout uses file-format version **1.0**. It has the lowest average modeled effort in the recorded eight-layout comparison: **J1 = 1.8000**, or **35.7% less modeled effort than UniJoy**. This is a result under the stated research model and text sets, not a timed typing-speed result or a proof of the best possible keyboard.
 
 ## Select it
 

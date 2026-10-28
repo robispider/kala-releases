@@ -17,6 +17,7 @@ export const pages = [
   { source: 'docs/privacy.md', route: 'privacy' },
   { source: 'docs/08-learning-module.md', route: 'guide/learning' },
   { source: 'docs/layouts/avro-phonetic-and-unijoy.md', route: 'layouts/avro-unijoy' },
+  { source: 'docs/layouts/kala-layout.md', route: 'layouts/kala-layout' },
   { source: 'docs/layouts/kala-jhor.md', route: 'layouts/kala-jhor' },
   { source: 'docs/layouts/kala-goti.md', route: 'layouts/kala-goti' },
   { source: 'docs/layouts/research-and-comparison.md', route: 'research' },

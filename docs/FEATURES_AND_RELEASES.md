@@ -2,6 +2,8 @@
 
 [Guide index](../USER_GUIDE.md) · [Implementation and evidence](reference/implementation-and-evidence.md)
 
+**Shared-layout update, 29 October 2026:** the updated source and rebuilt Kala use provisional B01, one map with Goti and Jhor typing styles. The previously installed copy still had the older separate maps. Check your map and release notes before practising: see [Kala Layout and availability](layouts/kala-layout.md). Try the shared arrangement online in [Kala Typing Master](https://robispider.github.io/kala-typing-master/).
+
 Reviewed **12 October 2026** against the application source at tag **v0.1.0-alpha.1**, commit `df967fbe9ac038cf7dabff0cb9c1f5a455dbc76b`. The public [v0.1.0-alpha.1 release](https://github.com/robispider/kala-releases/releases/tag/v0.1.0-alpha.1) is marked pre-release and provides a Windows x64 setup executable and `SHA256SUMS.txt`. The latest public release is <!-- kala:latest -->[v0.14.0-alpha.1](https://github.com/robispider/kala-releases/releases/tag/v0.14.0-alpha.1)<!-- /kala:latest -->, <!-- kala:latest-channel -->an **alpha pre-release**<!-- /kala:latest-channel -->; read its release notes for changes since this review.
 
 This table reflects the current implementation and the **12 October 2026 release decisions**: include Learn and omit UniJoy from bundled layouts. These decisions apply to the next installer; previously published assets are not replaced by a website update. The source snapshot above supplies the historical implementation evidence. This is not a new live compatibility sign-off or an independent audit of the downloaded executable.

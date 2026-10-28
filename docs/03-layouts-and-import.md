@@ -2,6 +2,8 @@
 
 [Guide index](../USER_GUIDE.md) · [Next: on-screen keyboard](04-onscreen-keyboard.md)
 
+**Shared-layout update, 29 October 2026:** the updated source and rebuilt Kala use provisional B01, one map with Goti and Jhor typing styles. The previously installed copy still had the older separate maps. Check your map and release notes before practising: see [Kala Layout and availability](layouts/kala-layout.md). Try the shared arrangement online in [Kala Typing Master](https://robispider.github.io/kala-typing-master/).
+
 ## Choose a supplied layout
 
 | Layout | How it types | Useful starting point |
