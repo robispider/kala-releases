@@ -36,3 +36,5 @@ await writeFile(path.join(siteRoot, 'src/content/docs/404.md'), `---\ntitle: "Pa
 await copyFile(path.join(repoRoot, 'docs/reference/layout-research-snapshot.json'), path.join(siteRoot, 'public/evidence/layout-research-snapshot.json'));
 await writeFile(path.join(siteRoot, 'public/robots.txt'), 'User-agent: *\nAllow: /\n');
 console.log(`Generated ${pages.length * locales.length + locales.length} bilingual pages for ${base}/.`);
+
+await copyFile(path.join(repoRoot, 'docs/reference/published-layout-snapshot-v1.json'), path.join(siteRoot, 'public/evidence/published-layout-snapshot-v1.json'));
