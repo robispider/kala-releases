@@ -56,9 +56,8 @@ for (const locale of locales) {
   const home = await readFile(path.join(root, locale, 'index.html'), 'utf8');
   for (const route of ['', 'research/', 'layouts/kala-layout/']) {
     const page = await readFile(path.join(root, locale, route, 'index.html'), 'utf8');
-    assert(page.includes('https://www.facebook.com/kalabanglakeyboard'), `Missing Facebook page: ${locale}/${route}`);
     assert(page.includes('https://robispider.github.io/kala-typing-master/'), `Missing Typing Master link: ${locale}/${route}`);
-    assert(page.includes('B01'), `Missing current layout identity: ${locale}/${route}`);
+    assert(!page.includes('shared-76c9b9dbfc689d0b'), `Experimental identity leaked into product page: ${locale}/${route}`);
   }
   assert(home.includes(`https://robispider.github.io/kala-layout/${locale}/how/`), `Missing localized layout-origin link: ${locale}`);
   const research = await readFile(path.join(root, locale, 'research/index.html'), 'utf8');

@@ -1,0 +1,79 @@
+
+> kala-bilingual-guide@1.0.0 build
+> npm run sync && astro build && node scripts/validate-site.mjs
+
+
+> kala-bilingual-guide@1.0.0 sync
+> node scripts/sync-content.mjs
+
+Content checks passed: 18 complete language pairs; 274 links; 22 latest-release markers at v0.14.0-alpha.1; table numbers, key maps, steps, and code/paths preserved.
+Generated 38 bilingual pages for /kala-releases/.
+16:49:38 [content] Syncing content
+16:49:38 [content] Synced content
+16:49:38 [types] Generated 379ms
+16:49:38 [build] output: "static"
+16:49:38 [build] mode: "static"
+16:49:38 [build] directory: D:\git repo\kala-releases\site\dist\
+16:49:38 [build] Collecting build info...
+16:49:38 [build] ✓ Completed in 522ms.
+16:49:38 [build] Building static entrypoints...
+16:49:38 [vite] ✓ built in 242ms
+16:49:38 [vite] ✓ built in 37ms
+16:49:38 [build] Rearranging server assets...
+
+ generating static routes 
+16:49:38 [WARN] [build] Could not render `/404` from route `/[...slug]` as it conflicts with higher priority route `/404`.
+16:49:38   ├─ /404.html (+14ms) 
+16:49:38   ├─ /index.html (+2ms) 
+16:49:38   ├─ /bn/index.html (+10ms) 
+16:49:38   ├─ /bn/guide/index.html (+3ms) 
+16:49:38   ├─ /bn/guide/corrections/index.html (+3ms) 
+16:49:38   ├─ /bn/guide/installation/index.html (+2ms) 
+16:49:38   ├─ /bn/guide/layouts/index.html (+2ms) 
+16:49:38   ├─ /bn/guide/learning/index.html (+2ms) 
+16:49:38   ├─ /bn/guide/on-screen-keyboard/index.html (+2ms) 
+16:49:38   ├─ /bn/guide/personal-words/index.html (+3ms) 
+16:49:38   ├─ /bn/guide/settings/index.html (+2ms) 
+16:49:38   ├─ /bn/guide/typing/index.html (+2ms) 
+16:49:38   ├─ /bn/layout-license/index.html (+8ms) 
+16:49:38   ├─ /bn/layouts/avro-unijoy/index.html (+3ms) 
+16:49:38   ├─ /bn/layouts/kala-goti/index.html (+2ms) 
+16:49:38   ├─ /bn/layouts/kala-jhor/index.html (+2ms) 
+16:49:38   ├─ /bn/layouts/kala-layout/index.html (+2ms) 
+16:49:38   ├─ /bn/privacy/index.html (+2ms) 
+16:49:38   ├─ /bn/reference/index.html (+2ms) 
+16:49:38   ├─ /bn/release-status/index.html (+2ms) 
+16:49:38   ├─ /bn/research/index.html (+2ms) 
+16:49:38   ├─ /en/index.html (+4ms) 
+16:49:38   ├─ /en/guide/index.html (+2ms) 
+16:49:38   ├─ /en/guide/corrections/index.html (+2ms) 
+16:49:38   ├─ /en/guide/installation/index.html (+1ms) 
+16:49:38   ├─ /en/guide/layouts/index.html (+1ms) 
+16:49:38   ├─ /en/guide/learning/index.html (+1ms) 
+16:49:38   ├─ /en/guide/on-screen-keyboard/index.html (+1ms) 
+16:49:38   ├─ /en/guide/personal-words/index.html (+2ms) 
+16:49:38   ├─ /en/guide/settings/index.html (+1ms) 
+16:49:38   ├─ /en/guide/typing/index.html (+1ms) 
+16:49:38   ├─ /en/layout-license/index.html (+1ms) 
+16:49:38   ├─ /en/layouts/avro-unijoy/index.html (+2ms) 
+16:49:38   ├─ /en/layouts/kala-goti/index.html (+2ms) 
+16:49:38   ├─ /en/layouts/kala-jhor/index.html (+2ms) 
+16:49:38   ├─ /en/layouts/kala-layout/index.html (+1ms) 
+16:49:38   ├─ /en/privacy/index.html (+1ms) 
+16:49:38   ├─ /en/reference/index.html (+1ms) 
+16:49:38   ├─ /en/release-status/index.html (+1ms) 
+16:49:38   ├─ /en/research/index.html (+2ms) 
+16:49:38 ✓ Completed in 138ms.
+
+ generating optimized images 
+16:49:38   ▶ /_astro/kala-mascot-520.beq_js7J_2koIrf.webp (reused cache entry) (+1ms) (1/1)
+16:49:38 ✓ Completed in 1ms.
+
+16:49:38 [build] ✓ Completed in 448ms.
+16:49:38 [starlight:pagefind] Building search index with Pagefind...
+16:49:38 [starlight:pagefind] Found 40 HTML files.
+16:49:38 [starlight:pagefind] Finished building search index in 240ms.
+16:49:38 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+16:49:38 [build] 40 page(s) built in 1.23s
+16:49:38 [build] Complete!
+Site checks passed: 38 pages; 2194 local links/assets/anchors; language switching, search, and research download.

@@ -2,11 +2,9 @@
 
 [Guide index](../../USER_GUIDE.md) · [Kala Jhor](kala-jhor.md) · [Research and full comparison](research-and-comparison.md)
 
-**Historical separate map.** This guide preserves the original arrangement for older installations. For the provisional shared B01 map, where Goti and Jhor use the same positions, follow the [Kala Layout guide](kala-layout.md). Check your on-screen keyboard: B01 has hasant on S and ি on A. The scores and recipes below describe the original map; file-format version 1.0 does not identify the arrangement.
-
 **Goti (গতি)** means motion or speed. Kala Goti is a fixed Bangla layout from the **Bangla-DH Pure** research project. Its keys were arranged by computer search for lower modeled finger effort. It uses **UniJoy-style vowel entry**, with new key positions.
 
-The original layout uses file-format version **1.0**. It ranks second in the recorded eight-layout comparison: average **J1 = 1.8432**, or **34.1% less modeled effort than UniJoy**. The name and model result do not imply a measured typing-speed gain.
+The current bundled layout is version **1.0**. It ranks second in the recorded eight-layout comparison: average **J1 = 1.8432**, or **34.1% less modeled effort than UniJoy**. The name and model result do not imply a measured typing-speed gain.
 
 ## Select it
 
